@@ -5,6 +5,6 @@
     <% if !user_signed_in? %>
         <%= link_to  "Zaloguj", new_user_session_path, class: 'nav-login' %>
     <%else%>
-        <%= link_to  "Moje konto", new_user_session_path, class: 'nav-login' %>
+        <%= button_to  "Moje konto", destroy_user_session_path, :method=>'delete' , class: 'nav-login' %>
     <%end%>
 </nav>
