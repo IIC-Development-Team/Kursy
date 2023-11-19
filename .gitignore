@@ -3,3 +3,4 @@
 tmp/cache/assets/*
 tmp/cache/bootsnap/*
 tmp/pids/*
+log/development.log

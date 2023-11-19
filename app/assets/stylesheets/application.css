@@ -85,3 +85,54 @@ html, body
 {
     font-size: 25px;
 }
+
+.login-form
+{
+    text-align: center;
+}
+
+.login-input
+{
+    border: 2px solid blueviolet;
+    background-color: rgb(43, 43, 43);
+    color: silver;
+    font-size: 25px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    padding: 10px;
+}
+
+.login-submit
+{
+    border: 2px solid blueviolet;
+    background-color: rgb(43, 43, 43);
+    color: silver;
+    font-size: 25px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    padding: 10px;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.login-submit:hover
+{
+    border: 2px solid blueviolet;
+    color: rgb(43, 43, 43);
+    background-color: silver;
+    font-size: 25px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    padding: 10px;
+    transition: 0.2s;
+}
+
+.login-no-account
+{
+    text-align: center;
+}
+
+.login-label
+{
+    font-size: 25px;
+}
