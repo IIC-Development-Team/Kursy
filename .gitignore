@@ -1,0 +1,5 @@
+#Ignore cache
+
+tmp/cache/assets/*
+tmp/cache/bootsnap/*
+tmp/pids/*
