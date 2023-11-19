@@ -136,3 +136,23 @@ html, body
 {
     font-size: 25px;
 }
+
+.login-link
+{
+    font-size: 20px;
+    text-decoration: none;
+    color: blueviolet;
+    transition: 0.2s;
+}
+
+.login-link:hover
+{
+    font-size: 20px;
+    color: silver;
+    transition: 0.2s;
+}
+
+.welcome
+{
+    text-align: center;
+}

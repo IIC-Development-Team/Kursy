@@ -3,7 +3,13 @@
     <div class="subtitle">Naucz się IT! Już dziś! Za darmo!</div>
 
     <div class="stat-counter">
-        Mamy 0 kursów i 0 zarejstrowanych użytkowników, <br>
+        Mamy 0 kursów, <br>
         a nasza strona ma już 000000 odwiedzin
     </div>
+
+    <% if user_signed_in?%>
+        <div class="welcome">
+            <h1>Witaj z powrotem USERNAME!</h1>
+        </div>
+    <%end%>
 </div>
