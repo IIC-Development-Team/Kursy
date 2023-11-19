@@ -4500,3 +4500,1404 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 2ms (Views: 2.1ms | ActiveRecord: 0.1ms | Allocations: 1847)
 
 
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-11-19 16:16:50 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.6ms | Allocations: 687)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.5ms | Allocations: 2036)
+  Rendered home/_header.erb (Duration: 0.2ms | Allocations: 151)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 3202)
+Completed 200 OK in 9ms (Views: 4.6ms | ActiveRecord: 1.3ms | Allocations: 7802)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-11-19 16:16:52 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.4ms | Allocations: 220)
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 144)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1772)
+  Rendered home/_header.erb (Duration: 0.3ms | Allocations: 130)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 2863)
+Completed 200 OK in 7ms (Views: 6.5ms | ActiveRecord: 0.0ms | Allocations: 3743)
+
+
+Started POST "/users" for 127.0.0.1 at 2023-11-19 16:17:09 +0100
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"ShadowGamer3301@protonmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Załóż konto"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "shadowgamer3301@protonmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["email", "shadowgamer3301@protonmail.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2023-11-19 15:17:09.895046"], ["updated_at", "2023-11-19 15:17:09.895046"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/
+Completed 303 See Other in 187ms (ActiveRecord: 1.8ms | Allocations: 7392)
+
+
+Started GET "/" for 127.0.0.1 at 2023-11-19 16:17:09 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:10
+  Rendered home/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1365)
+  Rendered home/_header.erb (Duration: 0.2ms | Allocations: 200)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | Allocations: 2525)
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.3ms | Allocations: 2764)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2023-11-19 16:17:24 +0100
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Completed 303 See Other in 3ms (ActiveRecord: 0.1ms | Allocations: 1832)
+
+
+Started GET "/" for 127.0.0.1 at 2023-11-19 16:17:24 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/home/index.html.erb:6
+  Rendered home/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 652)
+  Rendered home/_header.erb (Duration: 0.2ms | Allocations: 122)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | Allocations: 1737)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.1ms | Allocations: 1975)
+
+
+Started GET "/home/about" for 127.0.0.1 at 2023-11-19 16:18:06 +0100
+Processing by HomeController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/about.html.erb within layouts/application
+  Rendered home/about.html.erb within layouts/application (Duration: 0.3ms | Allocations: 96)
+  Rendered home/_header.erb (Duration: 0.4ms | Allocations: 167)
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | Allocations: 1436)
+Completed 200 OK in 3ms (Views: 3.2ms | ActiveRecord: 0.0ms | Allocations: 1674)
+
+
+Started GET "/home/contact" for 127.0.0.1 at 2023-11-19 16:18:07 +0100
+Processing by HomeController#contact as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/contact.html.erb within layouts/application
+  Rendered home/contact.html.erb within layouts/application (Duration: 0.3ms | Allocations: 80)
+  Rendered home/_header.erb (Duration: 0.2ms | Allocations: 167)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | Allocations: 1420)
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.0ms | Allocations: 1658)
+
+
+Started GET "/" for 127.0.0.1 at 2023-11-19 16:18:08 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/home/index.html.erb:6
+  Rendered home/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 650)
+  Rendered home/_header.erb (Duration: 0.1ms | Allocations: 122)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | Allocations: 1732)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.1ms | Allocations: 1970)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-11-19 16:18:21 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 235)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1085)
+  Rendered home/_header.erb (Duration: 0.3ms | Allocations: 127)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | Allocations: 2166)
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.0ms | Allocations: 2761)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-11-19 16:18:24 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 235)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1083)
+  Rendered home/_header.erb (Duration: 0.2ms | Allocations: 127)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | Allocations: 2165)
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.0ms | Allocations: 2773)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2023-11-19 16:18:30 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"ShadowGamer3301@protonmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Zaloguj"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "shadowgamer3301@protonmail.com"], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Completed 303 See Other in 203ms (ActiveRecord: 0.2ms | Allocations: 2479)
+
+
+Started GET "/" for 127.0.0.1 at 2023-11-19 16:18:30 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:10
+  Rendered home/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1172)
+  Rendered home/_header.erb (Duration: 0.3ms | Allocations: 186)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 2322)
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.1ms | Allocations: 2561)
+
+
+Started GET "/" for 127.0.0.1 at 2023-11-19 16:25:19 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:10
+  Rendered home/index.html.erb within layouts/application (Duration: 5.4ms | Allocations: 5026)
+  Rendered home/_header.erb (Duration: 0.5ms | Allocations: 470)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 6784)
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 1.2ms | Allocations: 7504)
+
+
+Started GET "/" for 127.0.0.1 at 2023-11-19 16:25:19 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:10
+  Rendered home/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1191)
+  Rendered home/_header.erb (Duration: 0.4ms | Allocations: 186)
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | Allocations: 2337)
+Completed 200 OK in 5ms (Views: 4.8ms | ActiveRecord: 0.2ms | Allocations: 2575)
+
+
+Started GET "/" for 127.0.0.1 at 2023-11-19 16:25:56 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:10
+  Rendered home/index.html.erb within layouts/application (Duration: 5.3ms | Allocations: 5507)
+  Rendered home/_header.erb (Duration: 0.6ms | Allocations: 1426)
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 8214)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 1.3ms | Allocations: 8912)
+
+
+  
+ActionView::Template::Error (undefined method `destroy_user_path' for #<ActionView::Base:0x0000000005ee70>):
+     5:     <% if !user_signed_in? %>
+     6:         <%= link_to  "Zaloguj", new_user_session_path, class: 'nav-login' %>
+     7:     <%else%>
+     8:         <%= link_to "Destroy", destroy_user_path(current_user), method: :delete, data: { confirm: "You sure?" } %>
+     9:         <%= button_to  "Moje konto", destroy_user_session_path, :method=>'delete' , class: 'nav-login' %>
+    10:     <%end%>
+    11: </nav>
+  
+app/views/home/_header.erb:8
+app/views/layouts/application.html.erb:13
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <main> at /home/zbychu/Pulpit/Kursy/config/environment.rb:5)
+Started GET "/" for 127.0.0.1 at 2023-11-19 16:27:18 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:10
+  Rendered home/index.html.erb within layouts/application (Duration: 5.5ms | Allocations: 5566)
+  Rendered home/_header.erb (Duration: 0.6ms | Allocations: 1415)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 8268)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 1.3ms | Allocations: 8964)
+
+
+  
+ActionView::Template::Error (undefined method `destroy_user_path' for #<ActionView::Base:0x00000000063da8>):
+     5:     <% if !user_signed_in? %>
+     6:         <%= link_to  "Zaloguj", new_user_session_path, class: 'nav-login' %>
+     7:     <%else%>
+     8:         <%= link_to "Destroy", destroy_user_path(current_user), method: :delete, data: { confirm: "You sure?" } %>
+     9:         <%= button_to  "Moje konto", destroy_user_session_path, :method=>'delete' , class: 'nav-login' %>
+    10:     <%end%>
+    11: </nav>
+  
+app/views/home/_header.erb:8
+app/views/layouts/application.html.erb:13
+Started GET "/" for 127.0.0.1 at 2023-11-19 16:29:46 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:10
+  Rendered home/index.html.erb within layouts/application (Duration: 6.1ms | Allocations: 5565)
+  Rendered home/_header.erb (Duration: 0.7ms | Allocations: 1415)
+  Rendered layout layouts/application.html.erb (Duration: 8.2ms | Allocations: 8267)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 1.5ms | Allocations: 8963)
+
+
+  
+ActionView::Template::Error (undefined method `destroy_user_path' for #<ActionView::Base:0x00000000068d08>):
+     5:     <% if !user_signed_in? %>
+     6:         <%= link_to  "Zaloguj", new_user_session_path, class: 'nav-login' %>
+     7:     <%else%>
+     8:         <%= link_to "Destroy", destroy_user_path(current_user), method: :delete, data: { confirm: "You sure?" } %>
+     9:         <%= button_to  "Moje konto", destroy_user_session_path, :method=>'delete' , class: 'nav-login' %>
+    10:     <%end%>
+    11: </nav>
+  
+app/views/home/_header.erb:8
+app/views/layouts/application.html.erb:13
+Started GET "/" for 127.0.0.1 at 2023-11-19 16:30:27 +0100
+  
+NameError (undefined local variable or method `user' for #<ActionDispatch::Routing::Mapper:0x00007f59faaa4ac8 @set=#<ActionDispatch::Routing::RouteSet:0x00007f5a5ba388f8>, @draw_paths=[#<Pathname:/usr/lib64/ruby/gems/3.2.0/gems/actionview-7.1.2/config/routes>, #<Pathname:/usr/lib64/ruby/gems/3.2.0/gems/activestorage-7.1.2/config/routes>, #<Pathname:/usr/lib64/ruby/gems/3.2.0/gems/actioncable-7.1.2/config/routes>, #<Pathname:/usr/lib64/ruby/gems/3.2.0/gems/actionmailbox-7.1.2/config/routes>, #<Pathname:/usr/lib64/ruby/gems/3.2.0/gems/actiontext-7.1.2/config/routes>, #<Pathname:/usr/lib64/ruby/gems/3.2.0/gems/importmap-rails-1.2.3/config/routes>, #<Pathname:/usr/lib64/ruby/gems/3.2.0/gems/turbo-rails-1.5.0/config/routes>, #<Pathname:/usr/lib64/ruby/gems/3.2.0/gems/stimulus-rails-1.3.0/config/routes>, #<Pathname:/usr/lib64/ruby/gems/3.2.0/gems/devise-4.9.3/config/routes>, #<Pathname:/home/zbychu/Pulpit/Kursy/config/routes>, #<Pathname:/home/zbychu/Pulpit/Kursy/config/routes>], @scope=#<ActionDispatch::Routing::Mapper::Scope:0x00007f59fae28fa0 @hash={:path_names=>{:new=>"new", :edit=>"edit"}}, @parent=#<ActionDispatch::Routing::Mapper::Scope:0x00007f5a5bd46a40 @hash=nil, @parent=nil, @scope_level=nil>, @scope_level=nil>, @concerns={}, @devise_finalized=false>):
+  
+config/routes.rb:16:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/" for 127.0.0.1 at 2023-11-19 16:30:33 +0100
+  
+NameError (undefined local variable or method `users' for #<ActionDispatch::Routing::Mapper:0x00007f59fb1a9530 @set=#<ActionDispatch::Routing::RouteSet:0x00007f5a5ba388f8>, @draw_paths=[#<Pathname:/usr/lib64/ruby/gems/3.2.0/gems/actionview-7.1.2/config/routes>, #<Pathname:/usr/lib64/ruby/gems/3.2.0/gems/activestorage-7.1.2/config/routes>, #<Pathname:/usr/lib64/ruby/gems/3.2.0/gems/actioncable-7.1.2/config/routes>, #<Pathname:/usr/lib64/ruby/gems/3.2.0/gems/actionmailbox-7.1.2/config/routes>, #<Pathname:/usr/lib64/ruby/gems/3.2.0/gems/actiontext-7.1.2/config/routes>, #<Pathname:/usr/lib64/ruby/gems/3.2.0/gems/importmap-rails-1.2.3/config/routes>, #<Pathname:/usr/lib64/ruby/gems/3.2.0/gems/turbo-rails-1.5.0/config/routes>, #<Pathname:/usr/lib64/ruby/gems/3.2.0/gems/stimulus-rails-1.3.0/config/routes>, #<Pathname:/usr/lib64/ruby/gems/3.2.0/gems/devise-4.9.3/config/routes>, #<Pathname:/home/zbychu/Pulpit/Kursy/config/routes>, #<Pathname:/home/zbychu/Pulpit/Kursy/config/routes>], @scope=#<ActionDispatch::Routing::Mapper::Scope:0x00007f5a5b5709d8 @hash={:path_names=>{:new=>"new", :edit=>"edit"}}, @parent=#<ActionDispatch::Routing::Mapper::Scope:0x00007f5a5bd46a40 @hash=nil, @parent=nil, @scope_level=nil>, @scope_level=nil>, @concerns={}, @devise_finalized=false>):
+  
+config/routes.rb:16:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/" for 127.0.0.1 at 2023-11-19 16:30:53 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:10
+  Rendered home/index.html.erb within layouts/application (Duration: 5.7ms | Allocations: 5564)
+  Rendered home/_header.erb (Duration: 0.6ms | Allocations: 1453)
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 8304)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 1.5ms | Allocations: 9000)
+
+
+  
+ActionView::Template::Error (undefined method `destroy_user_path' for #<ActionView::Base:0x0000000006e2f8>):
+     5:     <% if !user_signed_in? %>
+     6:         <%= link_to  "Zaloguj", new_user_session_path, class: 'nav-login' %>
+     7:     <%else%>
+     8:         <%= link_to "Destroy", destroy_user_path(current_user), method: :delete, data: { confirm: "You sure?" } %>
+     9:         <%= button_to  "Moje konto", destroy_user_session_path, :method=>'delete' , class: 'nav-login' %>
+    10:     <%end%>
+    11: </nav>
+  
+app/views/home/_header.erb:8
+app/views/layouts/application.html.erb:13
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <main> at /home/zbychu/Pulpit/Kursy/config/environment.rb:5)
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <main> at /home/zbychu/Pulpit/Kursy/config/environment.rb:5)
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <main> at /home/zbychu/Pulpit/Kursy/config/environment.rb:5)
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <main> at /home/zbychu/Pulpit/Kursy/config/environment.rb:5)
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddDeletedAtColumnToUsers (20231119153522)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (2.3ms)[0m  [1m[35mALTER TABLE "users" ADD "deleted_at" datetime(6)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20231119153522') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2023-11-19 16:35:53 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:10
+  Rendered home/index.html.erb within layouts/application (Duration: 6.5ms | Allocations: 6808)
+  Rendered home/_header.erb (Duration: 0.6ms | Allocations: 470)
+  Rendered layout layouts/application.html.erb (Duration: 8.3ms | Allocations: 8570)
+Completed 200 OK in 9ms (Views: 7.7ms | ActiveRecord: 1.3ms | Allocations: 9290)
+
+
+Started GET "/" for 127.0.0.1 at 2023-11-19 16:36:56 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:10
+  Rendered home/index.html.erb within layouts/application (Duration: 5.9ms | Allocations: 5822)
+  Rendered home/_header.erb (Duration: 0.5ms | Allocations: 470)
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | Allocations: 7578)
+Completed 200 OK in 9ms (Views: 7.3ms | ActiveRecord: 1.3ms | Allocations: 8298)
+
+
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <main> at /home/zbychu/Pulpit/Kursy/config/environment.rb:5)
+Started GET "/" for 127.0.0.1 at 2023-11-19 16:38:24 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:10
+  Rendered home/index.html.erb within layouts/application (Duration: 6.2ms | Allocations: 6853)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 6945)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 1.3ms | Allocations: 7641)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `user' for #<ActionView::Base:0x0000000007ca60>):
+    10:     <% if user_signed_in?%>
+    11:         <div class="welcome">
+    12:             <h1>Witaj z powrotem USERNAME!</h1>
+    13:             <%= link_to "Destroy", user, method: :delete, data: { confirm: "You sure?" } %>
+    14:         </div>
+    15:     <%end%>
+    16: </div>
+  
+app/views/home/index.html.erb:13
+Started GET "/" for 127.0.0.1 at 2023-11-19 16:38:40 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:10
+  Rendered home/index.html.erb within layouts/application (Duration: 5.8ms | Allocations: 5972)
+  Rendered home/_header.erb (Duration: 0.4ms | Allocations: 436)
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 7696)
+Completed 200 OK in 9ms (Views: 7.2ms | ActiveRecord: 1.3ms | Allocations: 8416)
+
+
+Started GET "/users/cancel" for 127.0.0.1 at 2023-11-19 16:38:43 +0100
+Processing by Users::RegistrationsController#cancel as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.1ms | Allocations: 1656)
+
+
+Started GET "/" for 127.0.0.1 at 2023-11-19 16:38:43 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:10
+  Rendered home/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1247)
+  Rendered home/_header.erb (Duration: 0.4ms | Allocations: 173)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | Allocations: 2379)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.2ms | Allocations: 2617)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2023-11-19 16:38:45 +0100
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Completed 303 See Other in 4ms (ActiveRecord: 0.1ms | Allocations: 2081)
+
+
+Started GET "/" for 127.0.0.1 at 2023-11-19 16:38:45 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/home/index.html.erb:6
+  Rendered home/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 648)
+  Rendered home/_header.erb (Duration: 0.2ms | Allocations: 125)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 1737)
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.3ms | Allocations: 1975)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-11-19 16:38:46 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.8ms | Allocations: 687)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.9ms | Allocations: 2019)
+  Rendered home/_header.erb (Duration: 0.2ms | Allocations: 151)
+  Rendered layout layouts/application.html.erb (Duration: 4.1ms | Allocations: 3179)
+Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 0.0ms | Allocations: 4282)
+
+
+Started GET "/" for 127.0.0.1 at 2023-11-19 16:38:49 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/home/index.html.erb:6
+  Rendered home/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 647)
+  Rendered home/_header.erb (Duration: 0.2ms | Allocations: 122)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | Allocations: 1729)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.1ms | Allocations: 1968)
+
+
+Started GET "/" for 127.0.0.1 at 2023-11-19 16:40:02 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/home/index.html.erb:6
+  Rendered home/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1794)
+  Rendered home/_header.erb (Duration: 0.4ms | Allocations: 395)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 3475)
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 1.1ms | Allocations: 4195)
+
+
+Started GET "/" for 127.0.0.1 at 2023-11-19 16:40:03 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/home/index.html.erb:6
+  Rendered home/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 648)
+  Rendered home/_header.erb (Duration: 0.3ms | Allocations: 122)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | Allocations: 1730)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.1ms | Allocations: 1968)
+
+
+Started GET "/" for 127.0.0.1 at 2023-11-19 16:40:12 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/home/index.html.erb:6
+  Rendered home/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1853)
+  Rendered home/_header.erb (Duration: 0.4ms | Allocations: 395)
+  Rendered layout layouts/application.html.erb (Duration: 4.1ms | Allocations: 3540)
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 1.1ms | Allocations: 4260)
+
+
+Started GET "/" for 127.0.0.1 at 2023-11-19 16:40:13 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/home/index.html.erb:6
+  Rendered home/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 642)
+  Rendered home/_header.erb (Duration: 0.2ms | Allocations: 122)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | Allocations: 1724)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.1ms | Allocations: 1962)
+
+
+Started GET "/" for 127.0.0.1 at 2023-11-19 16:40:14 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/home/index.html.erb:6
+  Rendered home/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 647)
+  Rendered home/_header.erb (Duration: 0.3ms | Allocations: 122)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | Allocations: 1730)
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.1ms | Allocations: 1968)
+
+
+Started GET "/" for 127.0.0.1 at 2023-11-19 16:40:14 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/home/index.html.erb:6
+  Rendered home/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 629)
+  Rendered home/_header.erb (Duration: 0.3ms | Allocations: 122)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 1711)
+Completed 200 OK in 4ms (Views: 3.9ms | ActiveRecord: 0.1ms | Allocations: 1950)
+
+
+Started GET "/" for 127.0.0.1 at 2023-11-19 16:40:15 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/home/index.html.erb:6
+  Rendered home/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1878)
+  Rendered home/_header.erb (Duration: 0.4ms | Allocations: 395)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | Allocations: 3559)
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 1.1ms | Allocations: 4278)
+
+
+Started GET "/" for 127.0.0.1 at 2023-11-19 16:40:16 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/home/index.html.erb:6
+  Rendered home/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 651)
+  Rendered home/_header.erb (Duration: 0.1ms | Allocations: 122)
+  Rendered layout layouts/application.html.erb (Duration: 2.1ms | Allocations: 1733)
+Completed 200 OK in 2ms (Views: 2.3ms | ActiveRecord: 0.1ms | Allocations: 1971)
+
+
+Started GET "/" for 127.0.0.1 at 2023-11-19 16:40:16 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/home/index.html.erb:6
+  Rendered home/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 665)
+  Rendered home/_header.erb (Duration: 0.3ms | Allocations: 122)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | Allocations: 1747)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.1ms | Allocations: 1985)
+
+
+Started GET "/" for 127.0.0.1 at 2023-11-19 16:40:16 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/home/index.html.erb:6
+  Rendered home/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 653)
+  Rendered home/_header.erb (Duration: 0.3ms | Allocations: 122)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 1735)
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.1ms | Allocations: 1974)
+
+
+Started GET "/" for 127.0.0.1 at 2023-11-19 16:41:19 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/home/index.html.erb:6
+  Rendered home/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1768)
+  Rendered home/_header.erb (Duration: 0.4ms | Allocations: 395)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | Allocations: 3455)
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 1.1ms | Allocations: 4175)
+
+
+Started GET "/" for 127.0.0.1 at 2023-11-19 16:41:20 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/home/index.html.erb:6
+  Rendered home/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 633)
+  Rendered home/_header.erb (Duration: 0.3ms | Allocations: 122)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | Allocations: 1715)
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.1ms | Allocations: 1953)
+
+
+Started GET "/" for 127.0.0.1 at 2023-11-19 16:41:21 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/home/index.html.erb:6
+  Rendered home/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 644)
+  Rendered home/_header.erb (Duration: 0.3ms | Allocations: 122)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | Allocations: 1732)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.1ms | Allocations: 1970)
+
+
+Started GET "/" for 127.0.0.1 at 2023-11-19 16:41:21 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/home/index.html.erb:6
+  Rendered home/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 659)
+  Rendered home/_header.erb (Duration: 0.2ms | Allocations: 122)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 1741)
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.1ms | Allocations: 1980)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-11-19 16:41:23 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.7ms | Allocations: 687)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.5ms | Allocations: 2037)
+  Rendered home/_header.erb (Duration: 0.4ms | Allocations: 403)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | Allocations: 3701)
+Completed 200 OK in 10ms (Views: 5.4ms | ActiveRecord: 1.2ms | Allocations: 9470)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2023-11-19 16:41:29 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"ShadowGamer3301@protonmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Zaloguj"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "shadowgamer3301@protonmail.com"], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Completed 303 See Other in 185ms (ActiveRecord: 0.2ms | Allocations: 2983)
+
+
+Started GET "/" for 127.0.0.1 at 2023-11-19 16:41:30 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:10
+  Rendered home/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 2512)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | Allocations: 2604)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.2ms | Allocations: 3171)
+
+
+  
+ActionView::Template::Error (You are passing an instance of ActiveRecord::Base to `find`. Please pass the id of the object by calling `.id`.):
+    11:         <div class="welcome">
+    12:             <h1>Witaj z powrotem USERNAME!</h1>
+    13: 
+    14:             <<%= button_to "Usuń konto", User.find(current_user).destroy%>>
+    15:         </div>
+    16:     <%end%>
+    17: </div>
+  
+app/views/home/index.html.erb:14
+Started GET "/" for 127.0.0.1 at 2023-11-19 16:41:42 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:10
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/views/home/index.html.erb:14
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 2]]
+  ↳ app/views/home/index.html.erb:14
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/views/home/index.html.erb:14
+  Rendered home/index.html.erb within layouts/application (Duration: 8.4ms | Allocations: 8187)
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | Allocations: 8279)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 2.7ms | Allocations: 8975)
+
+
+  
+ActionView::Template::Error (undefined method `users_path' for #<ActionView::Base:0x0000000009ede0>):
+    11:         <div class="welcome">
+    12:             <h1>Witaj z powrotem USERNAME!</h1>
+    13: 
+    14:             <<%= button_to "Usuń konto", current_user.destroy%>>
+    15:         </div>
+    16:     <%end%>
+    17: </div>
+  
+app/views/home/index.html.erb:14
+Started GET "/" for 127.0.0.1 at 2023-11-19 16:44:03 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:10
+  Rendered home/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 2732)
+  Rendered home/_header.erb (Duration: 0.5ms | Allocations: 395)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 4423)
+Completed 200 OK in 7ms (Views: 5.3ms | ActiveRecord: 1.3ms | Allocations: 5143)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-11-19 16:44:07 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.6ms | Allocations: 687)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.3ms | Allocations: 2035)
+  Rendered home/_header.erb (Duration: 0.2ms | Allocations: 151)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 3195)
+Completed 200 OK in 7ms (Views: 4.4ms | ActiveRecord: 0.0ms | Allocations: 7658)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2023-11-19 16:44:17 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"zprzybyla@tuta.io", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Zaloguj"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "zprzybyla@tuta.io"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 180ms (ActiveRecord: 0.1ms | Allocations: 1592)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"zprzybyla@tuta.io", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Zaloguj"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 235)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1074)
+  Rendered home/_header.erb (Duration: 0.1ms | Allocations: 97)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | Allocations: 2125)
+Completed 200 OK in 182ms (Views: 3.0ms | ActiveRecord: 0.0ms | Allocations: 2607)
+
+
+Started GET "/" for 127.0.0.1 at 2023-11-19 16:44:19 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/home/index.html.erb:6
+  Rendered home/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 625)
+  Rendered home/_header.erb (Duration: 0.2ms | Allocations: 122)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | Allocations: 1707)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.1ms | Allocations: 1946)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-11-19 16:44:20 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 235)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1083)
+  Rendered home/_header.erb (Duration: 0.3ms | Allocations: 127)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | Allocations: 2164)
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.0ms | Allocations: 2762)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2023-11-19 16:44:25 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"zprzybyla@tuta.io", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Zaloguj"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "zprzybyla@tuta.io"], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Completed 303 See Other in 178ms (ActiveRecord: 0.1ms | Allocations: 2629)
+
+
+Started GET "/" for 127.0.0.1 at 2023-11-19 16:44:25 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:10
+  Rendered home/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 2186)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | Allocations: 2277)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.1ms | Allocations: 2502)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `delete' for #<ActionView::Base:0x000000000a4038>):
+    11:         <div class="welcome">
+    12:             <h1>Witaj z powrotem USERNAME!</h1>
+    13: 
+    14:             <<%= button_to "Usuń konto", current_user, method: delete%>>
+    15:         </div>
+    16:     <%end%>
+    17: </div>
+  
+app/views/home/index.html.erb:14
+Started GET "/" for 127.0.0.1 at 2023-11-19 16:44:29 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:10
+  Rendered home/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 2181)
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | Allocations: 2272)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.1ms | Allocations: 2490)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `delete' for #<ActionView::Base:0x000000000a4330>):
+    11:         <div class="welcome">
+    12:             <h1>Witaj z powrotem USERNAME!</h1>
+    13: 
+    14:             <<%= button_to "Usuń konto", current_user, method: delete%>>
+    15:         </div>
+    16:     <%end%>
+    17: </div>
+  
+app/views/home/index.html.erb:14
+Started GET "/" for 127.0.0.1 at 2023-11-19 16:44:31 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:10
+  Rendered home/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 2181)
+  Rendered layout layouts/application.html.erb (Duration: 2.1ms | Allocations: 2272)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.1ms | Allocations: 2490)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `delete' for #<ActionView::Base:0x000000000a4600>):
+    11:         <div class="welcome">
+    12:             <h1>Witaj z powrotem USERNAME!</h1>
+    13: 
+    14:             <<%= button_to "Usuń konto", current_user, method: delete%>>
+    15:         </div>
+    16:     <%end%>
+    17: </div>
+  
+app/views/home/index.html.erb:14
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-11-19 16:44:46 +0100
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 6ms (ActiveRecord: 1.3ms | Allocations: 6193)
+
+
+Started GET "/" for 127.0.0.1 at 2023-11-19 16:44:46 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:10
+  Rendered home/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1356)
+  Rendered home/_header.erb (Duration: 0.5ms | Allocations: 469)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | Allocations: 3121)
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.1ms | Allocations: 3839)
+
+
+Started GET "/" for 127.0.0.1 at 2023-11-19 16:44:47 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:10
+  Rendered home/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1173)
+  Rendered home/_header.erb (Duration: 0.2ms | Allocations: 186)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | Allocations: 2319)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.1ms | Allocations: 2556)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2023-11-19 16:44:48 +0100
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Completed 303 See Other in 3ms (ActiveRecord: 0.1ms | Allocations: 1934)
+
+
+Started GET "/" for 127.0.0.1 at 2023-11-19 16:44:48 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/home/index.html.erb:6
+  Rendered home/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 645)
+  Rendered home/_header.erb (Duration: 0.2ms | Allocations: 125)
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | Allocations: 1733)
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.1ms | Allocations: 1970)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-11-19 16:44:49 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.7ms | Allocations: 687)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.6ms | Allocations: 2020)
+  Rendered home/_header.erb (Duration: 0.2ms | Allocations: 150)
+  Rendered layout layouts/application.html.erb (Duration: 3.7ms | Allocations: 3185)
+Completed 200 OK in 5ms (Views: 4.8ms | ActiveRecord: 0.0ms | Allocations: 4290)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2023-11-19 16:44:57 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"zprzybyla@tuta.io", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Zaloguj"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "zprzybyla@tuta.io"], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Completed 303 See Other in 204ms (ActiveRecord: 0.2ms | Allocations: 2647)
+
+
+Started GET "/" for 127.0.0.1 at 2023-11-19 16:44:57 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:10
+  Rendered home/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1169)
+  Rendered home/_header.erb (Duration: 0.2ms | Allocations: 186)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | Allocations: 2318)
+Completed 200 OK in 3ms (Views: 3.1ms | ActiveRecord: 0.1ms | Allocations: 2557)
+
+
+Started GET "/" for 127.0.0.1 at 2023-11-19 16:45:01 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:10
+  Rendered home/index.html.erb within layouts/application (Duration: 6.3ms | Allocations: 6909)
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 7001)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 1.3ms | Allocations: 7697)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `delete' for #<ActionView::Base:0x000000000ae588>):
+    11:         <div class="welcome">
+    12:             <h1>Witaj z powrotem USERNAME!</h1>
+    13: 
+    14:             <<%= button_to "Usuń konto", current_user, method: delete%>>
+    15:         </div>
+    16:     <%end%>
+    17: </div>
+  
+app/views/home/index.html.erb:14
+Started POST "/users/sign_in" for 127.0.0.1 at 2023-11-19 16:45:24 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"zprzybyla@tuta.io", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Zaloguj"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 15ms (ActiveRecord: 4.2ms | Allocations: 6203)
+
+
+Started GET "/" for 127.0.0.1 at 2023-11-19 16:45:24 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:10
+  Rendered home/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 2453)
+  Rendered layout layouts/application.html.erb (Duration: 2.5ms | Allocations: 2545)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.1ms | Allocations: 3242)
+
+
+  
+ActionView::Template::Error (You are passing an instance of ActiveRecord::Base to `find`. Please pass the id of the object by calling `.id`.):
+    11:         <div class="welcome">
+    12:             <h1>Witaj z powrotem USERNAME!</h1>
+    13: 
+    14:             <%= button_to "Usuń konto", User.find(current_user), method: delete%>
+    15:         </div>
+    16:     <%end%>
+    17: </div>
+  
+app/views/home/index.html.erb:14
+Started GET "/" for 127.0.0.1 at 2023-11-19 16:45:34 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:10
+  Rendered home/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 2229)
+  Rendered layout layouts/application.html.erb (Duration: 2.1ms | Allocations: 2320)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.1ms | Allocations: 2538)
+
+
+  
+ActionView::Template::Error (You are passing an instance of ActiveRecord::Base to `find`. Please pass the id of the object by calling `.id`.):
+    11:         <div class="welcome">
+    12:             <h1>Witaj z powrotem USERNAME!</h1>
+    13: 
+    14:             <%= button_to "Usuń konto", User.find(current_user), method: delete%>
+    15:         </div>
+    16:     <%end%>
+    17: </div>
+  
+app/views/home/index.html.erb:14
+Started GET "/" for 127.0.0.1 at 2023-11-19 16:45:42 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:10
+  Rendered home/index.html.erb within layouts/application (Duration: 6.2ms | Allocations: 6890)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 6982)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 1.4ms | Allocations: 7679)
+
+
+  
+ActionView::Template::Error (undefined method `current_user?' for #<ActionView::Base:0x000000000b8998>):
+    11:         <div class="welcome">
+    12:             <h1>Witaj z powrotem USERNAME!</h1>
+    13: 
+    14:             <%= button_to "Usuń konto", current_user?, method: delete%>
+    15:         </div>
+    16:     <%end%>
+    17: </div>
+  
+app/views/home/index.html.erb:14
+Started GET "/" for 127.0.0.1 at 2023-11-19 16:45:47 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:10
+  Rendered home/index.html.erb within layouts/application (Duration: 6.0ms | Allocations: 6892)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 6984)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 1.3ms | Allocations: 7681)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `delete' for #<ActionView::Base:0x000000000bda38>):
+    11:         <div class="welcome">
+    12:             <h1>Witaj z powrotem USERNAME!</h1>
+    13: 
+    14:             <%= button_to "Usuń konto", current_user, method: delete%>
+    15:         </div>
+    16:     <%end%>
+    17: </div>
+  
+app/views/home/index.html.erb:14
+Started GET "/" for 127.0.0.1 at 2023-11-19 16:45:58 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:10
+  Rendered home/index.html.erb within layouts/application (Duration: 10.2ms | Allocations: 6896)
+  Rendered layout layouts/application.html.erb (Duration: 10.5ms | Allocations: 6988)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 1.3ms | Allocations: 7684)
+
+
+  
+ActionView::Template::Error (undefined method `user_path' for #<ActionView::Base:0x000000000c2b28>):
+    11:         <div class="welcome">
+    12:             <h1>Witaj z powrotem USERNAME!</h1>
+    13: 
+    14:             <%= button_to "Usuń konto", current_user, method: 'delete'%>
+    15:         </div>
+    16:     <%end%>
+    17: </div>
+  
+app/views/home/index.html.erb:14
+Started GET "/" for 127.0.0.1 at 2023-11-19 16:46:52 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:10
+  Rendered home/index.html.erb within layouts/application (Duration: 6.2ms | Allocations: 6893)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 6985)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 1.3ms | Allocations: 7682)
+
+
+  
+ActionView::Template::Error (undefined method `user_path' for #<ActionView::Base:0x000000000c7c68>):
+    11:         <div class="welcome">
+    12:             <h1>Witaj z powrotem USERNAME!</h1>
+    13: 
+    14:             <%= button_to "Usuń konto", current_user, method: :delete%>
+    15:         </div>
+    16:     <%end%>
+    17: </div>
+  
+app/views/home/index.html.erb:14
+Started GET "/" for 127.0.0.1 at 2023-11-19 16:47:26 +0100
+  
+SyntaxError (/home/zbychu/Pulpit/Kursy/app/controllers/home_controller.rb:3: syntax error, unexpected ':', expecting `end' or dummy end
+        redirect_to: root_path
+                   ^
+):
+  
+app/controllers/home_controller.rb:3: syntax error, unexpected ':', expecting `end' or dummy end
+Started GET "/" for 127.0.0.1 at 2023-11-19 16:47:37 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:10
+  Rendered home/index.html.erb within layouts/application (Duration: 9.6ms | Allocations: 6943)
+  Rendered layout layouts/application.html.erb (Duration: 9.8ms | Allocations: 7035)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 1.4ms | Allocations: 7732)
+
+
+  
+ActionView::Template::Error (undefined method `user_path' for #<ActionView::Base:0x000000000d1e48>):
+    11:         <div class="welcome">
+    12:             <h1>Witaj z powrotem USERNAME!</h1>
+    13: 
+    14:             <%= button_to "Usuń konto", current_user, method: :delete%>
+    15:         </div>
+    16:     <%end%>
+    17: </div>
+  
+app/views/home/index.html.erb:14
+Started GET "/" for 127.0.0.1 at 2023-11-19 16:48:05 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:10
+  Rendered home/index.html.erb within layouts/application (Duration: 6.9ms | Allocations: 6906)
+  Rendered home/_header.erb (Duration: 0.4ms | Allocations: 432)
+  Rendered layout layouts/application.html.erb (Duration: 8.7ms | Allocations: 8611)
+Completed 200 OK in 10ms (Views: 8.2ms | ActiveRecord: 1.3ms | Allocations: 9329)
+
+
+Started DELETE "/" for 127.0.0.1 at 2023-11-19 16:48:07 +0100
+  
+ActionController::RoutingError (No route matches [DELETE] "/"):
+  
+Started GET "/" for 127.0.0.1 at 2023-11-19 16:48:10 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:10
+  Rendered home/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1326)
+  Rendered home/_header.erb (Duration: 0.2ms | Allocations: 173)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | Allocations: 2457)
+Completed 200 OK in 3ms (Views: 3.2ms | ActiveRecord: 0.1ms | Allocations: 2694)
+
+
+Started DELETE "/" for 127.0.0.1 at 2023-11-19 16:48:11 +0100
+  
+ActionController::RoutingError (No route matches [DELETE] "/"):
+  
+Started DELETE "/" for 127.0.0.1 at 2023-11-19 16:49:17 +0100
+  
+ActionController::RoutingError (No route matches [DELETE] "/"):
+  
+Started GET "/" for 127.0.0.1 at 2023-11-19 16:49:29 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:10
+  Rendered home/index.html.erb within layouts/application (Duration: 6.0ms | Allocations: 6909)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 7001)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 1.4ms | Allocations: 7698)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `user_signed_in' for #<ActionView::Base:0x000000000e15a0>):
+    11:         <div class="welcome">
+    12:             <h1>Witaj z powrotem USERNAME!</h1>
+    13: 
+    14:             <%= button_to "Usuń konto", user_signed_in, method: :delete%>
+    15:         </div>
+    16:     <%end%>
+    17: </div>
+  
+app/views/home/index.html.erb:14
+Started GET "/" for 127.0.0.1 at 2023-11-19 16:49:36 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:10
+  Rendered home/index.html.erb within layouts/application (Duration: 6.3ms | Allocations: 6946)
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 7038)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 1.3ms | Allocations: 7734)
+
+
+  
+ActionView::Template::Error (undefined method `to_model' for true:TrueClass):
+    11:         <div class="welcome">
+    12:             <h1>Witaj z powrotem USERNAME!</h1>
+    13: 
+    14:             <%= button_to "Usuń konto", user_signed_in?, method: :delete%>
+    15:         </div>
+    16:     <%end%>
+    17: </div>
+  
+app/views/home/index.html.erb:14
+Started GET "/" for 127.0.0.1 at 2023-11-19 16:49:53 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:10
+  Rendered home/index.html.erb within layouts/application (Duration: 5.9ms | Allocations: 6912)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 7004)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 1.3ms | Allocations: 7700)
+
+
+  
+ActionView::Template::Error (undefined method `user_path' for #<ActionView::Base:0x000000000eb988>):
+    11:         <div class="welcome">
+    12:             <h1>Witaj z powrotem USERNAME!</h1>
+    13: 
+    14:             <%= button_to "Usuń konto", current_user, method: :delete%>
+    15:         </div>
+    16:     <%end%>
+    17: </div>
+  
+app/views/home/index.html.erb:14
+Started GET "/" for 127.0.0.1 at 2023-11-19 16:50:06 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:10
+  Rendered home/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 2211)
+  Rendered layout layouts/application.html.erb (Duration: 2.1ms | Allocations: 2302)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.1ms | Allocations: 2520)
+
+
+  
+ActionView::Template::Error (undefined method `user_path' for #<ActionView::Base:0x000000000ebc80>):
+    11:         <div class="welcome">
+    12:             <h1>Witaj z powrotem USERNAME!</h1>
+    13: 
+    14:             <%= button_to "Usuń konto", current_user, method: :delete%>
+    15:         </div>
+    16:     <%end%>
+    17: </div>
+  
+app/views/home/index.html.erb:14
+Started GET "/" for 127.0.0.1 at 2023-11-19 16:50:43 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:10
+  Rendered home/index.html.erb within layouts/application (Duration: 5.8ms | Allocations: 5903)
+  Rendered home/_header.erb (Duration: 0.7ms | Allocations: 470)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 7665)
+Completed 200 OK in 9ms (Views: 7.2ms | ActiveRecord: 1.3ms | Allocations: 8385)
+
+
+Started GET "/" for 127.0.0.1 at 2023-11-19 16:51:03 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:10
+  [1m[36mUser Delete All (0.9ms)[0m  [1m[31mDELETE FROM "users"[0m
+  ↳ app/views/home/index.html.erb:16
+  Rendered home/index.html.erb within layouts/application (Duration: 6.9ms | Allocations: 7185)
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | Allocations: 7277)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 2.2ms | Allocations: 7973)
+
+
+  
+ActionView::Template::Error (undefined method `to_model' for 1:Integer):
+    13: 
+    14:         </div>
+    15:     <%end%>
+    16:     <%= button_to "Usuń konto", User.delete_all, method: :delete%>
+    17: </div>
+  
+app/views/home/index.html.erb:16
+Started GET "/" for 127.0.0.1 at 2023-11-19 16:51:13 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:10
+  [1m[36mUser Delete All (1.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  ↳ app/views/home/index.html.erb:16
+  Rendered home/index.html.erb within layouts/application (Duration: 5.3ms | Allocations: 4050)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 4142)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 2.5ms | Allocations: 4838)
+
+
+  
+ActionView::Template::Error (undefined method `to_model' for 0:Integer):
+    13: 
+    14:         </div>
+    15:     <%end%>
+    16:     <%= button_to "Usuń konto", User.delete_all%>
+    17: </div>
+  
+app/views/home/index.html.erb:16
+Started GET "/" for 127.0.0.1 at 2023-11-19 16:51:25 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:10
+  Rendered home/index.html.erb within layouts/application (Duration: 4.1ms | Allocations: 3710)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | Allocations: 3802)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 1.5ms | Allocations: 4498)
+
+
+  
+ActionView::Template::Error (undefined method `users_path' for #<ActionView::Base:0x000000001003b0>):
+    13: 
+    14:         </div>
+    15:     <%end%>
+    16:     <%= button_to "Usuń konto", User, method: :delete%>
+    17: </div>
+  
+app/views/home/index.html.erb:16
+Started GET "/" for 127.0.0.1 at 2023-11-19 16:51:44 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:10
+  Rendered home/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 3746)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 3838)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 1.3ms | Allocations: 4534)
+
+
+  
+ActionView::Template::Error (undefined method `users_path' for #<ActionView::Base:0x000000001056a8>):
+    13: 
+    14:         </div>
+    15:     <%end%>
+    16:     <%= button_to "Usuń konto", User, method: :delete%>
+    17: </div>
+  
+app/views/home/index.html.erb:16
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <main> at /home/zbychu/Pulpit/Kursy/config/environment.rb:5)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started GET "/" for 127.0.0.1 at 2023-11-19 16:56:33 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:10
+  Rendered home/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 2707)
+  Rendered home/_header.erb (Duration: 0.4ms | Allocations: 395)
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | Allocations: 4394)
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 0.9ms | Allocations: 5112)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-11-19 16:57:22 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.9ms | Allocations: 687)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.4ms | Allocations: 2036)
+  Rendered home/_header.erb (Duration: 0.2ms | Allocations: 151)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 3202)
+Completed 200 OK in 8ms (Views: 4.4ms | ActiveRecord: 0.0ms | Allocations: 7669)
+
+
+Started GET "/" for 127.0.0.1 at 2023-11-19 16:57:25 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/home/index.html.erb:6
+  Rendered home/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 648)
+  Rendered home/_header.erb (Duration: 0.2ms | Allocations: 122)
+  Rendered layout layouts/application.html.erb (Duration: 2.1ms | Allocations: 1730)
+Completed 200 OK in 2ms (Views: 2.3ms | ActiveRecord: 0.1ms | Allocations: 1969)
+
+
