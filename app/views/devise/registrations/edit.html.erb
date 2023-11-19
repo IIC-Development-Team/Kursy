@@ -1,43 +1,51 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
+    <div class="login-form" style="margin-top: 100px;">
+        <h2 class="update-text">Akutalizuj dane</h2>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
+        <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+          <%= render "devise/shared/error_messages", resource: resource %>
 
-  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
-  <% end %>
+          <div class="field">
+            <%= f.label :email, class: 'update-text' %><br />
+            <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "login-input" %>
+          </div>
 
-  <div class="field">
-    <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-    <% if @minimum_password_length %>
-      <br />
-      <em><%= @minimum_password_length %> characters minimum</em>
-    <% end %>
-  </div>
+          <div class="field">
+            <%= f.label :Nazwa_użytkownika %><br />
+            <%= f.text_field :username, autofocus: true, autocomplete: "username", class: 'login-input' %>
+          </div>
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
+          <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+            <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+          <% end %>
 
-  <div class="field">
-    <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-    <%= f.password_field :current_password, autocomplete: "current-password" %>
-  </div>
+          <div class="field">
+            <%= f.label :password, class: 'update-text' %> <i class="update-text">(leave blank if you don't want to change it)</i><br />
+            <%= f.password_field :password, autocomplete: "new-password", class: "login-input" %>
+            <% if @minimum_password_length %>
+              <br />
+              <em class="update-text"><%= @minimum_password_length %> characters minimum</em>
+            <% end %>
+          </div>
 
-  <div class="actions">
-    <%= f.submit "Update" %>
-  </div>
-<% end %>
+          <div class="field">
+            <%= f.label :password_confirmation, class: 'update-text' %><br />
+            <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "login-input" %>
+          </div>
 
-<h3>Cancel my account</h3>
+          <div class="field">
+            <%= f.label :current_password, class: 'update-text' %> <i class="update-text">(we need your current password to confirm your changes)</i><br />
+            <%= f.password_field :current_password, autocomplete: "current-password", class: "login-input" %>
+          </div>
 
-<div>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?", turbo_confirm: "Are you sure?" }, method: :delete %></div>
+          <div class="actions">
+            <%= f.submit "Aktualizuj", class: 'login-submit' %>
+          </div>
+        <% end %>
 
-<%= link_to "Back", :back %>
+        <h3 class="update-text">Usuń moje konto</h3>
+
+        <div><span class="update-text">Rezygnujesz?</span> <%= button_to "Usuń konto", registration_path(resource_name), data: { confirm: "Are you sure?", turbo_confirm: "Are you sure?" }, method: :delete, class: 'login-submit' %></div>
+
+        <%= link_to "Back", :back, class: 'login-link update-text' %>
+    </div>

@@ -89,6 +89,7 @@ html, body
 .login-form
 {
     text-align: center;
+    color: silver;
 }
 
 .login-input
@@ -155,4 +156,9 @@ html, body
 .welcome
 {
     text-align: center;
+}
+
+.update-text
+{
+    font-size: 25px;
 }

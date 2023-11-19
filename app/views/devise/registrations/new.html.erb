@@ -11,6 +11,11 @@
           </div>
 
           <div class="field">
+            <%= f.label :Nazwa_użytkownika %><br />
+            <%= f.text_field :username, autofocus: true, autocomplete: "username", class: 'login-input' %>
+          </div>
+
+          <div class="field">
             <%= f.label :Hasło %>
             <% if @minimum_password_length %>
             <em>(<%= @minimum_password_length %> znaków minimum)</em>
