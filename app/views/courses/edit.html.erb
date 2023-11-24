@@ -1,10 +1,14 @@
-<h1>Editing course</h1>
+<div class="main-content">
+    <div class="container">
+        <h1>Editing course</h1>
 
-<%= render "form", course: @course %>
+        <%= render "form", course: @course %>
 
-<br>
+        <br>
 
-<div>
-  <%= link_to "Show this course", @course %> |
-  <%= link_to "Back to courses", courses_path %>
+        <div>
+          <%= link_to "Show this course", @course %> |
+          <%= link_to "Back to courses", courses_path %>
+        </div>
+    </div>
 </div>
