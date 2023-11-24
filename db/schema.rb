@@ -10,8 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2023_11_19_160227) do
+ActiveRecord::Schema[7.1].define(version: 2023_11_24_121844) do
+  create_table "courses", force: :cascade do |t|
+    t.string "title"
+    t.text "desc"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "cover_url"
+  end
+
   create_table "films", force: :cascade do |t|
+    t.belongs_to :course, foregin_key: true
     t.string "title"
     t.text "desc"
     t.string "video_url"
@@ -28,7 +37,7 @@ ActiveRecord::Schema[7.1].define(version: 2023_11_19_160227) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.datetime "deleted_at"
-    t.string "username", null: false
+    t.string "username"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

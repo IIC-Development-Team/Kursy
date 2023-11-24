@@ -7324,3 +7324,264 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.2ms | Allocations: 2010)
 
 
+Started GET "/" for 127.0.0.1 at 2023-11-24 13:13:26 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Count (1.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/home/index.html.erb:6
+  Rendered home/index.html.erb within layouts/application (Duration: 4.0ms | Allocations: 782)
+  Rendered home/_header.html.erb (Duration: 0.7ms | Allocations: 144)
+  Rendered layout layouts/application.html.erb (Duration: 9.8ms | Allocations: 1889)
+Completed 200 OK in 11ms (Views: 8.3ms | ActiveRecord: 2.4ms | Allocations: 2137)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-11-24 13:13:28 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.7ms | Allocations: 235)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 8.3ms | Allocations: 1083)
+  Rendered home/_header.html.erb (Duration: 1.7ms | Allocations: 149)
+  Rendered layout layouts/application.html.erb (Duration: 15.5ms | Allocations: 2186)
+Completed 200 OK in 20ms (Views: 17.2ms | ActiveRecord: 0.0ms | Allocations: 2782)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-11-24 13:13:31 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.2ms | Allocations: 221)
+  Rendered devise/shared/_links.html.erb (Duration: 1.0ms | Allocations: 144)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 15.3ms | Allocations: 2066)
+  Rendered home/_header.html.erb (Duration: 2.2ms | Allocations: 152)
+  Rendered layout layouts/application.html.erb (Duration: 21.8ms | Allocations: 3175)
+Completed 200 OK in 27ms (Views: 23.6ms | ActiveRecord: 0.0ms | Allocations: 4106)
+
+
+Started POST "/users" for 127.0.0.1 at 2023-11-24 13:13:53 +0100
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"zprzybyla@tuta.io", "username"=>"ShadowGamer3301", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Załóż konto"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (2.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "zprzybyla@tuta.io"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at", "deleted_at", "username") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["email", "zprzybyla@tuta.io"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2023-11-24 12:13:54.043418"], ["updated_at", "2023-11-24 12:13:54.043418"], ["deleted_at", nil], ["username", "ShadowGamer3301"]]
+  [1m[36mTRANSACTION (3.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 303 See Other in 589ms (ActiveRecord: 6.3ms | Allocations: 11250)
+
+
+Started GET "/" for 127.0.0.1 at 2023-11-24 13:13:54 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:10
+  Rendered home/index.html.erb within layouts/application (Duration: 6.6ms | Allocations: 1552)
+  Rendered home/_header.html.erb (Duration: 2.2ms | Allocations: 230)
+  Rendered layout layouts/application.html.erb (Duration: 17.1ms | Allocations: 2750)
+Completed 200 OK in 19ms (Views: 17.8ms | ActiveRecord: 0.5ms | Allocations: 2998)
+
+
+Started GET "/users/edit" for 127.0.0.1 at 2023-11-24 13:14:00 +0100
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 13)
+  Rendered devise/registrations/edit.html.erb within layouts/application (Duration: 11.7ms | Allocations: 2093)
+  Rendered home/_header.html.erb (Duration: 0.8ms | Allocations: 200)
+  Rendered layout layouts/application.html.erb (Duration: 16.5ms | Allocations: 3247)
+Completed 200 OK in 25ms (Views: 18.3ms | ActiveRecord: 0.2ms | Allocations: 4913)
+
+
+Started GET "/" for 127.0.0.1 at 2023-11-24 13:14:11 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:10
+  Rendered home/index.html.erb within layouts/application (Duration: 8.2ms | Allocations: 1184)
+  Rendered home/_header.html.erb (Duration: 1.0ms | Allocations: 208)
+  Rendered layout layouts/application.html.erb (Duration: 15.0ms | Allocations: 2352)
+Completed 200 OK in 17ms (Views: 16.1ms | ActiveRecord: 0.5ms | Allocations: 2599)
+
+
+Started GET "/home/contact" for 127.0.0.1 at 2023-11-24 13:14:45 +0100
+Processing by HomeController#contact as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/contact.html.erb within layouts/application
+  Rendered home/contact.html.erb within layouts/application (Duration: 0.6ms | Allocations: 80)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:5
+  Rendered home/_header.html.erb (Duration: 4.2ms | Allocations: 800)
+  Rendered layout layouts/application.html.erb (Duration: 8.9ms | Allocations: 2053)
+Completed 200 OK in 10ms (Views: 9.7ms | ActiveRecord: 0.1ms | Allocations: 2300)
+
+
+Started GET "/" for 127.0.0.1 at 2023-11-24 13:14:46 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:10
+  Rendered home/index.html.erb within layouts/application (Duration: 7.8ms | Allocations: 1194)
+  Rendered home/_header.html.erb (Duration: 0.7ms | Allocations: 208)
+  Rendered layout layouts/application.html.erb (Duration: 11.8ms | Allocations: 2362)
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.6ms | Allocations: 2609)
+
+
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from block in tsort_each at /usr/lib/ruby/3.2.0/tsort.rb:228)
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from block in tsort_each at /usr/lib/ruby/3.2.0/tsort.rb:228)
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from block in tsort_each at /usr/lib/ruby/3.2.0/tsort.rb:228)
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateCourses (20231124121618)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "courses" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "desc" text, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20231124121618') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2023-11-24 13:16:36 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:10
+  Rendered home/index.html.erb within layouts/application (Duration: 25.1ms | Allocations: 6257)
+  Rendered home/_header.html.erb (Duration: 6.2ms | Allocations: 555)
+  Rendered layout layouts/application.html.erb (Duration: 45.4ms | Allocations: 8099)
+Completed 200 OK in 56ms (Views: 43.7ms | ActiveRecord: 4.2ms | Allocations: 9618)
+
+
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from block in tsort_each at /usr/lib/ruby/3.2.0/tsort.rb:228)
+Started GET "/" for 127.0.0.1 at 2023-11-24 13:17:47 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:10
+  Rendered home/index.html.erb within layouts/application (Duration: 36.9ms | Allocations: 6230)
+  Rendered home/_header.html.erb (Duration: 2.3ms | Allocations: 588)
+  Rendered layout layouts/application.html.erb (Duration: 46.5ms | Allocations: 8112)
+Completed 200 OK in 55ms (Views: 45.8ms | ActiveRecord: 4.2ms | Allocations: 9632)
+
+
+Started GET "/courses" for 127.0.0.1 at 2023-11-24 13:17:48 +0100
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:6
+  Rendered courses/index.html.erb within layouts/application (Duration: 8.7ms | Allocations: 931)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:6
+  Rendered home/_header.html.erb (Duration: 3.3ms | Allocations: 812)
+  Rendered layout layouts/application.html.erb (Duration: 16.4ms | Allocations: 2716)
+Completed 200 OK in 23ms (Views: 18.8ms | ActiveRecord: 0.3ms | Allocations: 3662)
+
+
+Started GET "/courses/new" for 127.0.0.1 at 2023-11-24 13:18:14 +0100
+Processing by CoursesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/new.html.erb within layouts/application
+  Rendered courses/_form.html.erb (Duration: 16.0ms | Allocations: 1471)
+  Rendered courses/new.html.erb within layouts/application (Duration: 17.5ms | Allocations: 1751)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:6
+  Rendered home/_header.html.erb (Duration: 6.9ms | Allocations: 805)
+  Rendered layout layouts/application.html.erb (Duration: 30.4ms | Allocations: 3514)
+Completed 200 OK in 47ms (Views: 31.5ms | ActiveRecord: 0.8ms | Allocations: 8082)
+
+
+Started GET "/courses" for 127.0.0.1 at 2023-11-24 13:18:20 +0100
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:6
+  Rendered courses/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 633)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:6
+  Rendered home/_header.html.erb (Duration: 3.5ms | Allocations: 806)
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | Allocations: 2398)
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.2ms | Allocations: 2658)
+
+
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from block in tsort_each at /usr/lib/ruby/3.2.0/tsort.rb:228)
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from block in tsort_each at /usr/lib/ruby/3.2.0/tsort.rb:228)
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddUrlToCourses (20231124121844)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (5.1ms)[0m  [1m[35mALTER TABLE "courses" ADD "cover_url" varchar[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20231124121844') RETURNING "version"[0m
+  [1m[36mTRANSACTION (3.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/courses" for 127.0.0.1 at 2023-11-24 13:22:03 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:6
+  Rendered courses/index.html.erb within layouts/application (Duration: 5.9ms | Allocations: 1225)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:6
+  Rendered home/_header.html.erb (Duration: 14.9ms | Allocations: 5659)
+  Rendered layout layouts/application.html.erb (Duration: 25.9ms | Allocations: 8175)
+Completed 200 OK in 37ms (Views: 24.5ms | ActiveRecord: 4.0ms | Allocations: 10291)
+
+
+Started GET "/" for 127.0.0.1 at 2023-11-24 13:22:04 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:10
+  Rendered home/index.html.erb within layouts/application (Duration: 11.7ms | Allocations: 1390)
+  Rendered home/_header.html.erb (Duration: 1.3ms | Allocations: 236)
+  Rendered layout layouts/application.html.erb (Duration: 19.9ms | Allocations: 2599)
+Completed 200 OK in 23ms (Views: 22.0ms | ActiveRecord: 0.8ms | Allocations: 3056)
+
+
+Started GET "/" for 127.0.0.1 at 2023-11-24 13:30:33 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Count (2.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:10
+  Rendered home/index.html.erb within layouts/application (Duration: 30.5ms | Allocations: 5576)
+  Rendered home/_header.html.erb (Duration: 2.6ms | Allocations: 587)
+  Rendered layout layouts/application.html.erb (Duration: 38.9ms | Allocations: 7450)
+Completed 200 OK in 48ms (Views: 36.8ms | ActiveRecord: 5.1ms | Allocations: 8968)
+
+
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from block in tsort_each at /usr/lib/ruby/3.2.0/tsort.rb:228)
+Started GET "/" for 127.0.0.1 at 2023-11-24 14:04:52 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Count (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/home/index.html.erb:6
+  Rendered home/index.html.erb within layouts/application (Duration: 26.4ms | Allocations: 3612)
+  Rendered home/_header.html.erb (Duration: 1.8ms | Allocations: 601)
+  Rendered layout layouts/application.html.erb (Duration: 97.3ms | Allocations: 25155)
+Completed 200 OK in 112ms (Views: 100.6ms | ActiveRecord: 3.5ms | Allocations: 28484)
+
+
