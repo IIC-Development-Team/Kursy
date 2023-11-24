@@ -20,7 +20,6 @@ ActiveRecord::Schema[7.1].define(version: 2023_11_24_121844) do
   end
 
   create_table "films", force: :cascade do |t|
-    t.belongs_to :course, foregin_key: true
     t.string "title"
     t.text "desc"
     t.string "video_url"
