@@ -7585,3 +7585,4 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 112ms (Views: 100.6ms | ActiveRecord: 3.5ms | Allocations: 28484)
 
 
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from block in tsort_each at /usr/lib/ruby/3.2.0/tsort.rb:228)
