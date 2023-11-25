@@ -1,10 +1,8 @@
 <p style="color: green"><%= notice %></p>
 
-
-
-
 <div class="main-content">
     <div class="container">
+      <%if user_signed_in?%>
         <h1>Nasze kursy</h1>
 
         <div id="courses">
@@ -16,8 +14,13 @@
           <% end %>
         </div>
 
-      <%if user_signed_in?%>
-        <%= link_to "Stwórz kurs", new_course_path %>
+        <% if current_user.admin %>
+          <%= link_to "Stwórz kurs", new_course_path %>
+        <% end %>
+
+      <% else %>
+        <h1>Zaloguje się by przeglądać kursy!</h1>
       <% end %>
+
     </div>
 </div>

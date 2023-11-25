@@ -1,12 +1,16 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @course %>
-
-<div>
-  <%= link_to "Back to courses", courses_path %>
-
-  <% if user_signed_in? %>
-  <%= link_to "Edit this course", edit_course_path(@course) %>
-  <%= button_to "Destroy this course", @course, method: :delete %>
-  <% end %>
+<div class="main-content">
+    <div class="container">
+    <% if user_signed_in? %>
+      <%= render @course %>
+      <div>
+        <%= link_to "Back to courses", courses_path %>
+        <% if current_user.admin %>
+        <%= link_to "Edit this course", edit_course_path(@course) %>
+        <%= button_to "Destroy this course", @course, method: :delete %>
+        <% end %>
+      </div>
+    <% end %>
+    </div>
 </div>
