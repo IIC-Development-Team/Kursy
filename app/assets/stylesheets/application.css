@@ -14,19 +14,47 @@
  *= require_self
  */
 
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+* {
+    --bg-color-acc: #8a2be2;
+    --bg-color: #2b2b2b;
+
+    --selection: #1b1b1b;
+    --selection-color: white;
+}
+
 html, body
 {
-    background-color: rgb(43, 43, 43);
+    background-color: #2b2b2b;
+    font-family: 'Poppins', sans-serif;
+}
+
+*::selection{
+    background-color: var(--selection);
+    color: var(--selection-color);
 }
 
 .main-nav
 {
     position: fixed;
-    background-color: blueviolet;
+    background-color: var(--bg-color-acc);
     top: 0;
     left: 0;
     width: 100%;
     height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-menu, .main-konto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-transform: uppercase;
 }
 
 .nav-link
@@ -34,8 +62,7 @@ html, body
     text-decoration: none;
     color: white;
     font-size: 25px;
-    margin-top: 15px;
-    margin-left: 20px;
+    margin-left: 30px;
     float: left;
 }
 
@@ -63,15 +90,23 @@ html, body
 
 .nav-login
 {
-    background-color: white;
-    color: blueviolet;
-    float: right;
-    margin-right: 20px;
-    margin-top: 10px;
+    background-color: blueviolet;
+    color: white;
+    border: 1px solid white;
+    margin-right: 30px;
     font-size: 20px;
     border-radius: 20px;
-    padding: 5px;
+    padding: 5px 15px;
     text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: 150ms ease-out;
+}
+
+.nav-login:hover {
+    color: blueviolet;
+    background-color: white;
+    border: 1px solid blueviolet;
 }
 
 .stat-counter
