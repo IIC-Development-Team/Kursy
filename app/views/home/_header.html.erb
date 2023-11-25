@@ -7,12 +7,12 @@
     </div>
     <div class="main-konto">
         <% if user_signed_in? %>
-            <%= link_to  "Moje konto", edit_user_registration_path, class: 'nav-login' %>
+            <%= link_to  "Moje konto", edit_user_registration_path, class: 'nav-login nav-fill' %>
         <%end%>
         
         <% if !user_signed_in? %>
             <%= link_to  "Sign in", new_user_session_path, class: 'nav-login' %>
-            <%= link_to "Sign up", new_user_registration_path, class: 'nav-login' %>
+            <%= link_to "Sign up", new_user_registration_path, class: 'nav-login nav-fill' %>
         <%else%>
             <%= button_to  "Wyloguj", destroy_user_session_path, :method=>'delete' , class: 'nav-login' %> <!-- Partyk tutaj nie ma dużych liter! Poza tym przycisk jest mniejszy od reszty elementów-->
         <%end%>

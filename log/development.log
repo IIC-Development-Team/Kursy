@@ -10187,3 +10187,52 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.1ms | Allocations: 2037)
 
 
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <main> at D:/Programowanie/Projekt/Kursy/config/environment.rb:5)
+Started GET "/" for 127.0.0.1 at 2023-11-26 00:30:32 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/home/index.html.erb:6
+  Rendered home/index.html.erb within layouts/application (Duration: 25.9ms | Allocations: 5367)
+  Rendered home/_header.html.erb (Duration: 1.6ms | Allocations: 681)
+  Rendered layout layouts/application.html.erb (Duration: 101.9ms | Allocations: 28292)
+Completed 200 OK in 122ms (Views: 109.4ms | ActiveRecord: 2.2ms | Allocations: 31920)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-11-26 00:30:36 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.8ms | Allocations: 233)
+  Rendered devise/shared/_links.html.erb (Duration: 1.2ms | Allocations: 600)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 119.4ms | Allocations: 4046)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 219)
+  Rendered layout layouts/application.html.erb (Duration: 122.8ms | Allocations: 5318)
+Completed 200 OK in 219ms (Views: 151.9ms | ActiveRecord: 0.2ms | Allocations: 21918)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-11-26 00:30:38 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.0ms | Allocations: 254)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 26.4ms | Allocations: 1788)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 192)
+  Rendered layout layouts/application.html.erb (Duration: 29.5ms | Allocations: 2976)
+Completed 200 OK in 36ms (Views: 32.9ms | ActiveRecord: 0.0ms | Allocations: 4017)
+
+
+Started GET "/" for 127.0.0.1 at 2023-11-26 00:30:42 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/home/index.html.erb:6
+  Rendered home/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 645)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 184)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | Allocations: 1828)
+Completed 200 OK in 7ms (Views: 4.7ms | ActiveRecord: 0.1ms | Allocations: 2097)
+
+

@@ -100,14 +100,16 @@ html, body
     text-decoration: none;
     font-weight: 600;
     letter-spacing: 1px;
-    transition: 150ms ease-out;
+    text-transform: uppercase;
+    cursor: pointer;
 }
 
-.nav-login:hover {
+.nav-fill {
     color: blueviolet;
     background-color: white;
     border: 1px solid blueviolet;
 }
+
 
 .stat-counter
 {
