@@ -4,3 +4,5 @@ tmp/cache/assets/*
 tmp/cache/bootsnap/*
 tmp/pids/*
 log/development.log
+storage/development.sqlite3-shm
+storage/development.sqlite3-wal
