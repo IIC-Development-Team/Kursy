@@ -1,12 +1,15 @@
 source "https://rubygems.org"
 
-ruby "3.0.2"
+ruby "3.2.2"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.1.2"
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
+
+# tzinfo-data
+gem "tzinfo-data"
 
 # Use sqlite3 as the database for Active Record
 gem "sqlite3", "~> 1.4"
