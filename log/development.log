@@ -14681,3 +14681,41 @@ Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-11-26 17:15:06 +0
   
 ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
   
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <main> at D:/Programowanie/Projekt/Kursy/config/environment.rb:5)
+Started GET "/" for 127.0.0.1 at 2023-11-26 17:19:55 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:10
+  Rendered home/index.html.erb within layouts/application (Duration: 271.3ms | Allocations: 23009)
+  Rendered home/_header.html.erb (Duration: 1.2ms | Allocations: 794)
+  Rendered layout layouts/application.html.erb (Duration: 1095.9ms | Allocations: 59313)
+Completed 200 OK in 1200ms (Views: 1146.7ms | ActiveRecord: 2.2ms | Allocations: 62938)
+
+
+Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-11-26 17:19:57 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
+  
+Started GET "/" for 127.0.0.1 at 2023-11-26 17:20:11 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:10
+  Rendered home/index.html.erb within layouts/application (Duration: 8.6ms | Allocations: 6552)
+  Rendered home/_header.html.erb (Duration: 1.2ms | Allocations: 675)
+  Rendered layout layouts/application.html.erb (Duration: 48.9ms | Allocations: 8585)
+Completed 200 OK in 58ms (Views: 51.4ms | ActiveRecord: 2.2ms | Allocations: 10146)
+
+
+Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-11-26 17:20:12 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
+  

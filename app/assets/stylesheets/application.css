@@ -26,6 +26,8 @@
 
     --selection: #1b1b1b;
     --selection-color: white;
+
+
     font-family: 'Poppins', sans-serif;
 }
 
@@ -71,9 +73,6 @@ html, body
 
 .main-content
 {
-    position: fixed;
-    top: 0;
-    left: 0;
     margin-top: 150px;
     margin-left: 200px;
     margin-right: 200px;
@@ -149,6 +148,7 @@ html, body
     color: white;
     border-radius: 5px;
     display: none;
+    z-index: 9999;
 }
 
 .nav-profile-menu hr {
@@ -184,6 +184,7 @@ ul li {
     font-size: 18px;
     cursor: pointer;
     width: fit-content;
+    z-index: 999999;
 }
 
 .logout-btn {
