@@ -6,15 +6,59 @@
         <%= link_to "Contact", home_contact_path, class: 'nav-link'%>
     </div>
     <div class="main-konto">
+        
         <% if user_signed_in? %>
-            <%= link_to  "Moje konto", edit_user_registration_path, class: 'nav-login nav-fill' %>
+            <div class="nav-profile">
+                <div class="nav-pfp">
+                    <img class="nav-pfp" src="app/images/pfp/prof_0.png" alt="pfp" />
+                </div>
+                <input type="checkbox" class="nav-profile-box">
+                <ul class="nav-profile-menu">
+                    <li>"Nazwa"</li>
+                    <hr>
+                    <li><%= link_to  "Moje konto", edit_user_registration_path, class: 'menu-elem' %></li>
+                    <li>Ustawienia</li> <!-- Ustaw we wszystkich elementach tego menu clase "menu-elem" -->
+                    <hr>
+                    <li>Dodaj konto</li>
+                    <li><%= button_to "Wyloguj", destroy_user_session_path, :method=>'delete' , class: 'logout-btn menu-elem' %></li>
+                </ul>
+            </div>
         <%end%>
         
         <% if !user_signed_in? %>
             <%= link_to  "Sign in", new_user_session_path, class: 'nav-login' %>
             <%= link_to "Sign up", new_user_registration_path, class: 'nav-login nav-fill' %>
-        <%else%>
-            <%= button_to  "Wyloguj", destroy_user_session_path, :method=>'delete' , class: 'nav-login' %> <!-- Partyk tutaj nie ma dużych liter! Poza tym przycisk jest mniejszy od reszty elementów-->
         <%end%>
     </div>
 </nav>
+
+<script>
+   const img = document.querySelector(".nav-profile-box");
+    const menu = document.querySelector(".nav-profile-menu");
+    let x = 1;
+
+    function showMenu() {
+    if (x === 1) {
+        menu.style.display = "block";
+        x = 0;
+    } else {
+        menu.style.display = "none";
+        x = 1;
+    }
+    }
+
+    function closeMenu(event) {
+        if (event.target !== menu && event.target !== img && !menu.contains(event.target)
+        ) {
+            menu.style.display = "none";
+            x = 1;
+        }
+    }
+
+    img.addEventListener("click", () => {
+        showMenu();
+    });
+
+    document.addEventListener("click", closeMenu);
+
+</script>
