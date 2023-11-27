@@ -1,13 +1,25 @@
 <p style="color: green"><%= notice %></p>
+<% require "youtube_embed" %>
 
 <div class="main-content">
     <div class="container">
     <% if user_signed_in? %>
       <%= render @course %>
+
+      <div id="films">
+    <% @films.each do |film| %>
+      <%= YoutubeEmbed::Video.iframe(film.video_url) %>
+      <p>
+        <%= link_to "Show this film", film %>
+      </p>
+    <% end %>
+  </div>
+
       <div>
         <%= link_to "Back to courses", courses_path %>
         <% if current_user.admin %>
         <%= link_to "Edit this course", edit_course_path(@course) %>
+        <%= link_to "Add content", new_film_path %>
         <%= button_to "Destroy this course", @course, method: :delete %>
         <% end %>
       </div>

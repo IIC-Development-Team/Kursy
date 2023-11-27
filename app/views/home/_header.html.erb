@@ -14,10 +14,10 @@
                 </div>
                 <input type="checkbox" class="nav-profile-box">
                 <ul class="nav-profile-menu">
-                    <li>"Nazwa"</li>
+                    <li><%= current_user.username %></li>
                     <hr>
                     <li><%= link_to  "Moje konto", edit_user_registration_path, class: 'menu-elem' %></li>
-                    <li>Ustawienia</li> <!-- Ustaw we wszystkich elementach tego menu clase "menu-elem" -->
+                    <li class='menu-elem'>Ustawienia</li> <!-- Ustaw we wszystkich elementach tego menu clase "menu-elem" -->
                     <hr>
                     <li>Pomoc</li>
                     <li>Wsparcie</li>
