@@ -3246,3 +3246,97 @@ Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-11-27 21:26:09 +0
   
 ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
   
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <main> at D:/Programowanie/Projekt/Kursy/config/environment.rb:5)
+Started GET "/users/edit" for 127.0.0.1 at 2023-11-28 18:17:55 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.7ms | Allocations: 241)
+  Rendered devise/registrations/edit.html.erb within layouts/application (Duration: 160.3ms | Allocations: 4193)
+  Rendered home/_header.html.erb (Duration: 1.5ms | Allocations: 699)
+  Rendered layout layouts/application.html.erb (Duration: 546.9ms | Allocations: 26981)
+Completed 200 OK in 1237ms (Views: 842.2ms | ActiveRecord: 2.2ms | Allocations: 54870)
+
+
+Started GET "/users/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-11-28 18:17:57 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/app/images/pfp/prof_0.png"):
+  
+Started GET "/" for 127.0.0.1 at 2023-11-28 18:17:58 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:10
+  Rendered home/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1470)
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 280)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 2837)
+Completed 200 OK in 12ms (Views: 9.9ms | ActiveRecord: 0.1ms | Allocations: 3513)
+
+
+Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-11-28 18:17:58 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses" for 127.0.0.1 at 2023-11-28 18:18:01 +0100
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:5
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:9
+  Rendered courses/_course.html.erb (Duration: 0.8ms | Allocations: 260)
+  Rendered courses/index.html.erb within layouts/application (Duration: 30.1ms | Allocations: 7872)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 218)
+  Rendered layout layouts/application.html.erb (Duration: 33.9ms | Allocations: 9117)
+Completed 200 OK in 60ms (Views: 37.1ms | ActiveRecord: 0.3ms | Allocations: 10094)
+
+
+Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-11-28 18:18:01 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses" for 127.0.0.1 at 2023-11-28 18:18:54 +0100
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:5
+  [1m[36mCourse Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:9
+  Rendered courses/_course.html.erb (Duration: 0.1ms | Allocations: 32)
+  Rendered courses/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1333)
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 216)
+  Rendered layout layouts/application.html.erb (Duration: 635.1ms | Allocations: 16493)
+Completed 200 OK in 638ms (Views: 635.4ms | ActiveRecord: 0.1ms | Allocations: 16781)
+
+
+Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-11-28 18:18:55 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses" for 127.0.0.1 at 2023-11-28 18:18:59 +0100
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:5
+  [1m[36mCourse Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:9
+  Rendered courses/_course.html.erb (Duration: 0.1ms | Allocations: 32)
+  Rendered courses/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1352)
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 216)
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | Allocations: 2625)
+Completed 200 OK in 10ms (Views: 8.2ms | ActiveRecord: 0.1ms | Allocations: 2905)
+
+
+Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-11-28 18:18:59 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
+  
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <main> at D:/Programowanie/Projekt/Kursy/config/environment.rb:5)
