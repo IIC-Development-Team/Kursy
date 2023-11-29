@@ -56,6 +56,7 @@ html, body
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 999999999999;
 }
 
 .main-menu, .main-konto {
@@ -291,4 +292,49 @@ ul li {
 .update-text
 {
     font-size: 2.5rem;
+}
+
+.course {
+    width: 26rem;
+    height: 38rem;
+    overflow: hidden;
+    border: 1px solid var(--bg-color-acc);
+    position: relative;
+    border-radius: 10px;
+}
+
+.course-cover {
+    width: auto;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(-50%);
+}
+
+.course-details {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color:#3e265391;
+    backdrop-filter: blur(5px);
+    z-index: 9;
+    padding: 0.5rem;
+}
+
+.course-title {
+    font-size: 2.4rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.course-desc {
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: white;
 }
