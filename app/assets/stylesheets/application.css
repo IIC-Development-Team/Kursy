@@ -301,6 +301,7 @@ ul li {
     border: 1px solid var(--bg-color-acc);
     position: relative;
     border-radius: 10px;
+    cursor: pointer;
 }
 
 .course-cover {
@@ -308,8 +309,14 @@ ul li {
     height: 100%;
     position: absolute;
     top: 0;
-    left: 0;
-    transform: translateX(-50%);
+    left: 50%;
+    transform: translateX(-50%) scale(1);
+    transform-origin: center;
+    transition: scale 200ms ease-out;
+}
+
+.course:hover .course-cover {
+    scale: 1.01;
 }
 
 .course-details {
