@@ -328,6 +328,7 @@ ul li {
     backdrop-filter: blur(5px);
     z-index: 9;
     padding: 0.5rem;
+    transition: 200ms ease-out;
 }
 
 .course-title {

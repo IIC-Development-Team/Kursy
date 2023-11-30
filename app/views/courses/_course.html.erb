@@ -10,7 +10,30 @@
   </div>
 
   <p>
-    <%= image_tag course.cover_url, class:"course-cover" %> <!-- Jeż weź zrób żeby ta okładka była jakiegoś sensownego rozmiaru IDK, jakieś 480x320, poeksperymentuj -->
+    <%= image_tag course.cover_url, class:"course-cover" %>
   </p>
 
 </div>
+
+<script>
+ const desc = document.querySelector(".course-desc")
+ const title = document.querySelector(".course-title")
+ const details = document.querySelector(".course-details")
+ const course = document.querySelector(".course")
+
+ console.log(desc.offsetHeight, title.offsetHeight)
+ console.log(desc.offsetHeight + title.offsetHeight, details.offsetHeight)
+ const odej = details.offsetHeight - title.offsetHeight - 10
+ 
+ details.style.bottom = -odej + "px"
+
+
+ course.addEventListener("mouseleave", () => {
+  details.style.bottom = -odej + "px"
+ })
+ course.addEventListener("mouseenter", () => {
+  details.style.bottom = 0
+ })
+ 
+
+</script>
