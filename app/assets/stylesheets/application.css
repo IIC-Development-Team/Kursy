@@ -309,7 +309,7 @@ ul li {
 
 .update-text
 {
-    font-size: 2.5rem;
+    font-size: 6rem;
 }
 
 .course {
@@ -363,4 +363,19 @@ ul li {
 a {
     text-decoration: none;
     color: white;
+}
+
+.user-edit-text {
+    font-size: 2.8rem;
+    color: white;
+}
+
+.hr-edited {
+    width: 43%;
+}
+
+.delete-account {
+    display: flex;
+    justify-content: center;
+   
 }

@@ -6844,3 +6844,4 @@ Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-01 00:40:10 +0
   
 ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
   
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <main> at C:/Users/Johan Faust/Desktop/Kursy/config/environment.rb:5)
