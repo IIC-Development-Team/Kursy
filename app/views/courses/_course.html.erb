@@ -16,13 +16,10 @@
 </div>
 
 <script>
- const desc = document.querySelector(".course-desc")
  const title = document.querySelector(".course-title")
  const details = document.querySelector(".course-details")
  const course = document.querySelector(".course")
 
- console.log(desc.offsetHeight, title.offsetHeight)
- console.log(desc.offsetHeight + title.offsetHeight, details.offsetHeight)
  const odej = details.offsetHeight - title.offsetHeight - 10
  
  details.style.bottom = -odej + "px"
