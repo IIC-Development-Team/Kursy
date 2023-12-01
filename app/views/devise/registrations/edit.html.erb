@@ -17,14 +17,12 @@
           <%= render "devise/shared/error_messages", resource: resource %>
 
           <div class="field">
-            <h1 class="user-edit-text">Zmień nazwę użytkownika</h1>
+            <h1 class="user-edit-text change-data">Nazwa użytkownika</h1>
             <%= f.text_field :username, autofocus: true, autocomplete: "username", class: 'login-input' %>
           </div>
 
-          <hr>
-
           <div class="field">
-            <h1 class="user-edit-text">Edytuj Email</h1>
+            <h1 class="user-edit-text change-data">Email</h1>
             <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "login-input" %>
           </div>
 
@@ -44,7 +42,7 @@
           <hr>
 
           <div class="aktualizuj-dane"> 
-            <%= f.submit "Aktualizuj", class: 'login-submit' %>
+            <%= f.submit "Aktualizuj", class: 'login-submit accept' %>
           </div>
 
           

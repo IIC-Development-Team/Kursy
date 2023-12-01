@@ -82,7 +82,7 @@ html, body
     position: relative
 }
 
-.nav-link:after {
+.nav-link::after {
     content: "";
     display: block;
     position: absolute;
@@ -247,7 +247,6 @@ ul li {
 
 .login-input
 {
-    /* border: 2px solid blueviolet; */
     border:none;
     background-color: #1f1f1f;
     color: silver;
@@ -264,13 +263,13 @@ ul li {
     background-color: #1f1f1f;
     color: silver;
     font-size: 2.5rem;
-    border-radius: 50px;
+    border-radius: 2px;
     margin-bottom: 30px;
     padding: 10px 20px;
     text-decoration: none;
     width: 200px;
     height: 60px;
-    /* box-shadow: inset 2px 2px 2px black; */
+    box-shadow: inset -2px -2px 2px white;
     position: relative;
     cursor: pointer;
     transition: 200ms ease-out;
@@ -279,6 +278,10 @@ ul li {
 .login-submit:hover {
     color: #1f1f1f;
     background-color: silver;
+}
+
+.accept {
+    color: rgb(2, 119, 21);
 }
 
 .login-no-account
@@ -374,6 +377,13 @@ a {
     color: white;
 }
 
+.change-data {
+    font-size: 1.8rem;
+    position: absolute;
+    top: 10px;
+    text-transform: uppercase;
+}
+
 .delete-account, .aktualizuj-dane {
     text-align: center;
 }
@@ -403,4 +413,11 @@ a {
     justify-content: space-between;
     align-items: start;
     background-color: #1f1f1f;
+}
+
+.field {
+    padding: 50px 0 0 0;
+    position: relative;
+    width: fit-content;
+    margin: auto;
 }
