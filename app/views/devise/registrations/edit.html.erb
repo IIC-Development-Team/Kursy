@@ -1,10 +1,17 @@
 
     <div class="login-form" style="margin-top: 100px;">
         <h1 class="update-text">Moje konto</h1>
-        <hr class="hr-edited">
+        <hr>
         <h1 class="user-edit-text">Zmień Avatar</h1>
+        <div class="change-avatar">
+          <img src="#actual-avatar" class="avatar">
+          <div class="rest-avatars">
+            <%# Do zrobienia reszta avatarow, jak beda gotowe to napisac %>
+          </div>
+        </div>
         <br>
-        <hr class="hr-edited">
+
+        <hr>
 
         <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
           <%= render "devise/shared/error_messages", resource: resource %>
@@ -14,29 +21,33 @@
             <%= f.text_field :username, autofocus: true, autocomplete: "username", class: 'login-input' %>
           </div>
 
-          <hr class="hr-edited">
+          <hr>
 
           <div class="field">
             <h1 class="user-edit-text">Edytuj Email</h1>
             <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "login-input" %>
           </div>
 
-          <hr class="hr-edited">
+          <hr>
           <h1 class="user-edit-text">Zmień hasło</h1>
           <%= f.submit "Zmień hasło", class: 'login-submit' %> <!-- Trzeba dodać funkcjonalność aby osoba klikająca w przycisk zmień hasło, miała dalsze kroki do zmiany hasła -->
 
           </div>
 
-          <hr class="hr-edited">
+          <hr>
 
-          <div class='delete_account'>
+          <div class='delete-account'>
             <h1 class="user-edit-text">Usuń konto</h1>
             <%= button_to "Usuń konto", registration_path(resource_name), data: { confirm: "Are you sure?", turbo_confirm: "Are you sure?" }, method: :delete, class: 'login-submit' %>
           </div>
 
-          <hr class="hr-edited">
+          <hr>
 
-          <%= f.submit "Aktualizuj", class: 'login-submit' %>
+          <div class="aktualizuj-dane"> 
+            <%= f.submit "Aktualizuj", class: 'login-submit' %>
+          </div>
+
+          
 
           <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
             <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
