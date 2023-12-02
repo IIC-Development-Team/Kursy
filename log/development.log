@@ -9644,3 +9644,3023 @@ Processing by Devise::RegistrationsController#edit as HTML
 Completed 200 OK in 13ms (Views: 8.0ms | ActiveRecord: 0.1ms | Allocations: 11563)
 
 
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <main> at /home/zbychu/Pulpit/Kursy/config/environment.rb:5)
+Started GET "/" for 127.0.0.1 at 2023-12-02 19:35:28 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/home/index.html.erb:6
+  Rendered home/index.html.erb within layouts/application (Duration: 7.5ms | Allocations: 3696)
+  Rendered home/_header.html.erb (Duration: 0.8ms | Allocations: 748)
+  Rendered layout layouts/application.html.erb (Duration: 52.1ms | Allocations: 32869)
+Completed 200 OK in 57ms (Views: 53.1ms | ActiveRecord: 1.2ms | Allocations: 36199)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-12-02 19:35:31 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.3ms | Allocations: 709)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 7.2ms | Allocations: 3383)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 219)
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | Allocations: 4625)
+Completed 200 OK in 34ms (Views: 9.5ms | ActiveRecord: 0.2ms | Allocations: 22247)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2023-12-02 19:35:41 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"zprzybyla@tuta.io", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Zaloguj"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "zprzybyla@tuta.io"], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Completed 303 See Other in 211ms (ActiveRecord: 0.2ms | Allocations: 5652)
+
+
+Started GET "/" for 127.0.0.1 at 2023-12-02 19:35:42 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:10
+  Rendered home/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1262)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 253)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | Allocations: 2478)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.2ms | Allocations: 2727)
+
+
+Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 19:35:42 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
+  
+Started GET "/" for 127.0.0.1 at 2023-12-02 19:35:45 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:10
+  Rendered home/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1198)
+  Rendered home/_header.html.erb (Duration: 0.5ms | Allocations: 231)
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | Allocations: 2403)
+Completed 200 OK in 5ms (Views: 4.9ms | ActiveRecord: 0.2ms | Allocations: 2652)
+
+
+Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 19:35:45 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses" for 127.0.0.1 at 2023-12-02 19:35:46 +0100
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:5
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:9
+  Rendered courses/_course.html.erb (Duration: 0.5ms | Allocations: 267)
+  Rendered courses/index.html.erb within layouts/application (Duration: 13.3ms | Allocations: 7822)
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 220)
+  Rendered layout layouts/application.html.erb (Duration: 15.2ms | Allocations: 9029)
+Completed 200 OK in 17ms (Views: 15.4ms | ActiveRecord: 0.5ms | Allocations: 9967)
+
+
+Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 19:35:46 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses/1" for 127.0.0.1 at 2023-12-02 19:35:53 +0100
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:64:in `set_course'
+  Rendering layout layouts/application.html.erb
+  Rendering courses/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/show.html.erb:6
+  Rendered courses/_course.html.erb (Duration: 0.1ms | Allocations: 35)
+  [1m[36mFilm Load (0.1ms)[0m  [1m[34mSELECT "films".* FROM "films"[0m
+  ↳ app/views/courses/show.html.erb:10
+  Rendered courses/show.html.erb within layouts/application (Duration: 13.6ms | Allocations: 7220)
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 218)
+  Rendered layout layouts/application.html.erb (Duration: 15.9ms | Allocations: 8407)
+Completed 200 OK in 19ms (Views: 15.8ms | ActiveRecord: 0.6ms | Allocations: 10162)
+
+
+Started GET "/courses/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 19:35:53 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/courses/app/images/pfp/prof_0.png"):
+  
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <main> at /home/zbychu/Pulpit/Kursy/config/environment.rb:5)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "plekus73@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "admin" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2023-12-02 18:36:13.347422"], ["admin", 1], ["id", 6]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/films/2" for 127.0.0.1 at 2023-12-02 19:37:30 +0100
+Processing by FilmsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mFilm Load (0.2ms)[0m  [1m[34mSELECT "films".* FROM "films" WHERE "films"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/films_controller.rb:65:in `set_film'
+  Rendering layout layouts/application.html.erb
+  Rendering films/show.html.erb within layouts/application
+  Rendered films/_film.html.erb (Duration: 0.3ms | Allocations: 195)
+  Rendered films/show.html.erb within layouts/application (Duration: 1.7ms | Allocations: 971)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:10
+  Rendered home/_header.html.erb (Duration: 1.8ms | Allocations: 812)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | Allocations: 2754)
+Completed 200 OK in 8ms (Views: 5.3ms | ActiveRecord: 0.3ms | Allocations: 4258)
+
+
+Started GET "/films/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 19:37:30 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/films/app/images/pfp/prof_0.png"):
+  
+Started GET "/films/2/edit" for 127.0.0.1 at 2023-12-02 19:37:32 +0100
+Processing by FilmsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mFilm Load (0.1ms)[0m  [1m[34mSELECT "films".* FROM "films" WHERE "films"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/films_controller.rb:65:in `set_film'
+  Rendering layout layouts/application.html.erb
+  Rendering films/edit.html.erb within layouts/application
+  Rendered films/_form.html.erb (Duration: 2.1ms | Allocations: 1988)
+  Rendered films/edit.html.erb within layouts/application (Duration: 2.7ms | Allocations: 2307)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:10
+  Rendered home/_header.html.erb (Duration: 0.9ms | Allocations: 810)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 4085)
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 0.1ms | Allocations: 4749)
+
+
+Started GET "/films/2/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 19:37:32 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/films/2/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses" for 127.0.0.1 at 2023-12-02 19:37:34 +0100
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:5
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:9
+  Rendered courses/_course.html.erb (Duration: 0.1ms | Allocations: 35)
+  Rendered courses/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1353)
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 218)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | Allocations: 2544)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.1ms | Allocations: 2805)
+
+
+Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 19:37:34 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses/1" for 127.0.0.1 at 2023-12-02 19:37:38 +0100
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:64:in `set_course'
+  Rendering layout layouts/application.html.erb
+  Rendering courses/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/show.html.erb:6
+  Rendered courses/_course.html.erb (Duration: 0.1ms | Allocations: 35)
+  [1m[36mFilm Load (0.0ms)[0m  [1m[34mSELECT "films".* FROM "films"[0m
+  ↳ app/views/courses/show.html.erb:10
+  Rendered courses/show.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1528)
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 218)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 2714)
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 0.2ms | Allocations: 3328)
+
+
+Started GET "/courses/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 19:37:38 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/courses/app/images/pfp/prof_0.png"):
+  
+Started GET "/films/2" for 127.0.0.1 at 2023-12-02 19:38:10 +0100
+Processing by FilmsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mFilm Load (0.1ms)[0m  [1m[34mSELECT "films".* FROM "films" WHERE "films"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/films_controller.rb:65:in `set_film'
+  Rendering layout layouts/application.html.erb
+  Rendering films/show.html.erb within layouts/application
+  Rendered films/_film.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered films/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 459)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:10
+  Rendered home/_header.html.erb (Duration: 1.3ms | Allocations: 810)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | Allocations: 2237)
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.1ms | Allocations: 2837)
+
+
+Started GET "/films/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 19:38:10 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/films/app/images/pfp/prof_0.png"):
+  
+Started GET "/films/2/edit" for 127.0.0.1 at 2023-12-02 19:38:11 +0100
+Processing by FilmsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mFilm Load (0.1ms)[0m  [1m[34mSELECT "films".* FROM "films" WHERE "films"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/films_controller.rb:65:in `set_film'
+  Rendering layout layouts/application.html.erb
+  Rendering films/edit.html.erb within layouts/application
+  Rendered films/_form.html.erb (Duration: 1.1ms | Allocations: 1119)
+  Rendered films/edit.html.erb within layouts/application (Duration: 1.3ms | Allocations: 1223)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:10
+  Rendered home/_header.html.erb (Duration: 0.9ms | Allocations: 810)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | Allocations: 3001)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.1ms | Allocations: 3601)
+
+
+Started GET "/films/2/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 19:38:11 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/films/2/app/images/pfp/prof_0.png"):
+  
+Started PATCH "/films/2" for 127.0.0.1 at 2023-12-02 19:38:16 +0100
+Processing by FilmsController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "film"=>{"title"=>"Test", "desc"=>"Test", "video_url"=>"https://www.youtube.com/watch?v=QhEu_etqv-w", "course_id"=>"1"}, "commit"=>"Update Film", "id"=>"2"}
+  [1m[36mFilm Load (0.1ms)[0m  [1m[34mSELECT "films".* FROM "films" WHERE "films"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/films_controller.rb:65:in `set_film'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/films_controller.rb:42:in `block in update'
+  [1m[36mFilm Update (0.8ms)[0m  [1m[33mUPDATE "films" SET "updated_at" = ?, "course_id" = ? WHERE "films"."id" = ?[0m  [["updated_at", "2023-12-02 18:38:16.077220"], ["course_id", 1], ["id", 2]]
+  ↳ app/controllers/films_controller.rb:42:in `block in update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/films_controller.rb:42:in `block in update'
+Redirected to http://127.0.0.1:3000/films/2
+Completed 302 Found in 5ms (ActiveRecord: 1.0ms | Allocations: 3673)
+
+
+Started GET "/films/2" for 127.0.0.1 at 2023-12-02 19:38:16 +0100
+Processing by FilmsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mFilm Load (0.1ms)[0m  [1m[34mSELECT "films".* FROM "films" WHERE "films"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/films_controller.rb:65:in `set_film'
+  Rendering layout layouts/application.html.erb
+  Rendering films/show.html.erb within layouts/application
+  Rendered films/_film.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered films/show.html.erb within layouts/application (Duration: 0.9ms | Allocations: 494)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:10
+  Rendered home/_header.html.erb (Duration: 1.0ms | Allocations: 810)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | Allocations: 2272)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.1ms | Allocations: 2872)
+
+
+Started GET "/films/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 19:38:16 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/films/app/images/pfp/prof_0.png"):
+  
+Started GET "/films" for 127.0.0.1 at 2023-12-02 19:38:21 +0100
+Processing by FilmsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering films/index.html.erb within layouts/application
+  [1m[36mFilm Load (0.1ms)[0m  [1m[34mSELECT "films".* FROM "films"[0m
+  ↳ app/views/films/index.html.erb:6
+  Rendered films/_film.html.erb (Duration: 0.0ms | Allocations: 21)
+  Rendered films/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 935)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:10
+  Rendered home/_header.html.erb (Duration: 0.9ms | Allocations: 810)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 2718)
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.1ms | Allocations: 3065)
+
+
+Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 19:38:21 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
+  
+Started GET "/films/2" for 127.0.0.1 at 2023-12-02 19:38:22 +0100
+Processing by FilmsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mFilm Load (0.1ms)[0m  [1m[34mSELECT "films".* FROM "films" WHERE "films"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/films_controller.rb:65:in `set_film'
+  Rendering layout layouts/application.html.erb
+  Rendering films/show.html.erb within layouts/application
+  Rendered films/_film.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered films/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 465)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:10
+  Rendered home/_header.html.erb (Duration: 1.6ms | Allocations: 810)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | Allocations: 2243)
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 0.1ms | Allocations: 2843)
+
+
+Started GET "/films/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 19:38:22 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/films/app/images/pfp/prof_0.png"):
+  
+Started GET "/films/2/edit" for 127.0.0.1 at 2023-12-02 19:38:23 +0100
+Processing by FilmsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mFilm Load (0.1ms)[0m  [1m[34mSELECT "films".* FROM "films" WHERE "films"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/films_controller.rb:65:in `set_film'
+  Rendering layout layouts/application.html.erb
+  Rendering films/edit.html.erb within layouts/application
+  Rendered films/_form.html.erb (Duration: 1.6ms | Allocations: 1100)
+  Rendered films/edit.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1204)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:10
+  Rendered home/_header.html.erb (Duration: 1.4ms | Allocations: 810)
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | Allocations: 2982)
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.1ms | Allocations: 3582)
+
+
+Started GET "/films/2/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 19:38:23 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/films/2/app/images/pfp/prof_0.png"):
+  
+Started PATCH "/films/2" for 127.0.0.1 at 2023-12-02 19:38:26 +0100
+Processing by FilmsController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "film"=>{"title"=>"Test", "desc"=>"Test", "video_url"=>"https://www.youtube.com/watch?v=QhEu_etqv-w", "course_id"=>"23"}, "commit"=>"Update Film", "id"=>"2"}
+  [1m[36mFilm Load (0.1ms)[0m  [1m[34mSELECT "films".* FROM "films" WHERE "films"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/films_controller.rb:65:in `set_film'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/films_controller.rb:42:in `block in update'
+  [1m[36mFilm Update (0.5ms)[0m  [1m[33mUPDATE "films" SET "updated_at" = ?, "course_id" = ? WHERE "films"."id" = ?[0m  [["updated_at", "2023-12-02 18:38:26.640681"], ["course_id", 23], ["id", 2]]
+  ↳ app/controllers/films_controller.rb:42:in `block in update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/films_controller.rb:42:in `block in update'
+Redirected to http://127.0.0.1:3000/films/2
+Completed 302 Found in 3ms (ActiveRecord: 0.7ms | Allocations: 2306)
+
+
+Started GET "/films/2" for 127.0.0.1 at 2023-12-02 19:38:26 +0100
+Processing by FilmsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mFilm Load (0.0ms)[0m  [1m[34mSELECT "films".* FROM "films" WHERE "films"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/films_controller.rb:65:in `set_film'
+  Rendering layout layouts/application.html.erb
+  Rendering films/show.html.erb within layouts/application
+  Rendered films/_film.html.erb (Duration: 0.0ms | Allocations: 21)
+  Rendered films/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 497)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:10
+  Rendered home/_header.html.erb (Duration: 1.0ms | Allocations: 810)
+  Rendered layout layouts/application.html.erb (Duration: 2.5ms | Allocations: 2275)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.1ms | Allocations: 2875)
+
+
+Started GET "/films/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 19:38:26 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/films/app/images/pfp/prof_0.png"):
+  
+Started GET "/films" for 127.0.0.1 at 2023-12-02 19:38:28 +0100
+Processing by FilmsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering films/index.html.erb within layouts/application
+  [1m[36mFilm Load (0.1ms)[0m  [1m[34mSELECT "films".* FROM "films"[0m
+  ↳ app/views/films/index.html.erb:6
+  Rendered films/_film.html.erb (Duration: 0.0ms | Allocations: 21)
+  Rendered films/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 741)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:10
+  Rendered home/_header.html.erb (Duration: 0.9ms | Allocations: 810)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | Allocations: 2524)
+Completed 200 OK in 3ms (Views: 3.1ms | ActiveRecord: 0.1ms | Allocations: 2784)
+
+
+Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 19:38:28 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
+  
+Started GET "/films/2" for 127.0.0.1 at 2023-12-02 19:38:29 +0100
+Processing by FilmsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mFilm Load (0.1ms)[0m  [1m[34mSELECT "films".* FROM "films" WHERE "films"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/films_controller.rb:65:in `set_film'
+  Rendering layout layouts/application.html.erb
+  Rendering films/show.html.erb within layouts/application
+  Rendered films/_film.html.erb (Duration: 0.0ms | Allocations: 21)
+  Rendered films/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 450)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:10
+  Rendered home/_header.html.erb (Duration: 1.0ms | Allocations: 810)
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | Allocations: 2228)
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.1ms | Allocations: 2828)
+
+
+Started GET "/films/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 19:38:29 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/films/app/images/pfp/prof_0.png"):
+  
+Started GET "/films/2/edit" for 127.0.0.1 at 2023-12-02 19:38:29 +0100
+Processing by FilmsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mFilm Load (0.1ms)[0m  [1m[34mSELECT "films".* FROM "films" WHERE "films"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/films_controller.rb:65:in `set_film'
+  Rendering layout layouts/application.html.erb
+  Rendering films/edit.html.erb within layouts/application
+  Rendered films/_form.html.erb (Duration: 1.5ms | Allocations: 1094)
+  Rendered films/edit.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1198)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:10
+  Rendered home/_header.html.erb (Duration: 1.3ms | Allocations: 810)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | Allocations: 2976)
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.1ms | Allocations: 3576)
+
+
+Started GET "/films/2/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 19:38:29 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/films/2/app/images/pfp/prof_0.png"):
+  
+Started PATCH "/films/2" for 127.0.0.1 at 2023-12-02 19:38:31 +0100
+Processing by FilmsController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "film"=>{"title"=>"Test", "desc"=>"Test", "video_url"=>"https://www.youtube.com/watch?v=QhEu_etqv-w", "course_id"=>"1"}, "commit"=>"Update Film", "id"=>"2"}
+  [1m[36mFilm Load (0.1ms)[0m  [1m[34mSELECT "films".* FROM "films" WHERE "films"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/films_controller.rb:65:in `set_film'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/films_controller.rb:42:in `block in update'
+  [1m[36mFilm Update (1.0ms)[0m  [1m[33mUPDATE "films" SET "updated_at" = ?, "course_id" = ? WHERE "films"."id" = ?[0m  [["updated_at", "2023-12-02 18:38:31.540787"], ["course_id", 1], ["id", 2]]
+  ↳ app/controllers/films_controller.rb:42:in `block in update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/films_controller.rb:42:in `block in update'
+Redirected to http://127.0.0.1:3000/films/2
+Completed 302 Found in 5ms (ActiveRecord: 1.2ms | Allocations: 2309)
+
+
+Started GET "/films/2" for 127.0.0.1 at 2023-12-02 19:38:31 +0100
+Processing by FilmsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mFilm Load (0.1ms)[0m  [1m[34mSELECT "films".* FROM "films" WHERE "films"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/films_controller.rb:65:in `set_film'
+  Rendering layout layouts/application.html.erb
+  Rendering films/show.html.erb within layouts/application
+  Rendered films/_film.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered films/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 494)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:10
+  Rendered home/_header.html.erb (Duration: 1.6ms | Allocations: 810)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | Allocations: 2272)
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.1ms | Allocations: 2872)
+
+
+Started GET "/films/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 19:38:31 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/films/app/images/pfp/prof_0.png"):
+  
+Started GET "/films" for 127.0.0.1 at 2023-12-02 19:38:32 +0100
+Processing by FilmsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering films/index.html.erb within layouts/application
+  [1m[36mFilm Load (0.1ms)[0m  [1m[34mSELECT "films".* FROM "films"[0m
+  ↳ app/views/films/index.html.erb:6
+  Rendered films/_film.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered films/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 729)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:10
+  Rendered home/_header.html.erb (Duration: 0.9ms | Allocations: 810)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | Allocations: 2512)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.1ms | Allocations: 2772)
+
+
+Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 19:38:32 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses" for 127.0.0.1 at 2023-12-02 19:38:36 +0100
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:5
+  [1m[36mCourse Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:9
+  Rendered courses/_course.html.erb (Duration: 0.1ms | Allocations: 35)
+  Rendered courses/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1346)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 218)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | Allocations: 2537)
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.1ms | Allocations: 2797)
+
+
+Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 19:38:37 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses/1" for 127.0.0.1 at 2023-12-02 19:38:38 +0100
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:64:in `set_course'
+  Rendering layout layouts/application.html.erb
+  Rendering courses/show.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/show.html.erb:6
+  Rendered courses/_course.html.erb (Duration: 0.1ms | Allocations: 35)
+  [1m[36mFilm Load (0.0ms)[0m  [1m[34mSELECT "films".* FROM "films"[0m
+  ↳ app/views/courses/show.html.erb:10
+  Rendered courses/show.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1534)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 218)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | Allocations: 2720)
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 0.1ms | Allocations: 3332)
+
+
+Started GET "/courses/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 19:38:38 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/courses/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses/1" for 127.0.0.1 at 2023-12-02 19:38:41 +0100
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:64:in `set_course'
+  Rendering layout layouts/application.html.erb
+  Rendering courses/show.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/show.html.erb:6
+  Rendered courses/_course.html.erb (Duration: 0.1ms | Allocations: 35)
+  [1m[36mFilm Load (0.0ms)[0m  [1m[34mSELECT "films".* FROM "films"[0m
+  ↳ app/views/courses/show.html.erb:10
+  Rendered courses/show.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1534)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 218)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | Allocations: 2720)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.1ms | Allocations: 3332)
+
+
+Started GET "/courses/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 19:38:41 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/courses/app/images/pfp/prof_0.png"):
+  
+Started GET "/films/2" for 127.0.0.1 at 2023-12-02 19:38:47 +0100
+Processing by FilmsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mFilm Load (0.1ms)[0m  [1m[34mSELECT "films".* FROM "films" WHERE "films"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/films_controller.rb:65:in `set_film'
+  Rendering layout layouts/application.html.erb
+  Rendering films/show.html.erb within layouts/application
+  Rendered films/_film.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered films/show.html.erb within layouts/application (Duration: 1.2ms | Allocations: 468)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:10
+  Rendered home/_header.html.erb (Duration: 1.6ms | Allocations: 810)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | Allocations: 2246)
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 0.1ms | Allocations: 2846)
+
+
+Started GET "/films/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 19:38:47 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/films/app/images/pfp/prof_0.png"):
+  
+Started GET "/films/2/edit" for 127.0.0.1 at 2023-12-02 19:38:49 +0100
+Processing by FilmsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mFilm Load (0.1ms)[0m  [1m[34mSELECT "films".* FROM "films" WHERE "films"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/films_controller.rb:65:in `set_film'
+  Rendering layout layouts/application.html.erb
+  Rendering films/edit.html.erb within layouts/application
+  Rendered films/_form.html.erb (Duration: 1.2ms | Allocations: 1118)
+  Rendered films/edit.html.erb within layouts/application (Duration: 1.3ms | Allocations: 1222)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:10
+  Rendered home/_header.html.erb (Duration: 1.0ms | Allocations: 810)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 3000)
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.1ms | Allocations: 3600)
+
+
+Started GET "/films/2/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 19:38:49 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/films/2/app/images/pfp/prof_0.png"):
+  
+Started PATCH "/films/2" for 127.0.0.1 at 2023-12-02 19:38:52 +0100
+Processing by FilmsController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "film"=>{"title"=>"Test", "desc"=>"Test", "video_url"=>"https://www.youtube.com/watch?v=QhEu_etqv-w", "course_id"=>"1"}, "commit"=>"Update Film", "id"=>"2"}
+  [1m[36mFilm Load (0.1ms)[0m  [1m[34mSELECT "films".* FROM "films" WHERE "films"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/films_controller.rb:65:in `set_film'
+Redirected to http://127.0.0.1:3000/films/2
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms | Allocations: 936)
+
+
+Started GET "/films/2" for 127.0.0.1 at 2023-12-02 19:38:52 +0100
+Processing by FilmsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mFilm Load (0.0ms)[0m  [1m[34mSELECT "films".* FROM "films" WHERE "films"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/films_controller.rb:65:in `set_film'
+  Rendering layout layouts/application.html.erb
+  Rendering films/show.html.erb within layouts/application
+  Rendered films/_film.html.erb (Duration: 0.0ms | Allocations: 21)
+  Rendered films/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 506)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:10
+  Rendered home/_header.html.erb (Duration: 0.9ms | Allocations: 810)
+  Rendered layout layouts/application.html.erb (Duration: 2.4ms | Allocations: 2284)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.1ms | Allocations: 2884)
+
+
+Started GET "/films/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 19:38:52 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/films/app/images/pfp/prof_0.png"):
+  
+Started GET "/films" for 127.0.0.1 at 2023-12-02 19:38:53 +0100
+Processing by FilmsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering films/index.html.erb within layouts/application
+  [1m[36mFilm Load (0.1ms)[0m  [1m[34mSELECT "films".* FROM "films"[0m
+  ↳ app/views/films/index.html.erb:6
+  Rendered films/_film.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered films/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 741)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:10
+  Rendered home/_header.html.erb (Duration: 1.6ms | Allocations: 810)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | Allocations: 2524)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.1ms | Allocations: 2784)
+
+
+Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 19:38:53 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
+  
+Started GET "/films/2" for 127.0.0.1 at 2023-12-02 19:38:55 +0100
+Processing by FilmsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mFilm Load (0.1ms)[0m  [1m[34mSELECT "films".* FROM "films" WHERE "films"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/films_controller.rb:65:in `set_film'
+  Rendering layout layouts/application.html.erb
+  Rendering films/show.html.erb within layouts/application
+  Rendered films/_film.html.erb (Duration: 0.0ms | Allocations: 21)
+  Rendered films/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 444)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:10
+  Rendered home/_header.html.erb (Duration: 0.9ms | Allocations: 810)
+  Rendered layout layouts/application.html.erb (Duration: 2.5ms | Allocations: 2222)
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.1ms | Allocations: 2822)
+
+
+Started GET "/films/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 19:38:55 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/films/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses" for 127.0.0.1 at 2023-12-02 19:38:56 +0100
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:5
+  [1m[36mCourse Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:9
+  Rendered courses/_course.html.erb (Duration: 0.1ms | Allocations: 35)
+  Rendered courses/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1349)
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 218)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | Allocations: 2540)
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.1ms | Allocations: 2800)
+
+
+Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 19:38:56 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses/1" for 127.0.0.1 at 2023-12-02 19:39:05 +0100
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:64:in `set_course'
+  Rendering layout layouts/application.html.erb
+  Rendering courses/show.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/show.html.erb:6
+  Rendered courses/_course.html.erb (Duration: 0.1ms | Allocations: 35)
+  [1m[36mFilm Load (0.1ms)[0m  [1m[34mSELECT "films".* FROM "films"[0m
+  ↳ app/views/courses/show.html.erb:10
+  Rendered courses/show.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1522)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 218)
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | Allocations: 2708)
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.2ms | Allocations: 3320)
+
+
+Started GET "/courses/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 19:39:06 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/courses/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses/1" for 127.0.0.1 at 2023-12-02 19:39:57 +0100
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:64:in `set_course'
+  Rendering layout layouts/application.html.erb
+  Rendering courses/show.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/show.html.erb:6
+  Rendered courses/_course.html.erb (Duration: 0.1ms | Allocations: 35)
+  [1m[36mFilm Load (0.0ms)[0m  [1m[34mSELECT "films".* FROM "films"[0m
+  ↳ app/views/courses/show.html.erb:10
+  Rendered courses/show.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1525)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 218)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | Allocations: 2711)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.1ms | Allocations: 3323)
+
+
+Started GET "/courses/1" for 127.0.0.1 at 2023-12-02 19:40:41 +0100
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:64:in `set_course'
+  Rendering layout layouts/application.html.erb
+  Rendering courses/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/show.html.erb:6
+  [1m[36mFilm Load (0.0ms)[0m  [1m[34mSELECT "films".* FROM "films"[0m
+  ↳ app/views/courses/show.html.erb:9
+  Rendered courses/show.html.erb within layouts/application (Duration: 8.9ms | Allocations: 9791)
+  Rendered home/_header.html.erb (Duration: 0.5ms | Allocations: 659)
+  Rendered layout layouts/application.html.erb (Duration: 10.8ms | Allocations: 11727)
+Completed 200 OK in 21ms (Views: 11.2ms | ActiveRecord: 2.0ms | Allocations: 18308)
+
+
+Started GET "/courses/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 19:40:41 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/courses/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses/1" for 127.0.0.1 at 2023-12-02 19:41:25 +0100
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:64:in `set_course'
+  Rendering layout layouts/application.html.erb
+  Rendering courses/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/show.html.erb:6
+  [1m[36mFilm Load (0.0ms)[0m  [1m[34mSELECT "films".* FROM "films"[0m
+  ↳ app/views/courses/show.html.erb:10
+  Rendered courses/show.html.erb within layouts/application (Duration: 7.1ms | Allocations: 9789)
+  Rendered home/_header.html.erb (Duration: 0.5ms | Allocations: 659)
+  Rendered layout layouts/application.html.erb (Duration: 8.9ms | Allocations: 11725)
+Completed 200 OK in 16ms (Views: 9.2ms | ActiveRecord: 1.6ms | Allocations: 18304)
+
+
+Started GET "/courses/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 19:41:25 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/courses/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses/1" for 127.0.0.1 at 2023-12-02 19:41:49 +0100
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:64:in `set_course'
+  Rendering layout layouts/application.html.erb
+  Rendering courses/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/show.html.erb:6
+  [1m[36mFilm Load (0.0ms)[0m  [1m[34mSELECT "films".* FROM "films"[0m
+  ↳ app/views/courses/show.html.erb:12
+  Rendered courses/show.html.erb within layouts/application (Duration: 7.5ms | Allocations: 9787)
+  Rendered home/_header.html.erb (Duration: 0.7ms | Allocations: 659)
+  Rendered layout layouts/application.html.erb (Duration: 9.5ms | Allocations: 11723)
+Completed 200 OK in 17ms (Views: 10.0ms | ActiveRecord: 1.7ms | Allocations: 18340)
+
+
+Started GET "/courses/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 19:41:50 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/courses/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses/1" for 127.0.0.1 at 2023-12-02 19:41:57 +0100
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:64:in `set_course'
+  Rendering layout layouts/application.html.erb
+  Rendering courses/show.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/show.html.erb:6
+  [1m[36mFilm Load (0.0ms)[0m  [1m[34mSELECT "films".* FROM "films"[0m
+  ↳ app/views/courses/show.html.erb:12
+  Rendered courses/show.html.erb within layouts/application (Duration: 25.5ms | Allocations: 9797)
+  Rendered home/_header.html.erb (Duration: 6.3ms | Allocations: 659)
+  Rendered layout layouts/application.html.erb (Duration: 42.1ms | Allocations: 11733)
+Completed 200 OK in 49ms (Views: 40.6ms | ActiveRecord: 3.5ms | Allocations: 18312)
+
+
+Started GET "/courses/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 19:41:57 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/courses/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses/1" for 127.0.0.1 at 2023-12-02 19:42:11 +0100
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:64:in `set_course'
+  Rendering layout layouts/application.html.erb
+  Rendering courses/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/show.html.erb:6
+  [1m[36mFilm Load (0.0ms)[0m  [1m[34mSELECT "films".* FROM "films"[0m
+  ↳ app/views/courses/show.html.erb:12
+  Rendered courses/show.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1421)
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 219)
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | Allocations: 2608)
+Completed 200 OK in 7ms (Views: 5.0ms | ActiveRecord: 0.2ms | Allocations: 3222)
+
+
+Started GET "/courses/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 19:42:11 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/courses/app/images/pfp/prof_0.png"):
+  
+Started GET "/films/new" for 127.0.0.1 at 2023-12-02 19:42:13 +0100
+Processing by FilmsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering films/new.html.erb within layouts/application
+  Rendered films/_form.html.erb (Duration: 1.5ms | Allocations: 1593)
+  Rendered films/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1876)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:10
+  Rendered home/_header.html.erb (Duration: 1.1ms | Allocations: 813)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | Allocations: 3664)
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.1ms | Allocations: 4230)
+
+
+Started GET "/films/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 19:42:13 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/films/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses" for 127.0.0.1 at 2023-12-02 19:42:17 +0100
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:5
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:9
+  Rendered courses/_course.html.erb (Duration: 0.3ms | Allocations: 231)
+  Rendered courses/index.html.erb within layouts/application (Duration: 4.6ms | Allocations: 2011)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 218)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 3202)
+Completed 200 OK in 6ms (Views: 6.0ms | ActiveRecord: 0.1ms | Allocations: 3551)
+
+
+Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 19:42:17 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses/1" for 127.0.0.1 at 2023-12-02 19:42:19 +0100
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:64:in `set_course'
+  Rendering layout layouts/application.html.erb
+  Rendering courses/show.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/show.html.erb:6
+  [1m[36mFilm Load (0.1ms)[0m  [1m[34mSELECT "films".* FROM "films"[0m
+  ↳ app/views/courses/show.html.erb:12
+  Rendered courses/show.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1432)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 219)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | Allocations: 2619)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.1ms | Allocations: 3231)
+
+
+Started GET "/courses/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 19:42:19 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/courses/app/images/pfp/prof_0.png"):
+  
+Started GET "/films/new" for 127.0.0.1 at 2023-12-02 19:42:27 +0100
+Processing by FilmsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering films/new.html.erb within layouts/application
+  Rendered films/_form.html.erb (Duration: 1.5ms | Allocations: 1082)
+  Rendered films/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1161)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:10
+  Rendered home/_header.html.erb (Duration: 1.5ms | Allocations: 811)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 2944)
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.1ms | Allocations: 3208)
+
+
+Started GET "/films/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 19:42:27 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/films/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses/1" for 127.0.0.1 at 2023-12-02 19:42:29 +0100
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:64:in `set_course'
+  Rendering layout layouts/application.html.erb
+  Rendering courses/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/show.html.erb:6
+  [1m[36mFilm Load (0.0ms)[0m  [1m[34mSELECT "films".* FROM "films"[0m
+  ↳ app/views/courses/show.html.erb:12
+  Rendered courses/show.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1423)
+  Rendered home/_header.html.erb (Duration: 0.5ms | Allocations: 219)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | Allocations: 2610)
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.2ms | Allocations: 3222)
+
+
+Started GET "/courses" for 127.0.0.1 at 2023-12-02 19:42:31 +0100
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:5
+  [1m[36mCourse Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:9
+  Rendered courses/_course.html.erb (Duration: 0.1ms | Allocations: 35)
+  Rendered courses/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1349)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 218)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 2526)
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.1ms | Allocations: 2785)
+
+
+Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 19:42:31 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses/new" for 127.0.0.1 at 2023-12-02 19:42:33 +0100
+Processing by CoursesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/new.html.erb within layouts/application
+  Rendered courses/_form.html.erb (Duration: 2.8ms | Allocations: 1399)
+  Rendered courses/new.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1680)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:10
+  Rendered home/_header.html.erb (Duration: 1.8ms | Allocations: 811)
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 3463)
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.1ms | Allocations: 3799)
+
+
+Started GET "/courses/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 19:42:33 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/courses/app/images/pfp/prof_0.png"):
+  
+Started POST "/courses" for 127.0.0.1 at 2023-12-02 19:43:31 +0100
+Processing by CoursesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "course"=>{"title"=>"Programowanie aplikacji w C++ i DirectX 11", "desc"=>"Naucz się programować multimedialne aplikacje i gry za pomocą języka C++ i biblioteki DirectX 11", "cover_url"=>""}, "commit"=>"Create Course"}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/courses_controller.rb:28:in `block in create'
+  [1m[36mCourse Create (0.6ms)[0m  [1m[32mINSERT INTO "courses" ("title", "desc", "created_at", "updated_at", "cover_url") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["title", "Programowanie aplikacji w C++ i DirectX 11"], ["desc", "Naucz się programować multimedialne aplikacje i gry za pomocą języka C++ i biblioteki DirectX 11"], ["created_at", "2023-12-02 18:43:31.211375"], ["updated_at", "2023-12-02 18:43:31.211375"], ["cover_url", ""]]
+  ↳ app/controllers/courses_controller.rb:28:in `block in create'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/courses_controller.rb:28:in `block in create'
+Redirected to http://127.0.0.1:3000/courses/2
+Completed 302 Found in 3ms (ActiveRecord: 1.1ms | Allocations: 2112)
+
+
+Started GET "/courses/2" for 127.0.0.1 at 2023-12-02 19:43:31 +0100
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:64:in `set_course'
+  Rendering layout layouts/application.html.erb
+  Rendering courses/show.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/show.html.erb:6
+  [1m[36mFilm Load (0.0ms)[0m  [1m[34mSELECT "films".* FROM "films"[0m
+  ↳ app/views/courses/show.html.erb:12
+  Rendered courses/show.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1441)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 219)
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | Allocations: 2628)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.1ms | Allocations: 3240)
+
+
+Started GET "/courses/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 19:43:31 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/courses/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses" for 127.0.0.1 at 2023-12-02 19:43:34 +0100
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:5
+  [1m[36mCourse Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:9
+  Rendered courses/_course.html.erb (Duration: 0.1ms | Allocations: 35)
+  Rendered courses/_course.html.erb (Duration: 0.1ms | Allocations: 32)
+  Rendered courses/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1489)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 218)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | Allocations: 2680)
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.1ms | Allocations: 2940)
+
+
+Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 19:43:34 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses/2" for 127.0.0.1 at 2023-12-02 19:43:41 +0100
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:64:in `set_course'
+  Rendering layout layouts/application.html.erb
+  Rendering courses/show.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/show.html.erb:6
+  [1m[36mFilm Load (0.0ms)[0m  [1m[34mSELECT "films".* FROM "films"[0m
+  ↳ app/views/courses/show.html.erb:12
+  Rendered courses/show.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1436)
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 219)
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | Allocations: 2623)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.2ms | Allocations: 3235)
+
+
+Started GET "/courses/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 19:43:41 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/courses/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses/2/edit" for 127.0.0.1 at 2023-12-02 19:43:43 +0100
+Processing by CoursesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:64:in `set_course'
+  Rendering layout layouts/application.html.erb
+  Rendering courses/edit.html.erb within layouts/application
+  Rendered courses/_form.html.erb (Duration: 1.4ms | Allocations: 951)
+  Rendered courses/edit.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1212)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:10
+  Rendered home/_header.html.erb (Duration: 1.3ms | Allocations: 810)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 2990)
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.1ms | Allocations: 3651)
+
+
+Started GET "/courses/2/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 19:43:43 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/courses/2/app/images/pfp/prof_0.png"):
+  
+Started PATCH "/courses/2" for 127.0.0.1 at 2023-12-02 19:44:59 +0100
+Processing by CoursesController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "course"=>{"title"=>"Programowanie aplikacji w C++ i DirectX 11", "desc"=>"Naucz się programować multimedialne aplikacje i gry za pomocą języka C++ i biblioteki DirectX 11", "cover_url"=>"https://www.syncfusion.com/blogs/wp-content/uploads/2018/08/directx_89859d36.png"}, "commit"=>"Update Course", "id"=>"2"}
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:64:in `set_course'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/courses_controller.rb:41:in `block in update'
+  [1m[36mCourse Update (1.0ms)[0m  [1m[33mUPDATE "courses" SET "updated_at" = ?, "cover_url" = ? WHERE "courses"."id" = ?[0m  [["updated_at", "2023-12-02 18:44:59.163068"], ["cover_url", "https://www.syncfusion.com/blogs/wp-content/uploads/2018/08/directx_89859d36.png"], ["id", 2]]
+  ↳ app/controllers/courses_controller.rb:41:in `block in update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/courses_controller.rb:41:in `block in update'
+Redirected to http://127.0.0.1:3000/courses/2
+Completed 302 Found in 5ms (ActiveRecord: 1.2ms | Allocations: 2325)
+
+
+Started GET "/courses/2" for 127.0.0.1 at 2023-12-02 19:44:59 +0100
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:64:in `set_course'
+  Rendering layout layouts/application.html.erb
+  Rendering courses/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/show.html.erb:6
+  [1m[36mFilm Load (0.0ms)[0m  [1m[34mSELECT "films".* FROM "films"[0m
+  ↳ app/views/courses/show.html.erb:12
+  Rendered courses/show.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1453)
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 219)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 2640)
+Completed 200 OK in 7ms (Views: 5.2ms | ActiveRecord: 0.2ms | Allocations: 3252)
+
+
+Started GET "/courses/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 19:44:59 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/courses/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses" for 127.0.0.1 at 2023-12-02 19:45:01 +0100
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:5
+  [1m[36mCourse Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:9
+  Rendered courses/_course.html.erb (Duration: 0.1ms | Allocations: 35)
+  Rendered courses/_course.html.erb (Duration: 0.1ms | Allocations: 33)
+  Rendered courses/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1484)
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 218)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | Allocations: 2675)
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.1ms | Allocations: 2935)
+
+
+Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 19:45:01 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses" for 127.0.0.1 at 2023-12-02 19:45:06 +0100
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:5
+  [1m[36mCourse Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:9
+  Rendered courses/_course.html.erb (Duration: 0.1ms | Allocations: 35)
+  Rendered courses/_course.html.erb (Duration: 0.1ms | Allocations: 33)
+  Rendered courses/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1490)
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 218)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 2681)
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.1ms | Allocations: 2941)
+
+
+Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 19:45:06 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses" for 127.0.0.1 at 2023-12-02 19:47:58 +0100
+Processing by CoursesController#index as */*
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  Rendered courses/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 482)
+  Rendered home/_header.html.erb (Duration: 0.6ms | Allocations: 645)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | Allocations: 2432)
+Completed 200 OK in 5ms (Views: 3.0ms | ActiveRecord: 0.0ms | Allocations: 4663)
+
+
+Started GET "/courses" for 127.0.0.1 at 2023-12-02 19:51:29 +0100
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:5
+  [1m[36mCourse Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:9
+  Rendered courses/_course.html.erb (Duration: 0.4ms | Allocations: 246)
+  Rendered courses/_course.html.erb (Duration: 0.0ms | Allocations: 33)
+  Rendered courses/index.html.erb within layouts/application (Duration: 9.0ms | Allocations: 10137)
+  Rendered home/_header.html.erb (Duration: 0.5ms | Allocations: 670)
+  Rendered layout layouts/application.html.erb (Duration: 10.9ms | Allocations: 12100)
+Completed 200 OK in 14ms (Views: 9.9ms | ActiveRecord: 1.7ms | Allocations: 14217)
+
+
+Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 19:51:29 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses" for 127.0.0.1 at 2023-12-02 19:51:37 +0100
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:5
+  [1m[36mCourse Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:9
+  Rendered courses/_course.html.erb (Duration: 0.3ms | Allocations: 246)
+  Rendered courses/_course.html.erb (Duration: 0.0ms | Allocations: 33)
+  Rendered courses/index.html.erb within layouts/application (Duration: 9.3ms | Allocations: 10167)
+  Rendered home/_header.html.erb (Duration: 0.6ms | Allocations: 670)
+  Rendered layout layouts/application.html.erb (Duration: 11.3ms | Allocations: 12130)
+Completed 200 OK in 14ms (Views: 10.5ms | ActiveRecord: 1.4ms | Allocations: 14245)
+
+
+Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 19:51:37 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses" for 127.0.0.1 at 2023-12-02 19:51:40 +0100
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:5
+  [1m[36mCourse Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:9
+  Rendered courses/_course.html.erb (Duration: 0.3ms | Allocations: 245)
+  Rendered courses/_course.html.erb (Duration: 0.0ms | Allocations: 33)
+  Rendered courses/index.html.erb within layouts/application (Duration: 8.7ms | Allocations: 10142)
+  Rendered home/_header.html.erb (Duration: 0.6ms | Allocations: 670)
+  Rendered layout layouts/application.html.erb (Duration: 10.4ms | Allocations: 12105)
+Completed 200 OK in 13ms (Views: 9.7ms | ActiveRecord: 1.4ms | Allocations: 14220)
+
+
+Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 19:51:40 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses" for 127.0.0.1 at 2023-12-02 19:52:26 +0100
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:5
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:9
+  Rendered courses/_course.html.erb (Duration: 0.3ms | Allocations: 246)
+  Rendered courses/_course.html.erb (Duration: 0.0ms | Allocations: 33)
+  Rendered courses/index.html.erb within layouts/application (Duration: 8.5ms | Allocations: 10158)
+  Rendered home/_header.html.erb (Duration: 0.6ms | Allocations: 670)
+  Rendered layout layouts/application.html.erb (Duration: 10.3ms | Allocations: 12121)
+Completed 200 OK in 13ms (Views: 9.6ms | ActiveRecord: 1.5ms | Allocations: 14236)
+
+
+Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 19:52:27 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses" for 127.0.0.1 at 2023-12-02 19:52:40 +0100
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:5
+  [1m[36mCourse Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:9
+  Rendered courses/_course.html.erb (Duration: 0.1ms | Allocations: 35)
+  Rendered courses/_course.html.erb (Duration: 0.0ms | Allocations: 33)
+  Rendered courses/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1488)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 218)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | Allocations: 2679)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.1ms | Allocations: 2939)
+
+
+Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 19:52:40 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses" for 127.0.0.1 at 2023-12-02 19:53:22 +0100
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  Rendered courses/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 172)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | Allocations: 1340)
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.0ms | Allocations: 1600)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-12-02 19:53:23 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.6ms | Allocations: 692)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.3ms | Allocations: 2038)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 219)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | Allocations: 3266)
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.0ms | Allocations: 4538)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2023-12-02 19:53:29 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"zprzybyla@tuta.io", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Zaloguj"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "zprzybyla@tuta.io"], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Completed 303 See Other in 194ms (ActiveRecord: 0.1ms | Allocations: 2737)
+
+
+Started GET "/" for 127.0.0.1 at 2023-12-02 19:53:29 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:10
+  Rendered home/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1370)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 239)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | Allocations: 2586)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.1ms | Allocations: 3044)
+
+
+Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 19:53:29 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses" for 127.0.0.1 at 2023-12-02 19:53:31 +0100
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:5
+  [1m[36mCourse Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:9
+  Rendered courses/_course.html.erb (Duration: 0.1ms | Allocations: 35)
+  Rendered courses/_course.html.erb (Duration: 0.1ms | Allocations: 33)
+  Rendered courses/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1529)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 218)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | Allocations: 2720)
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.1ms | Allocations: 2980)
+
+
+Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 19:53:31 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses" for 127.0.0.1 at 2023-12-02 20:01:54 +0100
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:5
+  [1m[36mCourse Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:9
+  Rendered courses/_course.html.erb (Duration: 0.3ms | Allocations: 246)
+  Rendered courses/_course.html.erb (Duration: 0.0ms | Allocations: 33)
+  Rendered courses/index.html.erb within layouts/application (Duration: 7.6ms | Allocations: 9142)
+  Rendered home/_header.html.erb (Duration: 0.6ms | Allocations: 670)
+  Rendered layout layouts/application.html.erb (Duration: 9.6ms | Allocations: 11105)
+Completed 200 OK in 12ms (Views: 9.1ms | ActiveRecord: 1.1ms | Allocations: 13215)
+
+
+Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 20:01:54 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses" for 127.0.0.1 at 2023-12-02 20:02:02 +0100
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:5
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:9
+  Rendered courses/_course.html.erb (Duration: 0.4ms | Allocations: 245)
+  Rendered courses/_course.html.erb (Duration: 0.0ms | Allocations: 33)
+  Rendered courses/index.html.erb within layouts/application (Duration: 9.9ms | Allocations: 10144)
+  Rendered home/_header.html.erb (Duration: 0.6ms | Allocations: 670)
+  Rendered layout layouts/application.html.erb (Duration: 11.6ms | Allocations: 12107)
+Completed 200 OK in 14ms (Views: 10.6ms | ActiveRecord: 1.9ms | Allocations: 14222)
+
+
+Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 20:02:02 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses" for 127.0.0.1 at 2023-12-02 20:02:05 +0100
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:5
+  [1m[36mCourse Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:9
+  Rendered courses/_course.html.erb (Duration: 0.1ms | Allocations: 35)
+  Rendered courses/_course.html.erb (Duration: 0.1ms | Allocations: 33)
+  Rendered courses/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1482)
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 218)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 2673)
+Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 0.1ms | Allocations: 2933)
+
+
+Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 20:02:05 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
+  
+Started GET "/" for 127.0.0.1 at 2023-12-02 20:02:05 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:10
+  Rendered home/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1367)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 239)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | Allocations: 2593)
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.1ms | Allocations: 3050)
+
+
+Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 20:02:05 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
+  
+Started GET "/home/about" for 127.0.0.1 at 2023-12-02 20:02:06 +0100
+Processing by HomeController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/about.html.erb within layouts/application
+  Rendered home/about.html.erb within layouts/application (Duration: 0.3ms | Allocations: 98)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:10
+  Rendered home/_header.html.erb (Duration: 1.6ms | Allocations: 825)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | Allocations: 2085)
+Completed 200 OK in 4ms (Views: 4.1ms | ActiveRecord: 0.1ms | Allocations: 2334)
+
+
+Started GET "/home/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 20:02:06 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/home/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses" for 127.0.0.1 at 2023-12-02 20:02:06 +0100
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:5
+  [1m[36mCourse Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:9
+  Rendered courses/_course.html.erb (Duration: 0.1ms | Allocations: 35)
+  Rendered courses/_course.html.erb (Duration: 0.0ms | Allocations: 33)
+  Rendered courses/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1502)
+  Rendered home/_header.html.erb (Duration: 0.7ms | Allocations: 218)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 2693)
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.1ms | Allocations: 2955)
+
+
+Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 20:02:06 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses" for 127.0.0.1 at 2023-12-02 20:02:15 +0100
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:5
+  [1m[36mCourse Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:9
+  Rendered courses/_course.html.erb (Duration: 0.3ms | Allocations: 245)
+  Rendered courses/_course.html.erb (Duration: 0.0ms | Allocations: 33)
+  Rendered courses/index.html.erb within layouts/application (Duration: 9.5ms | Allocations: 10150)
+  Rendered home/_header.html.erb (Duration: 0.6ms | Allocations: 670)
+  Rendered layout layouts/application.html.erb (Duration: 11.4ms | Allocations: 12113)
+Completed 200 OK in 14ms (Views: 10.8ms | ActiveRecord: 1.4ms | Allocations: 14228)
+
+
+Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 20:02:15 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses" for 127.0.0.1 at 2023-12-02 20:02:20 +0100
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:5
+  [1m[36mCourse Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:9
+  Rendered courses/_course.html.erb (Duration: 0.3ms | Allocations: 245)
+  Rendered courses/_course.html.erb (Duration: 0.0ms | Allocations: 33)
+  Rendered courses/index.html.erb within layouts/application (Duration: 8.7ms | Allocations: 10146)
+  Rendered home/_header.html.erb (Duration: 0.5ms | Allocations: 670)
+  Rendered layout layouts/application.html.erb (Duration: 10.5ms | Allocations: 12109)
+Completed 200 OK in 13ms (Views: 9.8ms | ActiveRecord: 1.4ms | Allocations: 14219)
+
+
+Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 20:02:20 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses" for 127.0.0.1 at 2023-12-02 20:02:29 +0100
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:5
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:9
+  Rendered courses/_course.html.erb (Duration: 0.4ms | Allocations: 247)
+  Rendered courses/_course.html.erb (Duration: 0.0ms | Allocations: 33)
+  Rendered courses/index.html.erb within layouts/application (Duration: 13.7ms | Allocations: 10137)
+  Rendered home/_header.html.erb (Duration: 0.6ms | Allocations: 670)
+  Rendered layout layouts/application.html.erb (Duration: 15.9ms | Allocations: 12100)
+Completed 200 OK in 18ms (Views: 15.1ms | ActiveRecord: 1.5ms | Allocations: 14212)
+
+
+Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 20:02:30 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses" for 127.0.0.1 at 2023-12-02 20:02:52 +0100
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:5
+  [1m[36mCourse Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:9
+  Rendered courses/_course.html.erb (Duration: 0.5ms | Allocations: 246)
+  Rendered courses/_course.html.erb (Duration: 0.0ms | Allocations: 33)
+  Rendered courses/index.html.erb within layouts/application (Duration: 9.6ms | Allocations: 10135)
+  Rendered home/_header.html.erb (Duration: 0.6ms | Allocations: 670)
+  Rendered layout layouts/application.html.erb (Duration: 11.5ms | Allocations: 12098)
+Completed 200 OK in 14ms (Views: 10.7ms | ActiveRecord: 1.4ms | Allocations: 14213)
+
+
+Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 20:02:52 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses" for 127.0.0.1 at 2023-12-02 20:02:56 +0100
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:5
+  [1m[36mCourse Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:9
+  Rendered courses/_course.html.erb (Duration: 0.3ms | Allocations: 246)
+  Rendered courses/_course.html.erb (Duration: 0.0ms | Allocations: 33)
+  Rendered courses/index.html.erb within layouts/application (Duration: 8.5ms | Allocations: 10150)
+  Rendered home/_header.html.erb (Duration: 0.6ms | Allocations: 670)
+  Rendered layout layouts/application.html.erb (Duration: 10.3ms | Allocations: 12113)
+Completed 200 OK in 13ms (Views: 9.5ms | ActiveRecord: 1.5ms | Allocations: 14223)
+
+
+Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 20:02:56 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses" for 127.0.0.1 at 2023-12-02 20:03:19 +0100
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:5
+  [1m[36mCourse Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:9
+  Rendered courses/_course.html.erb (Duration: 0.1ms | Allocations: 35)
+  Rendered courses/_course.html.erb (Duration: 0.0ms | Allocations: 33)
+  Rendered courses/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1500)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 218)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | Allocations: 2691)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.1ms | Allocations: 2951)
+
+
+Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 20:03:19 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses" for 127.0.0.1 at 2023-12-02 20:03:28 +0100
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:5
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:9
+  Rendered courses/_course.html.erb (Duration: 0.5ms | Allocations: 236)
+  Rendered courses/_course.html.erb (Duration: 0.0ms | Allocations: 33)
+  Rendered courses/index.html.erb within layouts/application (Duration: 13.1ms | Allocations: 10142)
+  Rendered home/_header.html.erb (Duration: 0.6ms | Allocations: 670)
+  Rendered layout layouts/application.html.erb (Duration: 15.1ms | Allocations: 12105)
+Completed 200 OK in 18ms (Views: 14.3ms | ActiveRecord: 1.5ms | Allocations: 14217)
+
+
+Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 20:03:28 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses" for 127.0.0.1 at 2023-12-02 20:05:30 +0100
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:5
+  [1m[36mCourse Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:9
+  Rendered courses/_course.html.erb (Duration: 0.1ms | Allocations: 35)
+  Rendered courses/_course.html.erb (Duration: 0.0ms | Allocations: 33)
+  Rendered courses/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1491)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 218)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 4415)
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.1ms | Allocations: 4675)
+
+
+Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 20:05:30 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses" for 127.0.0.1 at 2023-12-02 20:09:51 +0100
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:5
+  [1m[36mCourse Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:9
+  Rendered courses/_course.html.erb (Duration: 0.3ms | Allocations: 238)
+  Rendered courses/_course.html.erb (Duration: 0.0ms | Allocations: 33)
+  Rendered courses/index.html.erb within layouts/application (Duration: 8.5ms | Allocations: 10130)
+  Rendered home/_header.html.erb (Duration: 0.6ms | Allocations: 670)
+  Rendered layout layouts/application.html.erb (Duration: 10.3ms | Allocations: 12093)
+Completed 200 OK in 13ms (Views: 9.5ms | ActiveRecord: 1.4ms | Allocations: 14203)
+
+
+Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 20:09:51 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses/1" for 127.0.0.1 at 2023-12-02 20:09:58 +0100
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:64:in `set_course'
+  Rendering layout layouts/application.html.erb
+  Rendering courses/show.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/show.html.erb:6
+  [1m[36mFilm Load (0.0ms)[0m  [1m[34mSELECT "films".* FROM "films"[0m
+  ↳ app/views/courses/show.html.erb:12
+  Rendered courses/show.html.erb within layouts/application (Duration: 4.4ms | Allocations: 5014)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 219)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 6201)
+Completed 200 OK in 8ms (Views: 5.6ms | ActiveRecord: 0.3ms | Allocations: 7880)
+
+
+Started GET "/courses/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 20:09:58 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/courses/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses" for 127.0.0.1 at 2023-12-02 20:10:36 +0100
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:5
+  [1m[36mCourse Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:9
+  Rendered courses/_course.html.erb (Duration: 0.3ms | Allocations: 240)
+  Rendered courses/_course.html.erb (Duration: 0.0ms | Allocations: 33)
+  Rendered courses/index.html.erb within layouts/application (Duration: 8.5ms | Allocations: 10171)
+  Rendered home/_header.html.erb (Duration: 0.6ms | Allocations: 670)
+  Rendered layout layouts/application.html.erb (Duration: 10.4ms | Allocations: 12134)
+Completed 200 OK in 13ms (Views: 9.6ms | ActiveRecord: 1.5ms | Allocations: 14244)
+
+
+Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 20:10:36 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses" for 127.0.0.1 at 2023-12-02 20:13:21 +0100
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:5
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:9
+  Rendered courses/_course.html.erb (Duration: 0.4ms | Allocations: 246)
+  Rendered courses/_course.html.erb (Duration: 0.0ms | Allocations: 33)
+  Rendered courses/index.html.erb within layouts/application (Duration: 13.1ms | Allocations: 10141)
+  Rendered home/_header.html.erb (Duration: 1.5ms | Allocations: 670)
+  Rendered layout layouts/application.html.erb (Duration: 15.8ms | Allocations: 12104)
+Completed 200 OK in 18ms (Views: 15.0ms | ActiveRecord: 1.5ms | Allocations: 14216)
+
+
+Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 20:13:21 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses" for 127.0.0.1 at 2023-12-02 20:13:46 +0100
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:5
+  [1m[36mCourse Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:9
+  Rendered courses/_course.html.erb (Duration: 0.3ms | Allocations: 244)
+  Rendered courses/_course.html.erb (Duration: 0.0ms | Allocations: 33)
+  Rendered courses/index.html.erb within layouts/application (Duration: 8.9ms | Allocations: 10149)
+  Rendered home/_header.html.erb (Duration: 0.6ms | Allocations: 670)
+  Rendered layout layouts/application.html.erb (Duration: 10.9ms | Allocations: 12112)
+Completed 200 OK in 13ms (Views: 10.2ms | ActiveRecord: 1.4ms | Allocations: 14227)
+
+
+Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 20:13:46 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses" for 127.0.0.1 at 2023-12-02 20:16:07 +0100
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:5
+  [1m[36mCourse Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:9
+  Rendered courses/_course.html.erb (Duration: 0.3ms | Allocations: 249)
+  Rendered courses/_course.html.erb (Duration: 0.0ms | Allocations: 33)
+  Rendered courses/index.html.erb within layouts/application (Duration: 9.0ms | Allocations: 10159)
+  Rendered home/_header.html.erb (Duration: 0.5ms | Allocations: 670)
+  Rendered layout layouts/application.html.erb (Duration: 10.8ms | Allocations: 12122)
+Completed 200 OK in 13ms (Views: 10.2ms | ActiveRecord: 1.4ms | Allocations: 14237)
+
+
+Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 20:16:07 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses" for 127.0.0.1 at 2023-12-02 20:16:14 +0100
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:5
+  [1m[36mCourse Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:9
+  Rendered courses/_course.html.erb (Duration: 0.3ms | Allocations: 249)
+  Rendered courses/_course.html.erb (Duration: 0.0ms | Allocations: 33)
+  Rendered courses/index.html.erb within layouts/application (Duration: 8.7ms | Allocations: 10138)
+  Rendered home/_header.html.erb (Duration: 0.6ms | Allocations: 670)
+  Rendered layout layouts/application.html.erb (Duration: 10.6ms | Allocations: 12101)
+Completed 200 OK in 13ms (Views: 9.9ms | ActiveRecord: 1.4ms | Allocations: 14211)
+
+
+Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 20:16:14 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses" for 127.0.0.1 at 2023-12-02 20:16:25 +0100
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:5
+  [1m[36mCourse Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:9
+  Rendered courses/_course.html.erb (Duration: 0.3ms | Allocations: 250)
+  Rendered courses/_course.html.erb (Duration: 0.0ms | Allocations: 33)
+  Rendered courses/index.html.erb within layouts/application (Duration: 8.7ms | Allocations: 10148)
+  Rendered home/_header.html.erb (Duration: 0.6ms | Allocations: 670)
+  Rendered layout layouts/application.html.erb (Duration: 10.5ms | Allocations: 12111)
+Completed 200 OK in 13ms (Views: 9.9ms | ActiveRecord: 1.4ms | Allocations: 14221)
+
+
+Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 20:16:25 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses" for 127.0.0.1 at 2023-12-02 20:16:57 +0100
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:5
+  [1m[36mCourse Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:9
+  Rendered courses/_course.html.erb (Duration: 0.3ms | Allocations: 250)
+  Rendered courses/_course.html.erb (Duration: 0.0ms | Allocations: 33)
+  Rendered courses/index.html.erb within layouts/application (Duration: 8.7ms | Allocations: 10169)
+  Rendered home/_header.html.erb (Duration: 0.5ms | Allocations: 670)
+  Rendered layout layouts/application.html.erb (Duration: 10.5ms | Allocations: 12132)
+Completed 200 OK in 14ms (Views: 9.8ms | ActiveRecord: 1.4ms | Allocations: 14242)
+
+
+Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 20:16:57 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses" for 127.0.0.1 at 2023-12-02 20:17:39 +0100
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:5
+  [1m[36mCourse Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:9
+  Rendered courses/_course.html.erb (Duration: 0.3ms | Allocations: 247)
+  Rendered courses/_course.html.erb (Duration: 0.0ms | Allocations: 33)
+  Rendered courses/index.html.erb within layouts/application (Duration: 8.7ms | Allocations: 10148)
+  Rendered home/_header.html.erb (Duration: 0.6ms | Allocations: 670)
+  Rendered layout layouts/application.html.erb (Duration: 10.5ms | Allocations: 12111)
+Completed 200 OK in 13ms (Views: 9.8ms | ActiveRecord: 1.4ms | Allocations: 14221)
+
+
+Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 20:17:39 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses" for 127.0.0.1 at 2023-12-02 20:17:55 +0100
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:5
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:9
+  Rendered courses/_course.html.erb (Duration: 0.4ms | Allocations: 248)
+  Rendered courses/_course.html.erb (Duration: 0.0ms | Allocations: 33)
+  Rendered courses/index.html.erb within layouts/application (Duration: 13.1ms | Allocations: 10162)
+  Rendered home/_header.html.erb (Duration: 0.6ms | Allocations: 670)
+  Rendered layout layouts/application.html.erb (Duration: 14.9ms | Allocations: 12125)
+Completed 200 OK in 17ms (Views: 14.1ms | ActiveRecord: 1.5ms | Allocations: 14237)
+
+
+Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 20:17:55 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses" for 127.0.0.1 at 2023-12-02 20:18:09 +0100
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:5
+  [1m[36mCourse Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:9
+  Rendered courses/_course.html.erb (Duration: 0.3ms | Allocations: 246)
+  Rendered courses/_course.html.erb (Duration: 0.0ms | Allocations: 33)
+  Rendered courses/index.html.erb within layouts/application (Duration: 9.3ms | Allocations: 10142)
+  Rendered home/_header.html.erb (Duration: 0.7ms | Allocations: 670)
+  Rendered layout layouts/application.html.erb (Duration: 11.3ms | Allocations: 12105)
+Completed 200 OK in 14ms (Views: 10.7ms | ActiveRecord: 1.4ms | Allocations: 14220)
+
+
+Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 20:18:09 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses" for 127.0.0.1 at 2023-12-02 20:18:59 +0100
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:5
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:9
+  Rendered courses/_course.html.erb (Duration: 3.8ms | Allocations: 249)
+  Rendered courses/_course.html.erb (Duration: 0.0ms | Allocations: 33)
+  Rendered courses/index.html.erb within layouts/application (Duration: 38.0ms | Allocations: 10166)
+  Rendered home/_header.html.erb (Duration: 10.1ms | Allocations: 670)
+  Rendered layout layouts/application.html.erb (Duration: 58.7ms | Allocations: 12129)
+Completed 200 OK in 61ms (Views: 56.8ms | ActiveRecord: 2.6ms | Allocations: 14241)
+
+
+Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 20:18:59 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses" for 127.0.0.1 at 2023-12-02 20:19:15 +0100
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:5
+  [1m[36mCourse Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:9
+  Rendered courses/_course.html.erb (Duration: 0.3ms | Allocations: 249)
+  Rendered courses/_course.html.erb (Duration: 0.0ms | Allocations: 33)
+  Rendered courses/index.html.erb within layouts/application (Duration: 8.7ms | Allocations: 10180)
+  Rendered home/_header.html.erb (Duration: 0.6ms | Allocations: 670)
+  Rendered layout layouts/application.html.erb (Duration: 10.6ms | Allocations: 12130)
+Completed 200 OK in 13ms (Views: 9.8ms | ActiveRecord: 1.5ms | Allocations: 14241)
+
+
+Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 20:19:16 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses" for 127.0.0.1 at 2023-12-02 20:19:26 +0100
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:5
+  [1m[36mCourse Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:9
+  Rendered courses/_course.html.erb (Duration: 0.4ms | Allocations: 251)
+  Rendered courses/_course.html.erb (Duration: 0.0ms | Allocations: 33)
+  Rendered courses/index.html.erb within layouts/application (Duration: 12.5ms | Allocations: 10158)
+  Rendered home/_header.html.erb (Duration: 0.9ms | Allocations: 670)
+  Rendered layout layouts/application.html.erb (Duration: 14.8ms | Allocations: 12121)
+Completed 200 OK in 17ms (Views: 14.1ms | ActiveRecord: 1.4ms | Allocations: 14233)
+
+
+Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 20:19:27 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses" for 127.0.0.1 at 2023-12-02 20:19:46 +0100
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:5
+  [1m[36mCourse Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:9
+  Rendered courses/_course.html.erb (Duration: 0.5ms | Allocations: 245)
+  Rendered courses/_course.html.erb (Duration: 0.0ms | Allocations: 33)
+  Rendered courses/index.html.erb within layouts/application (Duration: 9.4ms | Allocations: 10141)
+  Rendered home/_header.html.erb (Duration: 0.6ms | Allocations: 670)
+  Rendered layout layouts/application.html.erb (Duration: 11.3ms | Allocations: 12104)
+Completed 200 OK in 14ms (Views: 10.3ms | ActiveRecord: 1.7ms | Allocations: 14219)
+
+
+Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 20:19:46 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses" for 127.0.0.1 at 2023-12-02 20:22:33 +0100
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:5
+  [1m[36mCourse Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:9
+  Rendered courses/_course.html.erb (Duration: 0.3ms | Allocations: 259)
+  Rendered courses/_course.html.erb (Duration: 0.0ms | Allocations: 33)
+  Rendered courses/index.html.erb within layouts/application (Duration: 8.7ms | Allocations: 10167)
+  Rendered home/_header.html.erb (Duration: 0.6ms | Allocations: 670)
+  Rendered layout layouts/application.html.erb (Duration: 10.5ms | Allocations: 12130)
+Completed 200 OK in 13ms (Views: 9.9ms | ActiveRecord: 1.4ms | Allocations: 14245)
+
+
+Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 20:22:33 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses" for 127.0.0.1 at 2023-12-02 20:22:49 +0100
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:5
+  [1m[36mCourse Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:9
+  Rendered courses/_course.html.erb (Duration: 0.3ms | Allocations: 258)
+  Rendered courses/_course.html.erb (Duration: 0.0ms | Allocations: 33)
+  Rendered courses/index.html.erb within layouts/application (Duration: 9.0ms | Allocations: 10153)
+  Rendered home/_header.html.erb (Duration: 0.5ms | Allocations: 670)
+  Rendered layout layouts/application.html.erb (Duration: 10.8ms | Allocations: 12116)
+Completed 200 OK in 13ms (Views: 9.7ms | ActiveRecord: 1.8ms | Allocations: 14228)
+
+
+Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 20:22:50 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses" for 127.0.0.1 at 2023-12-02 20:22:54 +0100
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:5
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:9
+  Rendered courses/_course.html.erb (Duration: 0.4ms | Allocations: 260)
+  Rendered courses/_course.html.erb (Duration: 0.0ms | Allocations: 33)
+  Rendered courses/index.html.erb within layouts/application (Duration: 13.0ms | Allocations: 10175)
+  Rendered home/_header.html.erb (Duration: 0.6ms | Allocations: 670)
+  Rendered layout layouts/application.html.erb (Duration: 15.2ms | Allocations: 12138)
+Completed 200 OK in 18ms (Views: 14.3ms | ActiveRecord: 1.6ms | Allocations: 14250)
+
+
+Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 20:22:54 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses" for 127.0.0.1 at 2023-12-02 20:22:55 +0100
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:5
+  [1m[36mCourse Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:9
+  Rendered courses/_course.html.erb (Duration: 0.1ms | Allocations: 35)
+  Rendered courses/_course.html.erb (Duration: 0.0ms | Allocations: 33)
+  Rendered courses/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1491)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 218)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 2668)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.1ms | Allocations: 2927)
+
+
+Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 20:22:55 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses" for 127.0.0.1 at 2023-12-02 20:23:06 +0100
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:5
+  [1m[36mCourse Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:9
+  Rendered courses/_course.html.erb (Duration: 0.3ms | Allocations: 258)
+  Rendered courses/_course.html.erb (Duration: 0.0ms | Allocations: 33)
+  Rendered courses/index.html.erb within layouts/application (Duration: 10.1ms | Allocations: 10145)
+  Rendered home/_header.html.erb (Duration: 0.6ms | Allocations: 670)
+  Rendered layout layouts/application.html.erb (Duration: 12.0ms | Allocations: 12108)
+Completed 200 OK in 15ms (Views: 11.2ms | ActiveRecord: 1.6ms | Allocations: 14223)
+
+
+Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 20:23:06 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses" for 127.0.0.1 at 2023-12-02 20:23:53 +0100
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:5
+  [1m[36mCourse Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:9
+  Rendered courses/_course.html.erb (Duration: 0.3ms | Allocations: 259)
+  Rendered courses/_course.html.erb (Duration: 0.0ms | Allocations: 33)
+  Rendered courses/index.html.erb within layouts/application (Duration: 8.8ms | Allocations: 10175)
+  Rendered home/_header.html.erb (Duration: 0.6ms | Allocations: 670)
+  Rendered layout layouts/application.html.erb (Duration: 10.6ms | Allocations: 12138)
+Completed 200 OK in 14ms (Views: 10.1ms | ActiveRecord: 1.4ms | Allocations: 14248)
+
+
+Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 20:23:53 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses" for 127.0.0.1 at 2023-12-02 20:24:02 +0100
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:5
+  [1m[36mCourse Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:9
+  Rendered courses/_course.html.erb (Duration: 0.3ms | Allocations: 259)
+  Rendered courses/_course.html.erb (Duration: 0.0ms | Allocations: 33)
+  Rendered courses/index.html.erb within layouts/application (Duration: 9.2ms | Allocations: 10166)
+  Rendered home/_header.html.erb (Duration: 0.5ms | Allocations: 670)
+  Rendered layout layouts/application.html.erb (Duration: 11.0ms | Allocations: 12129)
+Completed 200 OK in 13ms (Views: 10.0ms | ActiveRecord: 1.7ms | Allocations: 14239)
+
+
+Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 20:24:02 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses" for 127.0.0.1 at 2023-12-02 20:24:29 +0100
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:5
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:9
+  Rendered courses/_course.html.erb (Duration: 0.4ms | Allocations: 260)
+  Rendered courses/_course.html.erb (Duration: 0.0ms | Allocations: 33)
+  Rendered courses/index.html.erb within layouts/application (Duration: 13.6ms | Allocations: 10190)
+  Rendered home/_header.html.erb (Duration: 0.6ms | Allocations: 670)
+  Rendered layout layouts/application.html.erb (Duration: 15.5ms | Allocations: 12153)
+Completed 200 OK in 19ms (Views: 14.7ms | ActiveRecord: 1.5ms | Allocations: 14265)
+
+
+Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 20:24:29 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses" for 127.0.0.1 at 2023-12-02 20:25:02 +0100
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:5
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:9
+  Rendered courses/_course.html.erb (Duration: 0.4ms | Allocations: 259)
+  Rendered courses/_course.html.erb (Duration: 0.0ms | Allocations: 33)
+  Rendered courses/index.html.erb within layouts/application (Duration: 9.1ms | Allocations: 10160)
+  Rendered home/_header.html.erb (Duration: 0.6ms | Allocations: 670)
+  Rendered layout layouts/application.html.erb (Duration: 11.0ms | Allocations: 12123)
+Completed 200 OK in 14ms (Views: 10.2ms | ActiveRecord: 1.5ms | Allocations: 14233)
+
+
+Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 20:25:02 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses" for 127.0.0.1 at 2023-12-02 20:25:36 +0100
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:5
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:9
+  Rendered courses/_course.html.erb (Duration: 0.3ms | Allocations: 261)
+  Rendered courses/_course.html.erb (Duration: 0.0ms | Allocations: 33)
+  Rendered courses/index.html.erb within layouts/application (Duration: 9.7ms | Allocations: 10187)
+  Rendered home/_header.html.erb (Duration: 0.6ms | Allocations: 670)
+  Rendered layout layouts/application.html.erb (Duration: 11.7ms | Allocations: 12151)
+Completed 200 OK in 15ms (Views: 11.0ms | ActiveRecord: 1.5ms | Allocations: 14266)
+
+
+Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 20:25:36 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses" for 127.0.0.1 at 2023-12-02 20:26:16 +0100
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:5
+  [1m[36mCourse Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:9
+  Rendered courses/_course.html.erb (Duration: 0.3ms | Allocations: 259)
+  Rendered courses/_course.html.erb (Duration: 0.0ms | Allocations: 33)
+  Rendered courses/index.html.erb within layouts/application (Duration: 8.3ms | Allocations: 10160)
+  Rendered home/_header.html.erb (Duration: 0.6ms | Allocations: 670)
+  Rendered layout layouts/application.html.erb (Duration: 10.1ms | Allocations: 12123)
+Completed 200 OK in 12ms (Views: 9.4ms | ActiveRecord: 1.4ms | Allocations: 14235)
+
+
+Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 20:26:17 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses" for 127.0.0.1 at 2023-12-02 20:26:26 +0100
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:5
+  [1m[36mCourse Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:9
+  Rendered courses/_course.html.erb (Duration: 0.1ms | Allocations: 35)
+  Rendered courses/_course.html.erb (Duration: 0.1ms | Allocations: 33)
+  Rendered courses/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1488)
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 218)
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | Allocations: 2679)
+Completed 200 OK in 5ms (Views: 5.0ms | ActiveRecord: 0.1ms | Allocations: 2939)
+
+
+Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 20:26:26 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses" for 127.0.0.1 at 2023-12-02 20:26:27 +0100
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:5
+  [1m[36mCourse Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:9
+  Rendered courses/_course.html.erb (Duration: 0.1ms | Allocations: 35)
+  Rendered courses/_course.html.erb (Duration: 0.0ms | Allocations: 33)
+  Rendered courses/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1469)
+  Rendered home/_header.html.erb (Duration: 0.6ms | Allocations: 218)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | Allocations: 2660)
+Completed 200 OK in 4ms (Views: 4.1ms | ActiveRecord: 0.1ms | Allocations: 2920)
+
+
+Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 20:26:27 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses" for 127.0.0.1 at 2023-12-02 20:26:28 +0100
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:5
+  [1m[36mCourse Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:9
+  Rendered courses/_course.html.erb (Duration: 0.1ms | Allocations: 35)
+  Rendered courses/_course.html.erb (Duration: 0.1ms | Allocations: 33)
+  Rendered courses/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1496)
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 218)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | Allocations: 2687)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.1ms | Allocations: 2947)
+
+
+Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 20:26:28 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses" for 127.0.0.1 at 2023-12-02 20:26:30 +0100
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:5
+  [1m[36mCourse Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:9
+  Rendered courses/_course.html.erb (Duration: 0.1ms | Allocations: 35)
+  Rendered courses/_course.html.erb (Duration: 0.1ms | Allocations: 33)
+  Rendered courses/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1481)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 218)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | Allocations: 2672)
+Completed 200 OK in 5ms (Views: 5.1ms | ActiveRecord: 0.1ms | Allocations: 2932)
+
+
+Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 20:26:30 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses" for 127.0.0.1 at 2023-12-02 20:26:43 +0100
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:5
+  [1m[36mCourse Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:9
+  Rendered courses/_course.html.erb (Duration: 0.3ms | Allocations: 259)
+  Rendered courses/_course.html.erb (Duration: 0.0ms | Allocations: 33)
+  Rendered courses/index.html.erb within layouts/application (Duration: 8.5ms | Allocations: 10151)
+  Rendered home/_header.html.erb (Duration: 0.6ms | Allocations: 670)
+  Rendered layout layouts/application.html.erb (Duration: 10.4ms | Allocations: 12114)
+Completed 200 OK in 13ms (Views: 9.6ms | ActiveRecord: 1.4ms | Allocations: 14224)
+
+
+Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 20:26:43 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses" for 127.0.0.1 at 2023-12-02 20:27:26 +0100
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:5
+  [1m[36mCourse Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:9
+  Rendered courses/_course.html.erb (Duration: 0.4ms | Allocations: 259)
+  Rendered courses/_course.html.erb (Duration: 0.0ms | Allocations: 33)
+  Rendered courses/index.html.erb within layouts/application (Duration: 8.8ms | Allocations: 10150)
+  Rendered home/_header.html.erb (Duration: 0.6ms | Allocations: 670)
+  Rendered layout layouts/application.html.erb (Duration: 10.7ms | Allocations: 12113)
+Completed 200 OK in 13ms (Views: 10.0ms | ActiveRecord: 1.4ms | Allocations: 14228)
+
+
+Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 20:27:26 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses" for 127.0.0.1 at 2023-12-02 20:27:34 +0100
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:5
+  [1m[36mCourse Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:9
+  Rendered courses/_course.html.erb (Duration: 0.3ms | Allocations: 258)
+  Rendered courses/_course.html.erb (Duration: 0.0ms | Allocations: 33)
+  Rendered courses/index.html.erb within layouts/application (Duration: 8.7ms | Allocations: 10153)
+  Rendered home/_header.html.erb (Duration: 0.6ms | Allocations: 670)
+  Rendered layout layouts/application.html.erb (Duration: 10.7ms | Allocations: 12116)
+Completed 200 OK in 13ms (Views: 10.0ms | ActiveRecord: 1.5ms | Allocations: 14228)
+
+
+Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 20:27:35 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses" for 127.0.0.1 at 2023-12-02 20:27:59 +0100
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:5
+  [1m[36mCourse Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:9
+  Rendered courses/_course.html.erb (Duration: 0.5ms | Allocations: 259)
+  Rendered courses/_course.html.erb (Duration: 0.0ms | Allocations: 33)
+  Rendered courses/index.html.erb within layouts/application (Duration: 9.0ms | Allocations: 10169)
+  Rendered home/_header.html.erb (Duration: 0.6ms | Allocations: 670)
+  Rendered layout layouts/application.html.erb (Duration: 10.9ms | Allocations: 12132)
+Completed 200 OK in 13ms (Views: 10.1ms | ActiveRecord: 1.4ms | Allocations: 14242)
+
+
+Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 20:27:59 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses" for 127.0.0.1 at 2023-12-02 20:28:18 +0100
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:5
+  [1m[36mCourse Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:9
+  Rendered courses/_course.html.erb (Duration: 0.3ms | Allocations: 257)
+  Rendered courses/_course.html.erb (Duration: 0.0ms | Allocations: 33)
+  Rendered courses/index.html.erb within layouts/application (Duration: 8.8ms | Allocations: 10140)
+  Rendered home/_header.html.erb (Duration: 0.6ms | Allocations: 670)
+  Rendered layout layouts/application.html.erb (Duration: 10.7ms | Allocations: 12103)
+Completed 200 OK in 14ms (Views: 10.9ms | ActiveRecord: 1.4ms | Allocations: 14218)
+
+
+Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 20:28:18 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses" for 127.0.0.1 at 2023-12-02 20:29:25 +0100
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:5
+  [1m[36mCourse Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:9
+  Rendered courses/_course.html.erb (Duration: 0.3ms | Allocations: 260)
+  Rendered courses/_course.html.erb (Duration: 0.0ms | Allocations: 33)
+  Rendered courses/index.html.erb within layouts/application (Duration: 8.4ms | Allocations: 10152)
+  Rendered home/_header.html.erb (Duration: 0.6ms | Allocations: 670)
+  Rendered layout layouts/application.html.erb (Duration: 10.1ms | Allocations: 12115)
+Completed 200 OK in 13ms (Views: 9.5ms | ActiveRecord: 1.4ms | Allocations: 14227)
+
+
+Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 20:29:25 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses" for 127.0.0.1 at 2023-12-02 20:29:31 +0100
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:5
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:9
+  Rendered courses/_course.html.erb (Duration: 0.3ms | Allocations: 260)
+  Rendered courses/_course.html.erb (Duration: 0.0ms | Allocations: 33)
+  Rendered courses/index.html.erb within layouts/application (Duration: 8.6ms | Allocations: 10185)
+  Rendered home/_header.html.erb (Duration: 0.6ms | Allocations: 670)
+  Rendered layout layouts/application.html.erb (Duration: 10.6ms | Allocations: 12148)
+Completed 200 OK in 13ms (Views: 9.9ms | ActiveRecord: 1.4ms | Allocations: 14263)
+
+
+Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 20:29:31 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses" for 127.0.0.1 at 2023-12-02 20:31:05 +0100
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:5
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:9
+  Rendered courses/_course.html.erb (Duration: 0.4ms | Allocations: 270)
+  Rendered courses/_course.html.erb (Duration: 0.0ms | Allocations: 33)
+  Rendered courses/index.html.erb within layouts/application (Duration: 13.7ms | Allocations: 10181)
+  Rendered home/_header.html.erb (Duration: 0.6ms | Allocations: 670)
+  Rendered layout layouts/application.html.erb (Duration: 15.9ms | Allocations: 12144)
+Completed 200 OK in 19ms (Views: 15.1ms | ActiveRecord: 1.5ms | Allocations: 14256)
+
+
+Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 20:31:05 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses" for 127.0.0.1 at 2023-12-02 20:31:32 +0100
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:5
+  [1m[36mCourse Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:9
+  Rendered courses/_course.html.erb (Duration: 0.1ms | Allocations: 35)
+  Rendered courses/_course.html.erb (Duration: 0.0ms | Allocations: 33)
+  Rendered courses/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1482)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 218)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | Allocations: 2673)
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.1ms | Allocations: 2933)
+
+
+Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 20:31:32 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses" for 127.0.0.1 at 2023-12-02 20:32:11 +0100
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:5
+  [1m[36mCourse Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:9
+  Rendered courses/_course.html.erb (Duration: 0.1ms | Allocations: 35)
+  Rendered courses/_course.html.erb (Duration: 0.0ms | Allocations: 33)
+  Rendered courses/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1493)
+  Rendered home/_header.html.erb (Duration: 0.5ms | Allocations: 218)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | Allocations: 2684)
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.1ms | Allocations: 2944)
+
+
+Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 20:32:11 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses" for 127.0.0.1 at 2023-12-02 20:32:21 +0100
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:5
+  [1m[36mCourse Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:9
+  Rendered courses/_course.html.erb (Duration: 0.3ms | Allocations: 268)
+  Rendered courses/_course.html.erb (Duration: 0.0ms | Allocations: 33)
+  Rendered courses/index.html.erb within layouts/application (Duration: 8.5ms | Allocations: 10160)
+  Rendered home/_header.html.erb (Duration: 0.6ms | Allocations: 670)
+  Rendered layout layouts/application.html.erb (Duration: 10.4ms | Allocations: 12123)
+Completed 200 OK in 13ms (Views: 9.7ms | ActiveRecord: 1.4ms | Allocations: 14233)
+
+
+Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 20:32:21 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses" for 127.0.0.1 at 2023-12-02 20:32:27 +0100
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:5
+  [1m[36mCourse Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:9
+  Rendered courses/_course.html.erb (Duration: 0.1ms | Allocations: 35)
+  Rendered courses/_course.html.erb (Duration: 0.0ms | Allocations: 33)
+  Rendered courses/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1491)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 218)
+  Rendered layout layouts/application.html.erb (Duration: 3.7ms | Allocations: 2682)
+Completed 200 OK in 4ms (Views: 3.9ms | ActiveRecord: 0.1ms | Allocations: 2942)
+
+
+Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 20:32:27 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses" for 127.0.0.1 at 2023-12-02 20:33:02 +0100
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:5
+  [1m[36mCourse Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:9
+  Rendered courses/_course.html.erb (Duration: 0.3ms | Allocations: 268)
+  Rendered courses/_course.html.erb (Duration: 0.0ms | Allocations: 33)
+  Rendered courses/index.html.erb within layouts/application (Duration: 8.2ms | Allocations: 10160)
+  Rendered home/_header.html.erb (Duration: 0.6ms | Allocations: 670)
+  Rendered layout layouts/application.html.erb (Duration: 10.0ms | Allocations: 12123)
+Completed 200 OK in 12ms (Views: 9.3ms | ActiveRecord: 1.4ms | Allocations: 14233)
+
+
+Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 20:33:02 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses" for 127.0.0.1 at 2023-12-02 20:34:22 +0100
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:5
+  [1m[36mCourse Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:9
+  Rendered courses/_course.html.erb (Duration: 0.3ms | Allocations: 268)
+  Rendered courses/_course.html.erb (Duration: 0.0ms | Allocations: 33)
+  Rendered courses/index.html.erb within layouts/application (Duration: 8.6ms | Allocations: 10154)
+  Rendered home/_header.html.erb (Duration: 0.6ms | Allocations: 670)
+  Rendered layout layouts/application.html.erb (Duration: 10.4ms | Allocations: 12117)
+Completed 200 OK in 13ms (Views: 9.7ms | ActiveRecord: 1.4ms | Allocations: 14227)
+
+
+Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 20:34:22 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
+  
+Started GET "/" for 127.0.0.1 at 2023-12-02 20:34:34 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:10
+  Rendered home/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1388)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 239)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | Allocations: 2614)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.1ms | Allocations: 3072)
+
+
+Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 20:34:34 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses" for 127.0.0.1 at 2023-12-02 20:34:35 +0100
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:5
+  [1m[36mCourse Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:9
+  Rendered courses/_course.html.erb (Duration: 0.1ms | Allocations: 35)
+  Rendered courses/_course.html.erb (Duration: 0.1ms | Allocations: 33)
+  Rendered courses/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1482)
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 218)
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 2660)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.1ms | Allocations: 2919)
+
+
+Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 20:34:35 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses/1" for 127.0.0.1 at 2023-12-02 20:35:01 +0100
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:64:in `set_course'
+  Rendering layout layouts/application.html.erb
+  Rendering courses/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/show.html.erb:6
+  [1m[36mFilm Load (0.1ms)[0m  [1m[34mSELECT "films".* FROM "films"[0m
+  ↳ app/views/courses/show.html.erb:12
+  Rendered courses/show.html.erb within layouts/application (Duration: 6.3ms | Allocations: 5017)
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 219)
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 6204)
+Completed 200 OK in 18ms (Views: 8.0ms | ActiveRecord: 0.5ms | Allocations: 11780)
+
+
+Started GET "/courses/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 20:35:01 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/courses/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses" for 127.0.0.1 at 2023-12-02 20:35:52 +0100
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:5
+  [1m[36mCourse Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:9
+  Rendered courses/_course.html.erb (Duration: 0.1ms | Allocations: 35)
+  Rendered courses/_course.html.erb (Duration: 0.0ms | Allocations: 33)
+  Rendered courses/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1482)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 218)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | Allocations: 2714)
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.1ms | Allocations: 2974)
+
+
+Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 20:35:52 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses" for 127.0.0.1 at 2023-12-02 20:36:22 +0100
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:5
+  [1m[36mCourse Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:9
+  Rendered courses/_course.html.erb (Duration: 0.3ms | Allocations: 268)
+  Rendered courses/_course.html.erb (Duration: 0.0ms | Allocations: 33)
+  Rendered courses/index.html.erb within layouts/application (Duration: 8.5ms | Allocations: 10157)
+  Rendered home/_header.html.erb (Duration: 0.6ms | Allocations: 670)
+  Rendered layout layouts/application.html.erb (Duration: 10.3ms | Allocations: 12120)
+Completed 200 OK in 13ms (Views: 9.5ms | ActiveRecord: 1.4ms | Allocations: 14232)
+
+
+Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 20:36:22 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses" for 127.0.0.1 at 2023-12-02 20:37:07 +0100
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:5
+  [1m[36mCourse Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:9
+  Rendered courses/_course.html.erb (Duration: 0.3ms | Allocations: 266)
+  Rendered courses/_course.html.erb (Duration: 0.0ms | Allocations: 33)
+  Rendered courses/index.html.erb within layouts/application (Duration: 8.3ms | Allocations: 10126)
+  Rendered home/_header.html.erb (Duration: 0.6ms | Allocations: 670)
+  Rendered layout layouts/application.html.erb (Duration: 10.2ms | Allocations: 12089)
+Completed 200 OK in 13ms (Views: 9.5ms | ActiveRecord: 1.4ms | Allocations: 14201)
+
+
+Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 20:37:07 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses" for 127.0.0.1 at 2023-12-02 20:37:36 +0100
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:5
+  [1m[36mCourse Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:9
+  Rendered courses/_course.html.erb (Duration: 0.3ms | Allocations: 267)
+  Rendered courses/_course.html.erb (Duration: 0.0ms | Allocations: 33)
+  Rendered courses/index.html.erb within layouts/application (Duration: 9.5ms | Allocations: 10119)
+  Rendered home/_header.html.erb (Duration: 1.3ms | Allocations: 670)
+  Rendered layout layouts/application.html.erb (Duration: 12.0ms | Allocations: 12082)
+Completed 200 OK in 15ms (Views: 11.4ms | ActiveRecord: 1.4ms | Allocations: 14197)
+
+
+Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 20:37:36 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses" for 127.0.0.1 at 2023-12-02 20:38:04 +0100
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:5
+  [1m[36mCourse Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:9
+  Rendered courses/_course.html.erb (Duration: 0.4ms | Allocations: 270)
+  Rendered courses/_course.html.erb (Duration: 0.7ms | Allocations: 33)
+  Rendered courses/index.html.erb within layouts/application (Duration: 13.7ms | Allocations: 10112)
+  Rendered home/_header.html.erb (Duration: 0.5ms | Allocations: 670)
+  Rendered layout layouts/application.html.erb (Duration: 15.5ms | Allocations: 12075)
+Completed 200 OK in 18ms (Views: 14.8ms | ActiveRecord: 1.4ms | Allocations: 14185)
+
+
+Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 20:38:04 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses" for 127.0.0.1 at 2023-12-02 20:38:25 +0100
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:5
+  [1m[36mCourse Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:9
+  Rendered courses/_course.html.erb (Duration: 0.3ms | Allocations: 268)
+  Rendered courses/_course.html.erb (Duration: 0.0ms | Allocations: 33)
+  Rendered courses/index.html.erb within layouts/application (Duration: 8.4ms | Allocations: 10121)
+  Rendered home/_header.html.erb (Duration: 0.5ms | Allocations: 670)
+  Rendered layout layouts/application.html.erb (Duration: 10.1ms | Allocations: 12084)
+Completed 200 OK in 13ms (Views: 9.4ms | ActiveRecord: 1.4ms | Allocations: 14195)
+
+
+Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 20:38:25 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses" for 127.0.0.1 at 2023-12-02 20:38:49 +0100
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:5
+  [1m[36mCourse Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:9
+  Rendered courses/_course.html.erb (Duration: 0.3ms | Allocations: 259)
+  Rendered courses/_course.html.erb (Duration: 0.0ms | Allocations: 33)
+  Rendered courses/index.html.erb within layouts/application (Duration: 9.3ms | Allocations: 10148)
+  Rendered home/_header.html.erb (Duration: 0.5ms | Allocations: 670)
+  Rendered layout layouts/application.html.erb (Duration: 11.1ms | Allocations: 12111)
+Completed 200 OK in 15ms (Views: 10.4ms | ActiveRecord: 1.4ms | Allocations: 14223)
+
+
+Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 20:38:49 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses" for 127.0.0.1 at 2023-12-02 20:40:08 +0100
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:5
+  [1m[36mCourse Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:9
+  Rendered courses/_course.html.erb (Duration: 0.3ms | Allocations: 251)
+  Rendered courses/_course.html.erb (Duration: 0.0ms | Allocations: 33)
+  Rendered courses/index.html.erb within layouts/application (Duration: 8.2ms | Allocations: 10146)
+  Rendered home/_header.html.erb (Duration: 0.6ms | Allocations: 670)
+  Rendered layout layouts/application.html.erb (Duration: 10.2ms | Allocations: 12109)
+Completed 200 OK in 13ms (Views: 9.5ms | ActiveRecord: 1.4ms | Allocations: 14221)
+
+
+Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 20:40:08 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses" for 127.0.0.1 at 2023-12-02 20:40:31 +0100
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:5
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:9
+  Rendered courses/_course.html.erb (Duration: 4.8ms | Allocations: 238)
+  Rendered courses/_course.html.erb (Duration: 0.0ms | Allocations: 33)
+  Rendered courses/index.html.erb within layouts/application (Duration: 49.9ms | Allocations: 10133)
+  Rendered home/_header.html.erb (Duration: 3.6ms | Allocations: 670)
+  Rendered layout layouts/application.html.erb (Duration: 61.4ms | Allocations: 12096)
+Completed 200 OK in 64ms (Views: 53.9ms | ActiveRecord: 8.2ms | Allocations: 14208)
+
+
+Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 20:40:32 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses" for 127.0.0.1 at 2023-12-02 20:40:37 +0100
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:5
+  [1m[36mCourse Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:9
+  Rendered courses/_course.html.erb (Duration: 0.1ms | Allocations: 35)
+  Rendered courses/_course.html.erb (Duration: 0.0ms | Allocations: 33)
+  Rendered courses/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1515)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 218)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 2698)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.1ms | Allocations: 2959)
+
+
+Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 20:40:37 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
+  
+Started GET "/" for 127.0.0.1 at 2023-12-02 20:40:38 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:10
+  Rendered home/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1397)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 239)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | Allocations: 2623)
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.1ms | Allocations: 3083)
+
+
+Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 20:40:38 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses" for 127.0.0.1 at 2023-12-02 20:40:38 +0100
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:5
+  [1m[36mCourse Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:9
+  Rendered courses/_course.html.erb (Duration: 0.1ms | Allocations: 35)
+  Rendered courses/_course.html.erb (Duration: 0.0ms | Allocations: 33)
+  Rendered courses/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1484)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 218)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | Allocations: 2662)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.1ms | Allocations: 2921)
+
+
+Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 20:40:38 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses" for 127.0.0.1 at 2023-12-02 20:41:04 +0100
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:5
+  [1m[36mCourse Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:9
+  Rendered courses/_course.html.erb (Duration: 0.1ms | Allocations: 35)
+  Rendered courses/_course.html.erb (Duration: 0.0ms | Allocations: 33)
+  Rendered courses/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1493)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 218)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | Allocations: 2738)
+Completed 200 OK in 4ms (Views: 4.0ms | ActiveRecord: 0.1ms | Allocations: 3000)
+
+
+Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 20:41:04 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses" for 127.0.0.1 at 2023-12-02 20:42:08 +0100
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:5
+  [1m[36mCourse Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:9
+  Rendered courses/_course.html.erb (Duration: 0.9ms | Allocations: 260)
+  Rendered courses/_course.html.erb (Duration: 0.0ms | Allocations: 38)
+  Rendered courses/index.html.erb within layouts/application (Duration: 10.0ms | Allocations: 10175)
+  Rendered home/_header.html.erb (Duration: 0.6ms | Allocations: 670)
+  Rendered layout layouts/application.html.erb (Duration: 11.7ms | Allocations: 12138)
+Completed 200 OK in 14ms (Views: 11.0ms | ActiveRecord: 1.4ms | Allocations: 14253)
+
+
+Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 20:42:09 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses" for 127.0.0.1 at 2023-12-02 20:45:09 +0100
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:5
+  [1m[36mCourse Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:9
+  Rendered courses/_course.html.erb (Duration: 0.8ms | Allocations: 268)
+  Rendered courses/_course.html.erb (Duration: 0.0ms | Allocations: 38)
+  Rendered courses/index.html.erb within layouts/application (Duration: 9.2ms | Allocations: 10128)
+  Rendered home/_header.html.erb (Duration: 0.6ms | Allocations: 670)
+  Rendered layout layouts/application.html.erb (Duration: 11.3ms | Allocations: 12091)
+Completed 200 OK in 14ms (Views: 10.5ms | ActiveRecord: 1.5ms | Allocations: 14206)
+
+
+Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 20:45:09 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses" for 127.0.0.1 at 2023-12-02 20:45:29 +0100
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:5
+  [1m[36mCourse Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:9
+  Rendered courses/_course.html.erb (Duration: 0.4ms | Allocations: 267)
+  Rendered courses/_course.html.erb (Duration: 0.0ms | Allocations: 38)
+  Rendered courses/index.html.erb within layouts/application (Duration: 8.7ms | Allocations: 10119)
+  Rendered home/_header.html.erb (Duration: 0.6ms | Allocations: 670)
+  Rendered layout layouts/application.html.erb (Duration: 10.6ms | Allocations: 12077)
+Completed 200 OK in 13ms (Views: 9.6ms | ActiveRecord: 1.7ms | Allocations: 14187)
+
+
+Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 20:45:29 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses" for 127.0.0.1 at 2023-12-02 20:45:50 +0100
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:5
+  [1m[36mCourse Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:9
+  Rendered courses/_course.html.erb (Duration: 0.3ms | Allocations: 304)
+  Rendered courses/_course.html.erb (Duration: 0.0ms | Allocations: 43)
+  Rendered courses/index.html.erb within layouts/application (Duration: 10.0ms | Allocations: 10221)
+  Rendered home/_header.html.erb (Duration: 0.6ms | Allocations: 670)
+  Rendered layout layouts/application.html.erb (Duration: 11.9ms | Allocations: 12184)
+Completed 200 OK in 14ms (Views: 11.0ms | ActiveRecord: 1.6ms | Allocations: 14296)
+
+
+Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 20:45:50 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses" for 127.0.0.1 at 2023-12-02 20:48:35 +0100
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:5
+  [1m[36mCourse Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:9
+  Rendered courses/_course.html.erb (Duration: 0.3ms | Allocations: 273)
+  Rendered courses/_course.html.erb (Duration: 0.0ms | Allocations: 33)
+  Rendered courses/index.html.erb within layouts/application (Duration: 8.6ms | Allocations: 10183)
+  Rendered home/_header.html.erb (Duration: 0.6ms | Allocations: 670)
+  Rendered layout layouts/application.html.erb (Duration: 10.4ms | Allocations: 12146)
+Completed 200 OK in 13ms (Views: 9.7ms | ActiveRecord: 1.5ms | Allocations: 14258)
+
+
+Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 20:48:35 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses" for 127.0.0.1 at 2023-12-02 20:49:44 +0100
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:5
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:9
+  Rendered courses/_course.html.erb (Duration: 0.4ms | Allocations: 267)
+  Rendered courses/_course.html.erb (Duration: 0.0ms | Allocations: 33)
+  Rendered courses/index.html.erb within layouts/application (Duration: 57.2ms | Allocations: 10184)
+  Rendered home/_header.html.erb (Duration: 0.6ms | Allocations: 670)
+  Rendered layout layouts/application.html.erb (Duration: 59.5ms | Allocations: 12147)
+Completed 200 OK in 74ms (Views: 59.7ms | ActiveRecord: 3.8ms | Allocations: 14259)
+
+
+Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 20:49:44 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses" for 127.0.0.1 at 2023-12-02 20:50:00 +0100
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:5
+  [1m[36mCourse Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:9
+  Rendered courses/_course.html.erb (Duration: 0.3ms | Allocations: 264)
+  Rendered courses/_course.html.erb (Duration: 0.0ms | Allocations: 33)
+  Rendered courses/index.html.erb within layouts/application (Duration: 8.6ms | Allocations: 10111)
+  Rendered home/_header.html.erb (Duration: 0.6ms | Allocations: 670)
+  Rendered layout layouts/application.html.erb (Duration: 10.4ms | Allocations: 12060)
+Completed 200 OK in 13ms (Views: 9.7ms | ActiveRecord: 1.4ms | Allocations: 14169)
+
+
+Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 20:50:00 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses" for 127.0.0.1 at 2023-12-02 20:50:19 +0100
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:5
+  [1m[36mCourse Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:9
+  Rendered courses/_course.html.erb (Duration: 0.3ms | Allocations: 264)
+  Rendered courses/_course.html.erb (Duration: 0.0ms | Allocations: 33)
+  Rendered courses/index.html.erb within layouts/application (Duration: 8.7ms | Allocations: 10177)
+  Rendered home/_header.html.erb (Duration: 0.6ms | Allocations: 670)
+  Rendered layout layouts/application.html.erb (Duration: 10.5ms | Allocations: 12140)
+Completed 200 OK in 13ms (Views: 9.5ms | ActiveRecord: 1.7ms | Allocations: 14250)
+
+
+Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 20:50:19 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses" for 127.0.0.1 at 2023-12-02 20:50:28 +0100
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:5
+  [1m[36mCourse Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:9
+  Rendered courses/_course.html.erb (Duration: 0.3ms | Allocations: 264)
+  Rendered courses/_course.html.erb (Duration: 0.0ms | Allocations: 33)
+  Rendered courses/index.html.erb within layouts/application (Duration: 8.5ms | Allocations: 10162)
+  Rendered home/_header.html.erb (Duration: 0.5ms | Allocations: 670)
+  Rendered layout layouts/application.html.erb (Duration: 10.3ms | Allocations: 12126)
+Completed 200 OK in 14ms (Views: 9.7ms | ActiveRecord: 1.4ms | Allocations: 14236)
+
+
+Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 20:50:29 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses" for 127.0.0.1 at 2023-12-02 20:50:45 +0100
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:5
+  [1m[36mCourse Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:9
+  Rendered courses/_course.html.erb (Duration: 0.1ms | Allocations: 35)
+  Rendered courses/_course.html.erb (Duration: 0.0ms | Allocations: 33)
+  Rendered courses/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1485)
+  Rendered home/_header.html.erb (Duration: 0.5ms | Allocations: 218)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 4403)
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.1ms | Allocations: 4663)
+
+
+Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 20:50:45 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses" for 127.0.0.1 at 2023-12-02 20:51:00 +0100
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:5
+  [1m[36mCourse Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:9
+  Rendered courses/_course.html.erb (Duration: 0.1ms | Allocations: 35)
+  Rendered courses/_course.html.erb (Duration: 0.0ms | Allocations: 33)
+  Rendered courses/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1484)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 218)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 4419)
+Completed 200 OK in 6ms (Views: 5.9ms | ActiveRecord: 0.1ms | Allocations: 4680)
+
+
+Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 20:51:00 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
+  
+Started GET "/courses" for 127.0.0.1 at 2023-12-02 20:51:07 +0100
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:5
+  [1m[36mCourse Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:9
+  Rendered courses/_course.html.erb (Duration: 0.1ms | Allocations: 35)
+  Rendered courses/_course.html.erb (Duration: 0.0ms | Allocations: 33)
+  Rendered courses/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1490)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 218)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 2722)
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.1ms | Allocations: 2981)
+
+
+Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 20:51:07 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
+  
