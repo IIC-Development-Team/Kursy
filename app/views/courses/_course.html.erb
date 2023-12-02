@@ -1,4 +1,4 @@
-<div id="<%= dom_id course %>" class="course">
+<div id="<%= dom_id course %>" class="course" onmouseover="ShowDesc(this)" onmouseout="HideDesc(this)">
   <div class="course-details">
     <p class="course-title">
       <%= course.title %>
@@ -16,21 +16,21 @@
 </div>
 
 <script>
- const title = document.querySelector(".course-title")
- const details = document.querySelector(".course-details")
- const course = document.querySelector(".course")
 
- const odej = details.offsetHeight - title.offsetHeight - 10
- 
- details.style.bottom = -odej + "px"
+    function ShowDesc(course) {
+      for(const details of course.children)
+        if(details.className == "course-details")
+          for(const desc of details.children)
+            if(desc.className == "course-desc")
+              desc.style.display = "block"; //Pokaż
+    }
 
-
- course.addEventListener("mouseleave", () => {
-  details.style.bottom = -odej + "px"
- })
- course.addEventListener("mouseenter", () => {
-  details.style.bottom = 0
- })
- 
+    function HideDesc(course) {
+      for(const details of course.children)
+        if(details.className == "course-details") //Znajdź wszystkie dzieci z klasy
+          for(const desc of details.children)
+            if(desc.className == "course-desc") //Znajdź wszystkie dzieci z klasy
+              desc.style.display = "none"; //Ukryj
+    }
 
 </script>

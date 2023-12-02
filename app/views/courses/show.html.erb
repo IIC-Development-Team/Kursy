@@ -4,7 +4,9 @@
 <div class="main-content">
     <div class="container">
     <% if user_signed_in? %>
-      <%= render @course %>
+      <div>
+        <%= @course.title %>
+      </div>
 
       <div id="films">
     <% @films.each do |film| %>

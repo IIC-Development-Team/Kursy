@@ -365,6 +365,7 @@ ul li {
 .course-desc {
     font-size: 1.8rem;
     margin: 0;
+    display: none;
 }
 
 a {
