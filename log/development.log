@@ -12664,3 +12664,53 @@ Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 20:51:07 +0
   
 ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
   
+Started GET "/" for 127.0.0.1 at 2023-12-02 20:57:10 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:10
+  Rendered home/index.html.erb within layouts/application (Duration: 5.2ms | Allocations: 5907)
+  Rendered home/_header.html.erb (Duration: 0.7ms | Allocations: 703)
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 7910)
+Completed 200 OK in 9ms (Views: 6.8ms | ActiveRecord: 1.1ms | Allocations: 9429)
+
+
+Started GET "/app/images/pfp/prof_0.png" for 127.0.0.1 at 2023-12-02 20:57:10 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/images/pfp/prof_0.png"):
+  
+Started GET "/" for 127.0.0.1 at 2023-12-02 20:59:05 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:10
+  Rendered home/index.html.erb within layouts/application (Duration: 6.0ms | Allocations: 6538)
+  Rendered home/_header.html.erb (Duration: 0.6ms | Allocations: 704)
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 8542)
+Completed 200 OK in 10ms (Views: 7.4ms | ActiveRecord: 1.3ms | Allocations: 10060)
+
+
+Started GET "/prof_0.png" for 127.0.0.1 at 2023-12-02 20:59:05 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/prof_0.png"):
+  
+Started GET "/" for 127.0.0.1 at 2023-12-02 20:59:16 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:10
+  Rendered home/index.html.erb within layouts/application (Duration: 5.9ms | Allocations: 6547)
+  Rendered home/_header.html.erb (Duration: 0.6ms | Allocations: 704)
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | Allocations: 8551)
+Completed 200 OK in 10ms (Views: 7.3ms | ActiveRecord: 1.3ms | Allocations: 10069)
+
+
