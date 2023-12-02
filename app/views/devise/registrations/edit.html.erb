@@ -1,57 +1,47 @@
+<div class = "user_account_back" style="margin-top: 100px;">
+  <h1 class="update-text">Moje konto</h1>
 
-    <div class="login-form" style="margin-top: 100px;">
-        <h1 class="update-text">Moje konto</h1>
-        <hr>
-        <h1 class="user-edit-text">Zmień Avatar</h1>
-        <div class="change-avatar">
-          <img src="#actual-avatar" class="avatar">
-          <div class="rest-avatars">
-            <%# Do zrobienia reszta avatarow, jak beda gotowe to napisac %>
-          </div>
-        </div>
-        <br>
+  <div style="float:left; width: 28%; margin-left: 10%;"><hr></div>
+  <h2 style="float:left; width: 24%; margin-top: -8px; font-size: 2rem;">Personalne</h2>
+  <div style="float:left; width: 28%;"><hr></div>
 
-        <hr>
+  <div class="change-avatar">
+    <img src="#actual-avatar" class="avatar">
+  </div>
 
-        <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-          <%= render "devise/shared/error_messages", resource: resource %>
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+    <%= render "devise/shared/error_messages", resource: resource %>
 
-          <div class="field">
-            <h1 class="user-edit-text change-data">Nazwa użytkownika</h1>
-            <%= f.text_field :username, autofocus: true, autocomplete: "username", class: 'login-input' %>
-          </div>
+  <div class="field" style="margin-top: -50px;">
+    <h1 class="change-data">Nazwa użytkownika</h1>
+    <%= f.text_field :username, autofocus: true, autocomplete: "username", class: 'edit-input' %>
+  </div>
+  <br>
+  <br>
+  <div style="float:left; width: 28%; margin-left: 10%;"><hr></div>
+  <h2 style="float:left; width: 24%; margin-top: -8px; font-size: 2rem;">Prywatność</h2>
+  <div style="float:left; width: 28%;"><hr></div>
 
-          <div class="field">
-            <h1 class="user-edit-text change-data">Email</h1>
-            <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "login-input" %>
-          </div>
+  <div class="field" style="margin-top: -20px;">
+    <h1 class="change-data">Email</h1>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "edit-input" %>
+  </div>
 
-          <hr>
-          <h1 class="user-edit-text">Zmień hasło</h1>
-          <%= f.submit "Zmień hasło", class: 'login-submit' %> <!-- Trzeba dodać funkcjonalność aby osoba klikająca w przycisk zmień hasło, miała dalsze kroki do zmiany hasła -->
+  <div class="field" style="margin-top: -40px;">
+    <h1 class="change-data">Hasło</h1>
+    <%= f.password_field :email, autofocus: true, autocomplete: "password", class: "edit-input" %> <!-- Trzeba zmienić tutaj dane do hasła + dodać aby hasło było ********-->
+  </div>
 
-          </div>
+  <%= f.submit "Zmień hasło", class: 'edit-submit' %>
 
-          <hr>
-
-          <div class='delete-account'>
-            <h1 class="user-edit-text">Usuń konto</h1>
-            <%= button_to "Usuń konto", registration_path(resource_name), data: { confirm: "Are you sure?", turbo_confirm: "Are you sure?" }, method: :delete, class: 'login-submit' %>
-          </div>
-
-          <hr>
-
-          <div class="aktualizuj-dane"> 
-            <%= f.submit "Aktualizuj", class: 'login-submit accept' %>
-          </div>
-
-          
-
-          <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-            <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
-          <% end %>
-
-        <% end %>
+  <br>
+  <br>
+  <div style="float:left; width: 28%; margin-left: 10%;"><hr></div>
+  <h2 style="float:left; width: 24%; margin-top: -8px; font-size: 2rem;">Konto</h2>
+  <div style="float:left; width: 28%;"><hr></div>
+  
 
 
-    </div>
+  <% end %>
+  
+</div>

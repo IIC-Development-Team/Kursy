@@ -372,16 +372,8 @@ a {
     color: white;
 }
 
-.user-edit-text {
-    font-size: 2.8rem;
-    color: white;
-}
-
 .change-data {
-    font-size: 1.8rem;
-    position: absolute;
-    top: 10px;
-    text-transform: uppercase;
+    font-size: 1.4rem;
 }
 
 .delete-account, .aktualizuj-dane {
@@ -390,7 +382,7 @@ a {
 
 
 .change-avatar {
-    height: 200px;
+    height: 170px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -398,7 +390,7 @@ a {
 }
 
 .avatar {
-    width: 200px;
+    width: 160px;
     aspect-ratio: 1;
     border-radius: 50%;
     border: #1f1f1f 1px solid;
@@ -420,4 +412,57 @@ a {
     position: relative;
     width: fit-content;
     margin: auto;
+}
+
+.user_account_back {
+    background-color: #272727;
+    margin: auto;
+    text-align: center;
+    color: silver;
+    width: 32vw;
+    height: 84vh;
+}
+
+.edit-input
+{
+    border:none;
+    background-color: #1f1f1f;
+    color: silver;
+    font-size: 1.5rem;
+    border-radius: 2px;
+    padding: 10px;
+    box-shadow: inset 2px 2px 2px black;
+}
+
+.edit-submit
+{
+    margin-top: 8px;
+    border: none;
+    background-color: #1f1f1f;
+    color: silver;
+    border-radius: 2px;
+    box-shadow: inset -2px -2px 2px white;
+    cursor: pointer;
+    transition: 200ms ease-out;
+}
+
+.edit-submit:hover {
+    color: #1f1f1f;
+    background-color: silver;
+}
+
+.delete-submit {
+    margin-top: 8px;
+    border: none;
+    background-color: #1f1f1f;
+    color: silver;
+    border-radius: 2px;
+    box-shadow: inset -2px -2px 2px white;
+    cursor: pointer;
+    transition: 200ms ease-out;
+}
+
+.delete-submit:hover {
+    color: #1f1f1f;
+    background-color: silver;
 }
