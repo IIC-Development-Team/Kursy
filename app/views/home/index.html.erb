@@ -3,8 +3,8 @@
     <div class="subtitle">Naucz się IT! Już dziś! Za darmo!</div>
 
     <div class="stat-counter">
-        Mamy 0 kursów i <%= User.count %> zarejstrowanych użytkowników, <br>
-        a nasza strona ma już 000000 odwiedzin
+        Mamy <%= Course.count %> kursów i <%= User.count %> zarejstrowanych użytkowników, <br>
+        a nasza strona ma już <%= Client.count %> odwiedzin
     </div>
 
     <% if user_signed_in?%>
