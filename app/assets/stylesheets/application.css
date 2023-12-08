@@ -365,7 +365,6 @@ ul li {
 .course-desc {
     font-size: 1.8rem;
     margin: 0;
-    display: none;
 }
 
 a {
@@ -466,4 +465,10 @@ a {
 .delete-submit:hover {
     color: #1f1f1f;
     background-color: silver;
+}
+
+#courses {
+    width: 100%;
+    display: flex;
+    gap: 20px;
 }

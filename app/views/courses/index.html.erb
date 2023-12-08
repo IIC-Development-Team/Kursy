@@ -8,9 +8,11 @@
         <div id="courses">
           <% @courses.each do |course| %>
             <%= render course %>
+
             <p class="course-show">
               <%= link_to "Pokaż więcej", course %>
             </p>
+            
           <% end %>
         </div>
 

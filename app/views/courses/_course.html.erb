@@ -1,4 +1,21 @@
-<div id="<%= dom_id course %>" class="course" onmouseover="ShowDesc(this)" onmouseout="HideDesc(this)">
+<div id="<%= dom_id course %>" class="course" onload="HideDesc(this)" onmouseover="ShowDesc(this)" onmouseout="HideDesc(this)">
+  <div class="course-details">
+    <p class="course-title">
+      <%= course.title %>
+    </p>
+
+    <p class="course-desc">
+      <%= course.desc %>
+    </p>
+  </div>
+
+  <p>
+    <%= image_tag course.cover_url, class:"course-cover" %>
+  </p>
+
+</div>
+
+<div id="<%= dom_id course %>" class="course" onload="HideDesc(this)" onmouseover="ShowDesc(this)" onmouseout="HideDesc(this)">
   <div class="course-details">
     <p class="course-title">
       <%= course.title %>
@@ -22,15 +39,29 @@
         if(details.className == "course-details")
           for(const desc of details.children)
             if(desc.className == "course-desc")
-              desc.style.display = "block"; //Pokaż
+              details.style.bottom = 0;
     }
 
-    function HideDesc(course) {
-      for(const details of course.children)
-        if(details.className == "course-details") //Znajdź wszystkie dzieci z klasy
-          for(const desc of details.children)
-            if(desc.className == "course-desc") //Znajdź wszystkie dzieci z klasy
-              desc.style.display = "none"; //Ukryj
+  function HideDesc(course) {
+    for (const details of course.children) {
+      if (details.className == "course-details") {
+        var detail = details;
+
+        for (const titles of details.children) {
+          if (titles.className == "course-title") {
+            var odej = detail.offsetHeight - titles.offsetHeight - 10;
+            details.style.bottom = -odej + "px";
+            console.log(odej)
+          }
+        }
+      }
     }
+  }
+
+  const courses = document.querySelectorAll(".course")
+
+  courses.forEach(element => {
+    HideDesc(element)
+  });
 
 </script>
