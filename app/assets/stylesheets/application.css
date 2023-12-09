@@ -472,3 +472,14 @@ a {
     display: flex;
     gap: 20px;
 }
+
+.popup
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: block;
+    background-color: #8a2be2;
+    text-align: center;
+}

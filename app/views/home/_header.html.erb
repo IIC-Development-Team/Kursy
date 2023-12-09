@@ -10,7 +10,7 @@
         <% if user_signed_in? %>
             <div class="nav-profile">
                 <div class="nav-pfp">
-                    <img class="nav-pfp" src="prof_default.png" alt="pfp" />
+                    <%= image_tag "/prof_default.png", class: "nav-pfp", alt: "pfp" %>
                 </div>
                 <input type="checkbox" class="nav-profile-box">
                 <ul class="nav-profile-menu">

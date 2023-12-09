@@ -15,23 +15,6 @@
 
 </div>
 
-<div id="<%= dom_id course %>" class="course" onload="HideDesc(this)" onmouseover="ShowDesc(this)" onmouseout="HideDesc(this)">
-  <div class="course-details">
-    <p class="course-title">
-      <%= course.title %>
-    </p>
-
-    <p class="course-desc">
-      <%= course.desc %>
-    </p>
-  </div>
-
-  <p>
-    <%= image_tag course.cover_url, class:"course-cover" %>
-  </p>
-
-</div>
-
 <script>
 
     function ShowDesc(course) {
