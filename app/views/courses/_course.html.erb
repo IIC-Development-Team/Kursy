@@ -1,4 +1,4 @@
-<div id="<%= dom_id course %>" class="course" onload="HideDesc(this)" onmouseover="ShowDesc(this)" onmouseout="HideDesc(this)">
+<div id="<%= dom_id course %>" class="course">
   <div class="course-details">
     <p class="course-title">
       <%= course.title %>
@@ -15,36 +15,3 @@
 
 </div>
 
-<script>
-
-    function ShowDesc(course) {
-      for(const details of course.children)
-        if(details.className == "course-details")
-          for(const desc of details.children)
-            if(desc.className == "course-desc")
-              details.style.bottom = 0;
-    }
-
-  function HideDesc(course) {
-    for (const details of course.children) {
-      if (details.className == "course-details") {
-        var detail = details;
-
-        for (const titles of details.children) {
-          if (titles.className == "course-title") {
-            var odej = detail.offsetHeight - titles.offsetHeight - 10;
-            details.style.bottom = -odej + "px";
-            console.log(odej)
-          }
-        }
-      }
-    }
-  }
-
-  const courses = document.querySelectorAll(".course")
-
-  courses.forEach(element => {
-    HideDesc(element)
-  });
-
-</script>

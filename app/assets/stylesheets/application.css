@@ -486,7 +486,14 @@ a {
 
 .nav-img
 {
-    position: absolute;
-    left: 0;
-    top: 0;
+    height: 90%;
+    margin-left: 20px;
+    padding: 0;
+}
+
+.nav-img-cont {
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
