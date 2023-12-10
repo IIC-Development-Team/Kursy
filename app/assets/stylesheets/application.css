@@ -483,3 +483,10 @@ a {
     background-color: #8a2be2;
     text-align: center;
 }
+
+.nav-img
+{
+    position: absolute;
+    left: 0;
+    top: 0;
+}
