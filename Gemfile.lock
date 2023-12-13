@@ -100,6 +100,7 @@ GEM
     debug (1.8.0)
       irb (>= 1.5.0)
       reline (>= 0.3.1)
+    device_detector (1.1.2)
     devise (4.9.3)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -265,6 +266,7 @@ DEPENDENCIES
   bootsnap
   capybara
   debug
+  device_detector (~> 1.1, >= 1.1.2)
   devise (~> 4.9, >= 4.9.3)
   devise-two-factor
   importmap-rails
