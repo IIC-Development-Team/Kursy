@@ -22017,3 +22017,53 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 40ms (Views: 24.6ms | ActiveRecord: 5.1ms | Allocations: 4602)
 
 
+Started GET "/" for 127.0.0.1 at 2023-12-13 18:37:03 +0100
+Processing by HomeController#index as HTML
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:7:in `index'
+  [1m[36mClient Create (10.2ms)[0m  [1m[32mINSERT INTO "clients" ("browser", "os", "dev_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["browser", "Chrome"], ["os", "GNU/Linux"], ["dev_type", "desktop"], ["created_at", "2023-12-13 17:37:03.331995"], ["updated_at", "2023-12-13 17:37:03.331995"]]
+  ↳ app/controllers/home_controller.rb:7:in `index'
+  [1m[36mTRANSACTION (3.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:7:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1178)
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | Allocations: 1270)
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 14.6ms | Allocations: 7724)
+
+
+  
+ActionView::Template::Error (uninitialized constant #<Class:0x00007ffa46ba9620>::Courses):
+    3:     <div class="subtitle">Naucz się IT! Już dziś! Za darmo!</div>
+    4: 
+    5:     <div class="stat-counter">
+    6:         Mamy <%= Courses.count %> kursów i <%= User.count %> zarejstrowanych użytkowników, <br>
+    7:         a nasza strona ma już <%= Client.count %> odwiedzin
+    8:     </div>
+    9: 
+  
+app/views/home/index.html.erb:6
+Started GET "/" for 127.0.0.1 at 2023-12-13 18:37:11 +0100
+Processing by HomeController#index as HTML
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:7:in `index'
+  [1m[36mClient Create (4.1ms)[0m  [1m[32mINSERT INTO "clients" ("browser", "os", "dev_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["browser", "Chrome"], ["os", "GNU/Linux"], ["dev_type", "desktop"], ["created_at", "2023-12-13 17:37:11.593011"], ["updated_at", "2023-12-13 17:37:11.593011"]]
+  ↳ app/controllers/home_controller.rb:7:in `index'
+  [1m[36mTRANSACTION (11.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:7:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mCourse Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "courses"[0m
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mUser Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mClient Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "clients"[0m
+  ↳ app/views/home/index.html.erb:7
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:10
+  Rendered home/index.html.erb within layouts/application (Duration: 20.8ms | Allocations: 7735)
+  Rendered home/_header.html.erb (Duration: 2.1ms | Allocations: 703)
+  Rendered layout layouts/application.html.erb (Duration: 26.8ms | Allocations: 9740)
+Completed 200 OK in 72ms (Views: 27.6ms | ActiveRecord: 20.4ms | Allocations: 16674)
+
+
