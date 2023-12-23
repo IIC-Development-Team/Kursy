@@ -280,23 +280,7 @@ ul li {
     background-color: silver;
 }
 
-.confirm_button {
-    width: 140px;
-    height: 40px;
-    margin-top: 8px;
-    border: none;
-    background-color: #1f1f1f;
-    color: silver;
-    border-radius: 2px;
-    box-shadow: inset -2px -2px 2px white;
-    cursor: pointer;
-    transition: 200ms ease-out;
-}
 
-.confirm_button:hover {
-    color: #1f1f1f;
-    background-color: rgb(42, 180, 42);
-}
 
 .login-no-account
 {
@@ -331,6 +315,7 @@ ul li {
 .update-text
 {
     font-size: 6rem;
+    text-transform: uppercase;
 }
 
 .course {
@@ -387,7 +372,7 @@ a {
 }
 
 .change-data {
-    font-size: 1.4rem;
+    font-size: 1.8rem;
 }
 
 .delete-account, .aktualizuj-dane {
@@ -433,30 +418,11 @@ a {
 
 .avatar:hover::before {
     opacity: 1;
+    backdrop-filter: blur(5px);
 }
 
-.del-account-submit
-{
-    border: none;
-    background-color: #1f1f1f;
-    color: silver;
-    font-size: 1.5rem;
-    border-radius: 2px;
-    margin-bottom: 30px;
-    padding: 10px 20px;
-    text-decoration: none;
-    width: 140px;
-    height: 40px;
-    box-shadow: inset -2px -2px 2px white;
-    position: relative;
-    cursor: pointer;
-    transition: 200ms ease-out;
-}
 
-.del-account-submit:hover {
-    color: #1f1f1f;
-    background-color: rgb(250, 52, 52);
-}
+
 
 .rest-avatars {
     width: 70%;
@@ -504,6 +470,8 @@ a {
     box-shadow: inset -2px -2px 2px white;
     cursor: pointer;
     transition: 200ms ease-out;
+    padding: 5px 10px;
+    font-size: 1.4rem;
 }
 
 .edit-submit:hover {
@@ -556,4 +524,130 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.edit-acc {
+    width: fit-content;
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.edit-info {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+/* 
+.edit-button {
+    background-color: var(--bg-color);
+    border-radius: 8px;
+    border: 2px solid var(--bg-color-acc);
+    box-shadow: var(--bg-color-acc) 0 2px 5px 0;
+    box-sizing: border-box;
+    color: silver;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1.6rem;
+    padding: 3px 10px;
+    position: relative;
+    text-align: center;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+    width: 130px;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: 200ms ease-out;
+    margin-bottom: 30px;
+}
+
+.edit-button:hover {
+    background-color: var(--selection);
+    color: silver;
+}
+  
+.edit-button:focus {
+    border-color: #008296;
+    box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
+    outline: 0;
+}
+
+.confirm_button {
+    border: 2px solid rgb(42, 180, 42);
+    color:rgb(42, 180, 42);
+    text-align: center;
+}
+
+.confirm_button:hover {
+    color: #1f1f1f;
+    background-color: rgb(42, 180, 42);
+} */
+
+
+.edit-button {
+    padding: 10px 25px;
+    font-weight: 500;
+    background: #222222;
+    outline: none !important;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+    position: relative;
+    display: inline-block;
+    border: 2px solid black;
+    color: silver;
+    z-index: 1;
+    margin-bottom: 30px;
+    width: 150px;
+    font-size: 1.4rem;
+}
+
+.edit-button:hover {
+    color: white;
+}
+
+.edit-button:active {
+    top: 2px;
+}
+
+.del-account-submit {
+    border: 2px solid rgb(238, 51, 51);
+    color: rgb(238, 51, 51);
+}
+
+.del-account-submit:hover {
+    color: black;
+}
+
+
+.del-account-submit:after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+    direction: rtl;
+    z-index: -1;
+    background: rgb(238, 51, 51);
+    transition: all 1s ease;
+}
+
+.del-account-submit:hover:after {
+    left: 0;
+    right: auto;
+    width: 100%;
+}
+
+.confirm_button {
+    border: 2px solid rgb(42, 180, 42);
+    color: rgb(42, 180, 42);
+}
+
+.confirm_button:hover {
+    color: white;
 }

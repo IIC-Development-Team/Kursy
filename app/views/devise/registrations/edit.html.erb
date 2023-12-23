@@ -1,9 +1,12 @@
 <div class = "user_account_back" style="margin-top: 100px;">
   <h1 class="update-text">Moje konto</h1>
 
-  <div style="float:left; width: 28%; margin-left: 10%;"><hr></div>
-  <h2 style="float:left; width: 24%; margin-top: -8px; font-size: 2rem;">Personalne</h2>
-  <div style="float:left; width: 28%;"><hr></div>
+  <div class="edit-info">
+    <div style="width: 25%;"><hr></div>
+    <h2 class="edit-acc">Personalne</h2>
+    <div style="width: 25%;"><hr></div>
+  </div>
+
 
   <div class="change-avatar">
     <div class="avatar"></div> <%# Dobrze by było dodać do bazy z użytkownikiem informacje na temat jego aktualnego awataru i typie konta%>
@@ -18,11 +21,14 @@
   </div>
   <br>
   <br>
-  <div style="float:left; width: 28%; margin-left: 10%;"><hr></div>
-  <h2 style="float:left; width: 24%; margin-top: -8px; font-size: 2rem;">Prywatność</h2>
-  <div style="float:left; width: 28%;"><hr></div>
 
-  <div class="field" style="margin-top: -20px;">
+  <div class="edit-info">
+    <div style="width: 25%;"><hr></div>
+    <h2 class="edit-acc">Prywatność</h2>
+    <div style="width: 25%;"><hr></div>
+  </div>
+
+  <div class="field" style="margin-top: -50px;">
     <h1 class="change-data">Email</h1>
     <%= f.email_field :email, autofocus: false, autocomplete: "email", class: "edit-input" %>
   </div>
@@ -31,28 +37,31 @@
     <h1 class="change-data">Hasło</h1>
     <%= f.password_field :password, autofocus: false, autocomplete: "password", class: "edit-input" %>
   </div>
-
-  <a class='edit-submit' href=''>Zmień Hasło</a>
+  <br>
+  <a class='edit-button' href='' style="">Zmień Hasło</a>
 
   <br>
   <br>
-  <div style="float:left; width: 28%; margin-left: 10%;"><hr></div>
-  <h2 style="float:left; width: 24%; margin-top: -8px; font-size: 2rem;">Konto</h2>
-  <div style="float:left; width: 28%;"><hr></div>
+
+  <div class="edit-info">
+    <div style="width: 33%;"><hr></div>
+    <h2 class="edit-acc">Konto</h2>
+    <div style="width: 33%;"><hr></div>
+  </div>
+
 
   <div class="field" style="margin-top: -20px;">
-    <h1 class="change-data">Typ Konta</h1>
+    <h1 class="change-data" style="margin-top: -20px;">Typ Konta</h1>
     Viewer/Creator
     <br>
   </div>
 
   <div class='field' style="margin-top: -40px;">
-    <h1 class="change-data">Usuń konto</h1>
-    <%= button_to "Usuń konto", registration_path(resource_name), data: { confirm: "Are you sure?", turbo_confirm: "Are you sure?" }, method: :delete, class: 'del-account-submit' %>
+    <%= button_to "Usuń konto", registration_path(resource_name), data: { confirm: "Are you sure?", turbo_confirm: "Are you sure?" }, method: :delete, class: 'del-account-submit edit-button' %>
   </div>
 
   <div class="field" style="padding: 0 0 0 0;">
-      <%= f.submit "Zapisz zmiany ", class: 'confirm_button'%>
+      <%= f.submit "Zapisz zmiany ", class: 'confirm_button edit-button'%>
       <%# <img src='/save_changes.png' alt='submit' style="width: 20px; height: 20px; margin-left: 10px;"> %>
   </div>
   <br>
