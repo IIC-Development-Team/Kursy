@@ -100,11 +100,8 @@ html, body
 
 .main-content
 {
-    margin-top: 150px;
-    margin-left: 200px;
-    margin-right: 200px;
     color: silver;
-    width: calc(100% - 400px);
+    padding-top: 50px;
 }
 
 .title
@@ -241,7 +238,6 @@ ul li {
 {
     text-align: center;
     color: silver;
-    width: 50%;
     margin: auto;
 }
 
@@ -622,7 +618,6 @@ a {
     color: black;
 }
 
-
 .del-account-submit:after {
     position: absolute;
     content: "";
@@ -711,4 +706,15 @@ a {
 
 .cook:last-child:hover{
     color:rgb(238, 51, 51);
+}
+
+.remember-me {
+    font-size: 2.4rem;
+    padding: 0 0 50px 0 ;
+    user-select: none;
+}
+
+.remember-box {
+    width: 2rem;
+    height: 2rem;
 }
