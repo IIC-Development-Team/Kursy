@@ -1,0 +1,2 @@
+class ChangepasswordController < ApplicationController
+end
