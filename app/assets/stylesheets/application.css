@@ -651,3 +651,65 @@ a {
 .confirm_button:hover {
     color: white;
 }
+
+.cookies-modal {
+    background-color: #2424248c;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99999999999999999999999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.cookies-modal > div {
+    width: 400px;
+    height: 300px;
+    background-color: #131313;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 10px;
+}
+
+.cookies-modal > div > h3 {
+    font-size: 2.8rem;
+    text-transform: uppercase;
+}
+
+.cookies {
+    display: flex;
+    justify-content: center;
+}
+
+.cook {
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    width: 45%;
+    margin: 30px;
+    text-align: center;
+    transition: all 200ms ease;
+    border: 1px solid white;
+    padding: 5px 10px;
+}
+
+.cook:first-child {
+    border-color: rgb(42, 180, 42);
+}
+
+.cook:last-child {
+    border-color: rgb(238, 51, 51);
+}
+
+.cook:first-child:hover {
+    color:rgb(42, 180, 42);
+}
+
+.cook:last-child:hover{
+    color:rgb(238, 51, 51);
+}
