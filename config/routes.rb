@@ -15,4 +15,5 @@ Rails.application.routes.draw do
   get "home/about"
   get "home/contact"
   get "home/forms"
+  get "changepassword/index"
 end

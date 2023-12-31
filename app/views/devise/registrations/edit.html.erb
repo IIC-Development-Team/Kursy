@@ -38,7 +38,7 @@
     <%= f.password_field :password, autofocus: false, autocomplete: "password", class: "edit-input" %>
   </div>
   <br>
-  <a class='edit-button' href='changepassword.html.erb' style="">Zmień Hasło</a>
+  <%= link_to "Zmień hasło", home_forms_path, class: 'edit-button'%>
 
   <br>
   <br>

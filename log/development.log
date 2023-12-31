@@ -33567,3 +33567,277 @@ Completed 200 OK in 10ms (Views: 5.7ms | ActiveRecord: 0.8ms | Allocations: 4590
 
 
 >>>>>>> a1058baedaceff7d1561878499e41cbebdc0730b
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <main> at /home/zbychu/Kursy/config/environment.rb:5)
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <main> at /home/zbychu/Kursy/config/environment.rb:5)
+Started GET "/" for 127.0.0.1 at 2023-12-31 16:23:18 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:7:in `index'
+  [1m[36mClient Create (9.5ms)[0m  [1m[32mINSERT INTO "clients" ("browser", "os", "dev_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["browser", "Firefox"], ["os", "GNU/Linux"], ["dev_type", "desktop"], ["created_at", "2023-12-31 15:23:18.616258"], ["updated_at", "2023-12-31 15:23:18.616258"]]
+  ↳ app/controllers/home_controller.rb:7:in `index'
+  [1m[36mTRANSACTION (20.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:7:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mCourse Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "courses"[0m
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mUser Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mClient Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "clients"[0m
+  ↳ app/views/home/index.html.erb:7
+  Rendered home/index.html.erb within layouts/application (Duration: 6.2ms | Allocations: 4130)
+  Rendered home/_header.html.erb (Duration: 0.8ms | Allocations: 764)
+  Rendered layout layouts/application.html.erb (Duration: 233.8ms | Allocations: 85614)
+Completed 200 OK in 775ms (Views: 237.4ms | ActiveRecord: 32.1ms | Allocations: 556115)
+
+
+Started GET "/?cookies=true" for 127.0.0.1 at 2023-12-31 16:23:20 +0100
+Processing by HomeController#index as HTML
+  Parameters: {"cookies"=>"true"}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:7:in `index'
+  [1m[36mClient Create (0.8ms)[0m  [1m[32mINSERT INTO "clients" ("browser", "os", "dev_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["browser", "Firefox"], ["os", "GNU/Linux"], ["dev_type", "desktop"], ["created_at", "2023-12-31 15:23:20.285385"], ["updated_at", "2023-12-31 15:23:20.285385"]]
+  ↳ app/controllers/home_controller.rb:7:in `index'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:7:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mCourse Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "courses"[0m
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mUser Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mClient Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "clients"[0m
+  ↳ app/views/home/index.html.erb:7
+  Rendered home/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1231)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 219)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | Allocations: 2405)
+Completed 200 OK in 13ms (Views: 3.6ms | ActiveRecord: 1.0ms | Allocations: 7097)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-12-31 16:23:24 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.3ms | Allocations: 709)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 11.6ms | Allocations: 4305)
+  Rendered home/_header.html.erb (Duration: 0.5ms | Allocations: 263)
+  Rendered layout layouts/application.html.erb (Duration: 13.8ms | Allocations: 5577)
+Completed 200 OK in 35ms (Views: 15.5ms | ActiveRecord: 0.2ms | Allocations: 18360)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2023-12-31 16:23:45 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"zprzybyla@tuta.io", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Zaloguj"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "zprzybyla@tuta.io"], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Completed 303 See Other in 198ms (ActiveRecord: 0.1ms | Allocations: 7527)
+
+
+Started GET "/" for 127.0.0.1 at 2023-12-31 16:23:46 +0100
+Processing by HomeController#index as HTML
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:7:in `index'
+  [1m[36mClient Create (0.7ms)[0m  [1m[32mINSERT INTO "clients" ("browser", "os", "dev_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["browser", "Firefox"], ["os", "GNU/Linux"], ["dev_type", "desktop"], ["created_at", "2023-12-31 15:23:46.095530"], ["updated_at", "2023-12-31 15:23:46.095530"]]
+  ↳ app/controllers/home_controller.rb:7:in `index'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:7:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mCourse Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "courses"[0m
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mUser Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mClient Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "clients"[0m
+  ↳ app/views/home/index.html.erb:7
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:10
+  Rendered home/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 2034)
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 308)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 3300)
+Completed 200 OK in 6ms (Views: 3.4ms | ActiveRecord: 0.9ms | Allocations: 5175)
+
+
+Started GET "/courses" for 127.0.0.1 at 2023-12-31 16:23:51 +0100
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:5
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:9
+  Rendered courses/_course.html.erb (Duration: 2.5ms | Allocations: 242)
+  Rendered courses/_course.html.erb (Duration: 0.1ms | Allocations: 33)
+  Rendered courses/index.html.erb within layouts/application (Duration: 25.8ms | Allocations: 7547)
+  Rendered home/_header.html.erb (Duration: 0.5ms | Allocations: 274)
+  Rendered layout layouts/application.html.erb (Duration: 30.8ms | Allocations: 8793)
+Completed 200 OK in 32ms (Views: 31.2ms | ActiveRecord: 0.3ms | Allocations: 9376)
+
+
+Started GET "/" for 127.0.0.1 at 2023-12-31 16:23:53 +0100
+Processing by HomeController#index as HTML
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:7:in `index'
+  [1m[36mClient Create (1.0ms)[0m  [1m[32mINSERT INTO "clients" ("browser", "os", "dev_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["browser", "Firefox"], ["os", "GNU/Linux"], ["dev_type", "desktop"], ["created_at", "2023-12-31 15:23:53.460904"], ["updated_at", "2023-12-31 15:23:53.460904"]]
+  ↳ app/controllers/home_controller.rb:7:in `index'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:7:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mCourse Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "courses"[0m
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mUser Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mClient Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "clients"[0m
+  ↳ app/views/home/index.html.erb:7
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:10
+  Rendered home/index.html.erb within layouts/application (Duration: 23.9ms | Allocations: 1963)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 285)
+  Rendered layout layouts/application.html.erb (Duration: 25.2ms | Allocations: 3209)
+Completed 200 OK in 31ms (Views: 25.6ms | ActiveRecord: 1.3ms | Allocations: 5079)
+
+
+Started GET "/courses" for 127.0.0.1 at 2023-12-31 16:23:54 +0100
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:5
+  [1m[36mCourse Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:9
+  Rendered courses/_course.html.erb (Duration: 0.1ms | Allocations: 34)
+  Rendered courses/_course.html.erb (Duration: 0.1ms | Allocations: 33)
+  Rendered courses/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1501)
+  Rendered home/_header.html.erb (Duration: 0.5ms | Allocations: 272)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 2732)
+Completed 200 OK in 6ms (Views: 6.0ms | ActiveRecord: 0.1ms | Allocations: 2991)
+
+
+Started GET "/" for 127.0.0.1 at 2023-12-31 16:23:56 +0100
+Processing by HomeController#index as HTML
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:7:in `index'
+  [1m[36mClient Create (1.3ms)[0m  [1m[32mINSERT INTO "clients" ("browser", "os", "dev_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["browser", "Firefox"], ["os", "GNU/Linux"], ["dev_type", "desktop"], ["created_at", "2023-12-31 15:23:56.380311"], ["updated_at", "2023-12-31 15:23:56.380311"]]
+  ↳ app/controllers/home_controller.rb:7:in `index'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:7:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mCourse Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "courses"[0m
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mUser Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mClient Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "clients"[0m
+  ↳ app/views/home/index.html.erb:7
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:10
+  Rendered home/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1957)
+  Rendered home/_header.html.erb (Duration: 0.6ms | Allocations: 285)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 3197)
+Completed 200 OK in 11ms (Views: 6.2ms | ActiveRecord: 1.7ms | Allocations: 5075)
+
+
+Started GET "/users/edit" for 127.0.0.1 at 2023-12-31 16:23:59 +0100
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.3ms | Allocations: 221)
+  Rendered devise/registrations/edit.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1437)
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 283)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | Allocations: 2679)
+Completed 200 OK in 7ms (Views: 4.9ms | ActiveRecord: 0.1ms | Allocations: 4593)
+
+
+Started GET "/users/changepassword.html.erb" for 127.0.0.1 at 2023-12-31 16:24:10 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/changepassword.html.erb"):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2023-12-31 16:27:09 +0100
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.2ms | Allocations: 213)
+  Rendered devise/registrations/edit.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1434)
+  Rendered home/_header.html.erb (Duration: 0.7ms | Allocations: 783)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | Allocations: 3482)
+Completed 200 OK in 11ms (Views: 5.1ms | ActiveRecord: 1.4ms | Allocations: 11152)
+
+
+Started GET "/changepassword/index" for 127.0.0.1 at 2023-12-31 16:27:21 +0100
+Processing by ChangepasswordController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering changepassword/index.html.erb within layouts/application
+  Rendered changepassword/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 83)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:11
+  Rendered home/_header.html.erb (Duration: 2.1ms | Allocations: 945)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | Allocations: 2260)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.1ms | Allocations: 2973)
+
+
+Started GET "/" for 127.0.0.1 at 2023-12-31 16:27:51 +0100
+Processing by HomeController#index as HTML
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:7:in `index'
+  [1m[36mClient Create (0.9ms)[0m  [1m[32mINSERT INTO "clients" ("browser", "os", "dev_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["browser", "Firefox"], ["os", "GNU/Linux"], ["dev_type", "desktop"], ["created_at", "2023-12-31 15:27:51.910094"], ["updated_at", "2023-12-31 15:27:51.910094"]]
+  ↳ app/controllers/home_controller.rb:7:in `index'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:7:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mCourse Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "courses"[0m
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mUser Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/home/index.html.erb:6
+  [1m[36mClient Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "clients"[0m
+  ↳ app/views/home/index.html.erb:7
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:10
+  Rendered home/index.html.erb within layouts/application (Duration: 5.6ms | Allocations: 3119)
+  Rendered home/_header.html.erb (Duration: 0.6ms | Allocations: 293)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 4380)
+Completed 200 OK in 17ms (Views: 8.1ms | ActiveRecord: 2.3ms | Allocations: 9667)
+
+
+Started GET "/users/edit" for 127.0.0.1 at 2023-12-31 16:27:54 +0100
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 13)
+  Rendered devise/registrations/edit.html.erb within layouts/application (Duration: 1.3ms | Allocations: 634)
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 271)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | Allocations: 1859)
+Completed 200 OK in 6ms (Views: 3.4ms | ActiveRecord: 0.1ms | Allocations: 3444)
+
+
+Started GET "/users/edit" for 127.0.0.1 at 2023-12-31 16:28:49 +0100
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.2ms | Allocations: 213)
+  Rendered devise/registrations/edit.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1482)
+  Rendered home/_header.html.erb (Duration: 0.6ms | Allocations: 772)
+  Rendered layout layouts/application.html.erb (Duration: 3.7ms | Allocations: 3529)
+Completed 200 OK in 12ms (Views: 4.9ms | ActiveRecord: 1.4ms | Allocations: 11160)
+
+
+Started GET "/users/edit" for 127.0.0.1 at 2023-12-31 16:29:14 +0100
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.2ms | Allocations: 213)
+  Rendered devise/registrations/edit.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1476)
+  Rendered home/_header.html.erb (Duration: 0.6ms | Allocations: 772)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | Allocations: 3509)
+Completed 200 OK in 12ms (Views: 4.9ms | ActiveRecord: 1.4ms | Allocations: 11098)
+
+
