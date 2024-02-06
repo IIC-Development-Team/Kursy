@@ -19,6 +19,9 @@
     <section class="cookies-modal">
       <div>
         <h3>We process cookies.</h3>
+        <p class="cookies-info">
+          Korzystając z naszej strony, wyrażasz zgodę na używanie plików cookie zgodnie z naszą polityką prywatności. Jeśli nie zgadzasz się z korzystaniem z plików cookie, możesz dostosować ustawienia przeglądarki internetowej lub zrezygnować z korzystania z naszej strony.
+        </p>
         <div class="cookies">
           <%= link_to "Accept cookies", root_path(cookies: true), method: :post, class:"cook" %>
           <%= link_to "Reject cookies", root_path(cookies: false), method: :post, class:"cook" %>
