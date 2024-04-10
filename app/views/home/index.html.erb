@@ -1,17 +1,40 @@
 <div class="main-content">
-    <div class="title">Go for IT</div>
-    <div class="subtitle">Naucz się IT! Już dziś! Za darmo!</div>
-
-    <div class="stat-counter">
-        Mamy 0 kursów i <%= User.count %> zarejstrowanych użytkowników, <br>
-        a nasza strona ma już 000000 odwiedzin
-    </div>
-
-    <% if user_signed_in?%>
+  <div class="landing">
+    <div class="main-left">
+      <div class="title">Go for IT</div>
+      <div class="subtitle">Ucz się jak chcesz,<br> Kiedy chcesz, <br> Ile chcesz.</div>
+      <hr>
+      <% if user_signed_in?%>
         <div class="welcome">
             <h1>Witaj z powrotem <%= current_user.username %></h1>
-
         </div>
-    <%end%>
+      <%end%>
+      <div class="stat-counter">
+        Mamy <%= Course.count %> kursów i <%= User.count %> zarejstrowanych użytkowników, <br>
+        a nasza strona ma już <%= Client.count %> odwiedzin.
+      </div>
+    </div>
+    <div class="main-right">
+      <%= image_tag "/landing-image.png", class: "main-img", alt: "Landing Page Image" %>
+    </div>
+  </div>
+
+    <%= turbo_frame_tag :cookies_modal do %>
+  <% if session[:cookies_accepted].nil? # don't re-render if a true/false selected %>
+    <section class="cookies-modal">
+      <div>
+        <h3>We process cookies.</h3>
+        <p class="cookies-info">
+          Korzystając z naszej strony, wyrażasz zgodę na używanie plików cookie zgodnie z naszą polityką prywatności. Jeśli nie zgadzasz się z korzystaniem z plików cookie, możesz dostosować ustawienia przeglądarki internetowej lub zrezygnować z korzystania z naszej strony.
+        </p>
+        <div class="cookies">
+          <%= link_to "Accept cookies", root_path(cookies: true), method: :post, class:"cook" %>
+          <%= link_to "Reject cookies", root_path(cookies: false), method: :post, class:"cook" %>
+        </div>
+        
+      </div>
+    </section>
+  <% end %>
+<% end %>
 </div>
 

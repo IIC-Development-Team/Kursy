@@ -1,15 +1,71 @@
 <nav class="main-nav">
-    <%= link_to "Home", root_path, class: 'nav-link' %>
-    <%= link_to "About Us", home_about_path, class: 'nav-link'%>
-    <%= link_to "Contact", home_contact_path, class: 'nav-link'%>
-    <%= link_to "Kursy", courses_path, class: 'nav-link'%>
-    <% if user_signed_in? %>
-        <%= link_to  "Moje konto", edit_user_registration_path, class: 'nav-link' %>
-    <%end%>
-    
-    <% if !user_signed_in? %>
-        <%= link_to  "Zaloguj", new_user_session_path, class: 'nav-login' %>
-    <%else%>
-        <%= button_to  "Wyloguj", destroy_user_session_path, :method=>'delete' , class: 'nav-login' %>
-    <%end%>
+    <div class="main-menu">
+        <%= link_to image_tag("/logo.png", class: "nav-img"), root_path, class: "nav-img-cont" %>
+        <%= link_to "Kursy", courses_path, class: 'nav-link'%>
+        <%= link_to "O nas", home_about_path, class: 'nav-link'%>
+        <%= link_to "Kontakt", home_contact_path, class: 'nav-link'%>
+        <%= link_to "Formularze", home_forms_path, class: 'nav-link'%>
+    </div>
+    <div class="main-konto">
+        
+        <% if user_signed_in? %>
+            <div class="nav-profile">
+                <div class="nav-pfp">
+                    <%= image_tag "/prof_default.png", class: "nav-pfp", alt: "pfp" %>
+                </div>
+                <input type="checkbox" class="nav-profile-box">
+                <ul class="nav-profile-menu">
+                    <li><%= current_user.username %></li>
+                    <hr>
+                    <li><%= link_to  "Moje konto", edit_user_registration_path, class: 'menu-elem' %></li>
+                    <li class='menu-elem'>Ustawienia</li> <!-- Ustaw we wszystkich elementach tego menu clase "menu-elem" -->
+                    <hr>
+                    <li class='menu-elem'>Pomoc</li>
+                    <li class='menu-elem'>Wsparcie</li>
+                    <li class='menu-elem'>Opinie</li>
+                    <hr>
+                    <li style="color: gold">Premium</li>
+                    <hr>
+                    <li class='menu-elem'>Dodaj konto</li>
+                    <li><%= button_to "Wyloguj", destroy_user_session_path, :method=>'delete' , class: 'logout-btn menu-elem' %></li>
+                </ul>
+            </div>
+        <%end%>
+        
+        <% if !user_signed_in? %>
+            <%= link_to  "Sign in", new_user_session_path, class: 'nav-login' %>
+            <%= link_to "Sign up", new_user_registration_path, class: 'nav-login nav-fill' %>
+        <%end%>
+    </div>
 </nav>
+
+<script>
+   const img = document.querySelector(".nav-profile-box");
+    const menu = document.querySelector(".nav-profile-menu");
+    let x = 1;
+
+    function showMenu() {
+    if (x === 1) {
+        menu.style.display = "block";
+        x = 0;
+    } else {
+        menu.style.display = "none";
+        x = 1;
+    }
+    }
+
+    function closeMenu(event) {
+        if (event.target !== menu && event.target !== img && !menu.contains(event.target)
+        ) {
+            menu.style.display = "none";
+            x = 1;
+        }
+    }
+
+    img.addEventListener("click", () => {
+        showMenu();
+    });
+
+    document.addEventListener("click", closeMenu);
+
+</script>

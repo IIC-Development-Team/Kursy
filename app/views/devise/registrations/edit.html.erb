@@ -1,51 +1,65 @@
+<div class="user_account_back" style="margin-top: 100px;">
+  <h1 class="update-text">Moje konto</h1>
 
-    <div class="login-form" style="margin-top: 100px;">
-        <h2 class="update-text">Akutalizuj dane</h2>
+  <div class="edit-info">
+    <div style="width: 25%;"><hr></div>
+    <h2 class="edit-acc">Personalne</h2>
+    <div style="width: 25%;"><hr></div>
+  </div>
 
-        <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-          <%= render "devise/shared/error_messages", resource: resource %>
 
-          <div class="field">
-            <%= f.label :email, class: 'update-text' %><br />
-            <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "login-input" %>
-          </div>
+  <div class="change-avatar">
+    <div class="avatar"></div> <%# Dobrze by było dodać do bazy z użytkownikiem informacje na temat jego aktualnego awataru i typie konta#%>
+  </div>
 
-          <div class="field">
-            <%= f.label :Nazwa_użytkownika %><br />
-            <%= f.text_field :username, autofocus: true, autocomplete: "username", class: 'login-input' %>
-          </div>
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+    <%= render "devise/shared/error_messages", resource: resource %>
 
-          <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-            <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
-          <% end %>
+  <div class="field" style="margin-top: -50px;">
+    <h1 class="change-data">Nazwa użytkownika</h1>
+    <%= f.text_field :username, autofocus: false, autocomplete: "username", class: 'edit-input' %>
+  </div>
+  <br>
+  <br>
 
-          <div class="field">
-            <%= f.label :password, class: 'update-text' %> <i class="update-text">(leave blank if you don't want to change it)</i><br />
-            <%= f.password_field :password, autocomplete: "new-password", class: "login-input" %>
-            <% if @minimum_password_length %>
-              <br />
-              <em class="update-text"><%= @minimum_password_length %> characters minimum</em>
-            <% end %>
-          </div>
+  <div class="edit-info">
+    <div style="width: 25%;"><hr></div>
+    <h2 class="edit-acc">Prywatność</h2>
+    <div style="width: 25%;"><hr></div>
+  </div>
 
-          <div class="field">
-            <%= f.label :password_confirmation, class: 'update-text' %><br />
-            <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "login-input" %>
-          </div>
+  <div class="field" style="margin-top: -50px;">
+    <h1 class="change-data">Email</h1>
+    <%= f.email_field :email, autofocus: false, autocomplete: "email", class: "edit-input" %>
+  </div>
 
-          <div class="field">
-            <%= f.label :current_password, class: 'update-text' %> <i class="update-text">(we need your current password to confirm your changes)</i><br />
-            <%= f.password_field :current_password, autocomplete: "current-password", class: "login-input" %>
-          </div>
+  <div class="field" style="margin-top: -40px;">
+    <h1 class="change-data">Hasło</h1>
+    <%= f.password_field :password, autofocus: false, autocomplete: "password", class: "edit-input" %>
+  </div>
 
-          <div class="actions">
-            <%= f.submit "Aktualizuj", class: 'login-submit' %>
-          </div>
-        <% end %>
+  <div class="field" style="margin-top: -40px;">
+    <h1 class="change-data">Powtórz Hasło</h1>
+    <%= f.password_field :password_confirmation, autofocus: false, autocomplete: "password", class: "edit-input" %>
+  </div>
+  <div class="edit-info">
+    <div style="width: 33%;"><hr></div>
+    <h2 class="edit-acc">Konto</h2>
+    <div style="width: 33%;"><hr></div>
+  </div>
 
-        <h3 class="update-text">Usuń moje konto</h3>
 
-        <div><span class="update-text">Rezygnujesz?</span> <%= button_to "Usuń konto", registration_path(resource_name), data: { confirm: "Are you sure?", turbo_confirm: "Are you sure?" }, method: :delete, class: 'login-submit' %></div>
+  <div class="field" style="padding: 0 0 0 0;">
+      <%= f.submit "Zapisz zmiany", class: 'confirm_button edit-button' %>
+  </div>
+  <br>
+  
 
-        <%= link_to "Back", :back, class: 'login-link update-text' %>
-    </div>
+  <% end %>
+
+
+  <div class='field' style="margin-top: -40px;">
+    <%= button_to "Usuń konto", registration_path(resource_name), data: { confirm: "Are you sure?", turbo_confirm: "Are you sure?" }, method: :delete, class: 'del-account-submit edit-button' %>
+  </div>
+  
+</div>

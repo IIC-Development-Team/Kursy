@@ -1,12 +1,17 @@
-<div id="<%= dom_id course %>">
-  <p>
-    <strong>Title:</strong>
-    <%= course.title %>
-  </p>
+<div id="<%= dom_id course %>" class="course">
+  <div class="course-details">
+    <p class="course-title">
+      <%= course.title %>
+    </p>
+
+    <p class="course-desc">
+      <%= course.desc %>
+    </p>
+  </div>
 
   <p>
-    <strong>Desc:</strong>
-    <%= course.desc %>
+    <%= image_tag course.cover_url, class:"course-cover" %>
   </p>
 
 </div>
+

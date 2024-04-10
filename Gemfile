@@ -1,12 +1,15 @@
 source "https://rubygems.org"
 
-ruby "3.0.2"
+ruby "3.2.2"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.1.2"
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
+
+# tzinfo-data
+gem "tzinfo-data"
 
 # Use sqlite3 as the database for Active Record
 gem "sqlite3", "~> 1.4"
@@ -26,6 +29,8 @@ gem "stimulus-rails"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
 
+gem 'device_detector', '~> 1.1', '>= 1.1.2'
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"
 
@@ -44,6 +49,8 @@ gem "bootsnap", require: false
 gem 'devise', '~> 4.9', '>= 4.9.3'
 
 gem 'devise-two-factor'
+
+gem 'youtube-embed'
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"

@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2023_11_25_112647) do
+ActiveRecord::Schema[7.1].define(version: 2023_12_13_165704) do
+  create_table "clients", force: :cascade do |t|
+    t.string "browser"
+    t.string "os"
+    t.string "dev_type"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "courses", force: :cascade do |t|
     t.string "title"
     t.text "desc"
@@ -25,6 +33,7 @@ ActiveRecord::Schema[7.1].define(version: 2023_11_25_112647) do
     t.string "video_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "course_id"
   end
 
   create_table "users", force: :cascade do |t|

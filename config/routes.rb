@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :courses
-  devise_for :users
+  devise_for :users, controllers: {registrations: 'users/registrations'}
   resources :films
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
@@ -14,4 +14,6 @@ Rails.application.routes.draw do
   root "home#index"
   get "home/about"
   get "home/contact"
+  get "home/forms"
+  get "changepassword/index"
 end
