@@ -38674,3 +38674,549 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 22ms (Views: 16.9ms | ActiveRecord: 1.2ms | Allocations: 5198)
 
 
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <main> at /home/zbychu/Kursy/config/environment.rb:5)
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <main> at /home/zbychu/Kursy/config/environment.rb:5)
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <main> at /home/zbychu/Kursy/config/environment.rb:5)
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <main> at /home/zbychu/Kursy/config/environment.rb:5)
+Started GET "/" for 127.0.0.1 at 2024-04-13 22:35:29 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:7:in `index'
+  [1m[36mClient Create (1.2ms)[0m  [1m[32mINSERT INTO "clients" ("browser", "os", "dev_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["browser", "Firefox"], ["os", "GNU/Linux"], ["dev_type", "desktop"], ["created_at", "2024-04-13 20:35:30.089671"], ["updated_at", "2024-04-13 20:35:30.089671"]]
+  ↳ app/controllers/home_controller.rb:7:in `index'
+  [1m[36mTRANSACTION (4.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:7:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mCourse Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "courses"[0m
+  ↳ app/views/home/index.html.erb:13
+  [1m[36mUser Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/home/index.html.erb:13
+  [1m[36mClient Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "clients"[0m
+  ↳ app/views/home/index.html.erb:14
+  Rendered home/index.html.erb within layouts/application (Duration: 13.6ms | Allocations: 5041)
+  Rendered home/_header.html.erb (Duration: 0.9ms | Allocations: 910)
+  Rendered layout layouts/application.html.erb (Duration: 708.7ms | Allocations: 88761)
+Completed 200 OK in 1342ms (Views: 717.0ms | ActiveRecord: 7.9ms | Allocations: 655989)
+
+
+Started GET "/?cookies=true" for 127.0.0.1 at 2024-04-13 22:35:35 +0200
+Processing by HomeController#index as HTML
+  Parameters: {"cookies"=>"true"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:7:in `index'
+  [1m[36mClient Create (0.9ms)[0m  [1m[32mINSERT INTO "clients" ("browser", "os", "dev_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["browser", "Firefox"], ["os", "GNU/Linux"], ["dev_type", "desktop"], ["created_at", "2024-04-13 20:35:35.009994"], ["updated_at", "2024-04-13 20:35:35.009994"]]
+  ↳ app/controllers/home_controller.rb:7:in `index'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:7:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mCourse Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "courses"[0m
+  ↳ app/views/home/index.html.erb:13
+  [1m[36mUser Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/home/index.html.erb:13
+  [1m[36mClient Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "clients"[0m
+  ↳ app/views/home/index.html.erb:14
+  Rendered home/index.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1908)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 259)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 3280)
+Completed 200 OK in 29ms (Views: 10.2ms | ActiveRecord: 1.1ms | Allocations: 9261)
+
+
+Started GET "/courses" for 127.0.0.1 at 2024-04-13 22:36:29 +0200
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  Rendered courses/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 752)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 263)
+  Rendered layout layouts/application.html.erb (Duration: 11.0ms | Allocations: 2142)
+Completed 200 OK in 12ms (Views: 11.7ms | ActiveRecord: 0.0ms | Allocations: 2833)
+
+
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <main> at /home/zbychu/Kursy/config/environment.rb:5)
+Started GET "/users/sign_in" for 127.0.0.1 at 2024-04-13 22:42:04 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 3.0ms | Allocations: 1004)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 14.9ms | Allocations: 6157)
+  Rendered home/_header.html.erb (Duration: 1.0ms | Allocations: 967)
+  Rendered layout layouts/application.html.erb (Duration: 66.8ms | Allocations: 28163)
+Completed 200 OK in 315ms (Views: 80.5ms | ActiveRecord: 1.4ms | Allocations: 187240)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2024-04-13 22:42:17 +0200
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"zprzybyla@tuta.io", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Zaloguj"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "zprzybyla@tuta.io"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Update (3.3ms)[0m  [1m[33mUPDATE "users" SET "remember_created_at" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_created_at", "2024-04-13 20:42:18.198765"], ["updated_at", "2024-04-13 20:42:18.199155"], ["id", 5]]
+  [1m[36mTRANSACTION (4.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://127.0.0.1/
+Completed 303 See Other in 401ms (ActiveRecord: 8.0ms | Allocations: 16673)
+
+
+Started GET "/" for 127.0.0.1 at 2024-04-13 22:42:18 +0200
+Processing by HomeController#index as HTML
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:7:in `index'
+  [1m[36mClient Create (1.2ms)[0m  [1m[32mINSERT INTO "clients" ("browser", "os", "dev_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["browser", "Firefox"], ["os", "GNU/Linux"], ["dev_type", "desktop"], ["created_at", "2024-04-13 20:42:18.679575"], ["updated_at", "2024-04-13 20:42:18.679575"]]
+  ↳ app/controllers/home_controller.rb:7:in `index'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:7:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:7
+  [1m[36mCourse Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "courses"[0m
+  ↳ app/views/home/index.html.erb:13
+  [1m[36mUser Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/home/index.html.erb:13
+  [1m[36mClient Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "clients"[0m
+  ↳ app/views/home/index.html.erb:14
+  Rendered home/index.html.erb within layouts/application (Duration: 11.3ms | Allocations: 4667)
+  Rendered home/_header.html.erb (Duration: 4.6ms | Allocations: 400)
+  Rendered layout layouts/application.html.erb (Duration: 19.3ms | Allocations: 6261)
+Completed 200 OK in 474ms (Views: 20.0ms | ActiveRecord: 1.9ms | Allocations: 251957)
+
+
+Started GET "/courses" for 127.0.0.1 at 2024-04-13 22:42:21 +0200
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:5
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:9
+  Rendered courses/_course.html.erb (Duration: 3.1ms | Allocations: 337)
+  Rendered courses/_course.html.erb (Duration: 0.0ms | Allocations: 34)
+  Rendered courses/index.html.erb within layouts/application (Duration: 36.1ms | Allocations: 42228)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 318)
+  Rendered layout layouts/application.html.erb (Duration: 41.9ms | Allocations: 43669)
+Completed 200 OK in 46ms (Views: 43.6ms | ActiveRecord: 0.2ms | Allocations: 44362)
+
+
+Started GET "/courses/2" for 127.0.0.1 at 2024-04-13 22:42:22 +0200
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:64:in `set_course'
+  Rendering layout layouts/application.html.erb
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 1355)
+  Rendered layout layouts/application.html.erb (Duration: 1.0ms | Allocations: 1441)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.1ms | Allocations: 3766)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <p style="color: green"><%= notice %></p>
+<% require "youtube_embed" %>
+
+<div class="main-content">
+    <div class="container">
+    <% if user_signed_in? %>
+      <div>
+        <%= @course.title %>
+      </div>
+
+      <div id="films">
+    <% @films.each do |film| %>
+      <% if film.course_id == @course.id %>
+      <%= YoutubeEmbed::Video.iframe(film.video_url) %>
+      <p>
+        <%= link_to "Show this film", film %>
+      </p>
+    <% end %>
+  </div>
+
+      <div>
+        <%= link_to "Back to courses", courses_path %>
+        <% if current_user.admin %>
+        <%= link_to "Edit this course", edit_course_path(@course) %>
+        <%= link_to "Add content", new_film_path %>
+        <%= button_to "Destroy this course", @course, method: :delete %>
+        <% end %>
+      </div>
+    <% end %>
+    </div>
+</div>
+
+):
+1:    <p style="color: green"><%= notice %></p>
+2:    <% require "youtube_embed" %>
+3:    
+4:    <div class="main-content">
+5:        <div class="container">
+6:        <% if user_signed_in? %>
+7:          <div>
+8:            <%= @course.title %>
+9:          </div>
+10:    
+11:          <div id="films">
+12:        <% @films.each do |film| %>
+13:          <% if film.course_id == @course.id %>
+14:          <%= YoutubeEmbed::Video.iframe(film.video_url) %>
+15:          <p>
+16:            <%= link_to "Show this film", film %>
+17:          </p>
+18:        <% end %>
+19:      </div>
+20:    
+21:          <div>
+22:            <%= link_to "Back to courses", courses_path %>
+23:            <% if current_user.admin %>
+24:            <%= link_to "Edit this course", edit_course_path(@course) %>
+25:            <%= link_to "Add content", new_film_path %>
+26:            <%= button_to "Destroy this course", @course, method: :delete %>
+27:            <% end %>
+28:          </div>
+29:        <% end %>
+30:        </div>
+31:    </div>
+  
+app/views/courses/show.html.erb:34: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/courses/2" for 127.0.0.1 at 2024-04-13 22:43:00 +0200
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:64:in `set_course'
+  Rendering layout layouts/application.html.erb
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 1327)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | Allocations: 1414)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 1.3ms | Allocations: 10546)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <p style="color: green"><%= notice %></p>
+<% require "youtube_embed" %>
+
+<div class="main-content">
+    <div class="container">
+    <% if user_signed_in? %>
+      <div>
+        <%= @course.title %>
+      </div>
+
+      <div id="films">
+    <% @films.each do |film| %>
+      <% if film.course_id == @course.id %>
+      <%= YoutubeEmbed::Video.iframe(film.video_url) %>
+      <p>
+        <%= link_to "Show this film", film %>
+      </p>
+    <% end %>
+  </div>
+
+      <div>
+        <%= link_to "Back to courses", courses_path %>
+        <% if current_user.admin %>
+        <%= link_to "Edit this course", edit_course_path(@course) %>
+        <%= link_to "Add content", new_film_path %>
+        <%= button_to "Destroy this course", @course, method: :delete %>
+        <% end %>
+      </div>
+    <% end %>
+    </div>
+</div>
+
+):
+1:    <p style="color: green"><%= notice %></p>
+2:    <% require "youtube_embed" %>
+3:    
+4:    <div class="main-content">
+5:        <div class="container">
+6:        <% if user_signed_in? %>
+7:          <div>
+8:            <%= @course.title %>
+9:          </div>
+10:    
+11:          <div id="films">
+12:        <% @films.each do |film| %>
+13:          <% if film.course_id == @course.id %>
+14:          <%= YoutubeEmbed::Video.iframe(film.video_url) %>
+15:          <p>
+16:            <%= link_to "Show this film", film %>
+17:          </p>
+18:        <% end %>
+19:      </div>
+20:    
+21:          <div>
+22:            <%= link_to "Back to courses", courses_path %>
+23:            <% if current_user.admin %>
+24:            <%= link_to "Edit this course", edit_course_path(@course) %>
+25:            <%= link_to "Add content", new_film_path %>
+26:            <%= button_to "Destroy this course", @course, method: :delete %>
+27:            <% end %>
+28:          </div>
+29:        <% end %>
+30:        </div>
+31:    </div>
+  
+app/views/courses/show.html.erb:34: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/courses/2" for 127.0.0.1 at 2024-04-13 22:43:11 +0200
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:64:in `set_course'
+  Rendering layout layouts/application.html.erb
+  Rendering courses/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/show.html.erb:6
+  [1m[36mFilm Load (0.1ms)[0m  [1m[34mSELECT "films".* FROM "films"[0m
+  ↳ app/views/courses/show.html.erb:12
+  Rendered courses/show.html.erb within layouts/application (Duration: 39.8ms | Allocations: 36551)
+  Rendered home/_header.html.erb (Duration: 0.7ms | Allocations: 935)
+  Rendered layout layouts/application.html.erb (Duration: 46.7ms | Allocations: 38971)
+Completed 200 OK in 77ms (Views: 49.5ms | ActiveRecord: 2.1ms | Allocations: 48152)
+
+
+Started GET "/courses" for 127.0.0.1 at 2024-04-13 22:43:13 +0200
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:5
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:9
+  Rendered courses/_course.html.erb (Duration: 0.4ms | Allocations: 252)
+  Rendered courses/_course.html.erb (Duration: 0.0ms | Allocations: 34)
+  Rendered courses/index.html.erb within layouts/application (Duration: 10.1ms | Allocations: 2625)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 310)
+  Rendered layout layouts/application.html.erb (Duration: 12.7ms | Allocations: 3935)
+Completed 200 OK in 16ms (Views: 13.6ms | ActiveRecord: 0.1ms | Allocations: 4374)
+
+
+Started GET "/courses/3" for 127.0.0.1 at 2024-04-13 22:43:15 +0200
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:64:in `set_course'
+  Rendering layout layouts/application.html.erb
+  Rendering courses/show.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/show.html.erb:6
+  [1m[36mFilm Load (0.0ms)[0m  [1m[34mSELECT "films".* FROM "films"[0m
+  ↳ app/views/courses/show.html.erb:12
+  Rendered courses/show.html.erb within layouts/application (Duration: 8.0ms | Allocations: 1758)
+  Rendered home/_header.html.erb (Duration: 1.9ms | Allocations: 309)
+  Rendered layout layouts/application.html.erb (Duration: 11.6ms | Allocations: 3047)
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.2ms | Allocations: 3873)
+
+
+Started GET "/courses" for 127.0.0.1 at 2024-04-13 22:43:16 +0200
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:5
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:9
+  Rendered courses/_course.html.erb (Duration: 0.1ms | Allocations: 35)
+  Rendered courses/_course.html.erb (Duration: 0.1ms | Allocations: 34)
+  Rendered courses/index.html.erb within layouts/application (Duration: 9.7ms | Allocations: 1832)
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 310)
+  Rendered layout layouts/application.html.erb (Duration: 13.8ms | Allocations: 3139)
+Completed 200 OK in 15ms (Views: 14.6ms | ActiveRecord: 0.1ms | Allocations: 3473)
+
+
+Started GET "/courses/2" for 127.0.0.1 at 2024-04-13 22:43:17 +0200
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:64:in `set_course'
+  Rendering layout layouts/application.html.erb
+  Rendering courses/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/show.html.erb:6
+  [1m[36mFilm Load (0.1ms)[0m  [1m[34mSELECT "films".* FROM "films"[0m
+  ↳ app/views/courses/show.html.erb:12
+  Rendered courses/show.html.erb within layouts/application (Duration: 7.6ms | Allocations: 1755)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 309)
+  Rendered layout layouts/application.html.erb (Duration: 9.8ms | Allocations: 3044)
+Completed 200 OK in 15ms (Views: 11.5ms | ActiveRecord: 0.2ms | Allocations: 3858)
+
+
+Started GET "/films/new" for 127.0.0.1 at 2024-04-13 22:43:19 +0200
+Processing by FilmsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering films/new.html.erb within layouts/application
+  Rendered films/_form.html.erb (Duration: 3.4ms | Allocations: 2651)
+  Rendered films/new.html.erb within layouts/application (Duration: 9.9ms | Allocations: 3004)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:11
+  Rendered home/_header.html.erb (Duration: 6.2ms | Allocations: 1235)
+  Rendered layout layouts/application.html.erb (Duration: 17.5ms | Allocations: 5356)
+Completed 200 OK in 21ms (Views: 19.4ms | ActiveRecord: 0.1ms | Allocations: 6036)
+
+
+Started POST "/films" for 127.0.0.1 at 2024-04-13 22:44:09 +0200
+Processing by FilmsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "film"=>{"title"=>"Krzyk pterodaktyla", "desc"=>"Wiadomo o co chodzi", "video_url"=>"https://www.youtube.com/watch?v=C0C3NK55tI8", "course_id"=>"2"}, "commit"=>"Create Film"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/films_controller.rb:29:in `block in create'
+  [1m[36mFilm Create (3.1ms)[0m  [1m[32mINSERT INTO "films" ("title", "desc", "video_url", "created_at", "updated_at", "course_id") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["title", "Krzyk pterodaktyla"], ["desc", "Wiadomo o co chodzi"], ["video_url", "https://www.youtube.com/watch?v=C0C3NK55tI8"], ["created_at", "2024-04-13 20:44:09.951130"], ["updated_at", "2024-04-13 20:44:09.951130"], ["course_id", 2]]
+  ↳ app/controllers/films_controller.rb:29:in `block in create'
+  [1m[36mTRANSACTION (8.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/films_controller.rb:29:in `block in create'
+Redirected to http://127.0.0.1/films/4
+Completed 302 Found in 16ms (ActiveRecord: 12.0ms | Allocations: 2637)
+
+
+Started GET "/films/4" for 127.0.0.1 at 2024-04-13 22:44:09 +0200
+Processing by FilmsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mFilm Load (0.1ms)[0m  [1m[34mSELECT "films".* FROM "films" WHERE "films"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/films_controller.rb:65:in `set_film'
+  Rendering layout layouts/application.html.erb
+  Rendering films/show.html.erb within layouts/application
+  Rendered films/_film.html.erb (Duration: 0.3ms | Allocations: 233)
+  Rendered films/show.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1122)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:11
+  Rendered home/_header.html.erb (Duration: 3.9ms | Allocations: 1070)
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 3173)
+Completed 200 OK in 15ms (Views: 8.1ms | ActiveRecord: 0.2ms | Allocations: 4765)
+
+
+Started GET "/courses" for 127.0.0.1 at 2024-04-13 22:44:12 +0200
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:5
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:9
+  Rendered courses/_course.html.erb (Duration: 0.1ms | Allocations: 35)
+  Rendered courses/_course.html.erb (Duration: 0.0ms | Allocations: 34)
+  Rendered courses/index.html.erb within layouts/application (Duration: 6.2ms | Allocations: 1819)
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 310)
+  Rendered layout layouts/application.html.erb (Duration: 11.1ms | Allocations: 3126)
+Completed 200 OK in 12ms (Views: 11.5ms | ActiveRecord: 0.1ms | Allocations: 3451)
+
+
+Started GET "/courses/2" for 127.0.0.1 at 2024-04-13 22:44:13 +0200
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:64:in `set_course'
+  Rendering layout layouts/application.html.erb
+  Rendering courses/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/show.html.erb:6
+  [1m[36mFilm Load (0.0ms)[0m  [1m[34mSELECT "films".* FROM "films"[0m
+  ↳ app/views/courses/show.html.erb:12
+  Rendered courses/show.html.erb within layouts/application (Duration: 5.6ms | Allocations: 1838)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 309)
+  Rendered layout layouts/application.html.erb (Duration: 9.9ms | Allocations: 3127)
+Completed 200 OK in 14ms (Views: 12.1ms | ActiveRecord: 0.1ms | Allocations: 3943)
+
+
+Started GET "/courses" for 127.0.0.1 at 2024-04-13 22:44:15 +0200
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:5
+  [1m[36mCourse Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:9
+  Rendered courses/_course.html.erb (Duration: 0.1ms | Allocations: 35)
+  Rendered courses/_course.html.erb (Duration: 0.1ms | Allocations: 34)
+  Rendered courses/index.html.erb within layouts/application (Duration: 6.2ms | Allocations: 1800)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 310)
+  Rendered layout layouts/application.html.erb (Duration: 11.2ms | Allocations: 3107)
+Completed 200 OK in 13ms (Views: 11.7ms | ActiveRecord: 0.1ms | Allocations: 3431)
+
+
+Started GET "/courses/3" for 127.0.0.1 at 2024-04-13 22:44:16 +0200
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:64:in `set_course'
+  Rendering layout layouts/application.html.erb
+  Rendering courses/show.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/show.html.erb:6
+  [1m[36mFilm Load (0.0ms)[0m  [1m[34mSELECT "films".* FROM "films"[0m
+  ↳ app/views/courses/show.html.erb:12
+  Rendered courses/show.html.erb within layouts/application (Duration: 7.9ms | Allocations: 1771)
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 309)
+  Rendered layout layouts/application.html.erb (Duration: 10.5ms | Allocations: 3060)
+Completed 200 OK in 14ms (Views: 11.0ms | ActiveRecord: 0.1ms | Allocations: 3875)
+
+
+Started GET "/courses" for 127.0.0.1 at 2024-04-13 22:44:18 +0200
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:5
+  [1m[36mCourse Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:9
+  Rendered courses/_course.html.erb (Duration: 0.2ms | Allocations: 35)
+  Rendered courses/_course.html.erb (Duration: 0.1ms | Allocations: 34)
+  Rendered courses/index.html.erb within layouts/application (Duration: 8.6ms | Allocations: 1814)
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 310)
+  Rendered layout layouts/application.html.erb (Duration: 12.3ms | Allocations: 3121)
+Completed 200 OK in 14ms (Views: 13.3ms | ActiveRecord: 0.1ms | Allocations: 3445)
+
+
+Started GET "/courses/2" for 127.0.0.1 at 2024-04-13 22:44:19 +0200
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:64:in `set_course'
+  Rendering layout layouts/application.html.erb
+  Rendering courses/show.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/show.html.erb:6
+  [1m[36mFilm Load (0.0ms)[0m  [1m[34mSELECT "films".* FROM "films"[0m
+  ↳ app/views/courses/show.html.erb:12
+  Rendered courses/show.html.erb within layouts/application (Duration: 7.7ms | Allocations: 1823)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 309)
+  Rendered layout layouts/application.html.erb (Duration: 12.1ms | Allocations: 3112)
+Completed 200 OK in 14ms (Views: 12.5ms | ActiveRecord: 0.1ms | Allocations: 3927)
+
+
+Started GET "/courses" for 127.0.0.1 at 2024-04-13 22:44:21 +0200
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:5
+  [1m[36mCourse Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:9
+  Rendered courses/_course.html.erb (Duration: 0.1ms | Allocations: 35)
+  Rendered courses/_course.html.erb (Duration: 0.0ms | Allocations: 34)
+  Rendered courses/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1814)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 310)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 3121)
+Completed 200 OK in 6ms (Views: 5.8ms | ActiveRecord: 0.1ms | Allocations: 3445)
+
+
+Started GET "/" for 127.0.0.1 at 2024-04-13 22:44:24 +0200
+Processing by HomeController#index as HTML
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:7:in `index'
+  [1m[36mClient Create (1.3ms)[0m  [1m[32mINSERT INTO "clients" ("browser", "os", "dev_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["browser", "Firefox"], ["os", "GNU/Linux"], ["dev_type", "desktop"], ["created_at", "2024-04-13 20:44:24.510927"], ["updated_at", "2024-04-13 20:44:24.510927"]]
+  ↳ app/controllers/home_controller.rb:7:in `index'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:7:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:7
+  [1m[36mCourse Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "courses"[0m
+  ↳ app/views/home/index.html.erb:13
+  [1m[36mUser Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/home/index.html.erb:13
+  [1m[36mClient Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "clients"[0m
+  ↳ app/views/home/index.html.erb:14
+  Rendered home/index.html.erb within layouts/application (Duration: 5.0ms | Allocations: 3425)
+  Rendered home/_header.html.erb (Duration: 0.8ms | Allocations: 348)
+  Rendered layout layouts/application.html.erb (Duration: 10.1ms | Allocations: 4880)
+Completed 200 OK in 26ms (Views: 13.3ms | ActiveRecord: 1.8ms | Allocations: 11181)
+
+
