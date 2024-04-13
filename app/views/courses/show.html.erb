@@ -10,10 +10,12 @@
 
       <div id="films">
     <% @films.each do |film| %>
+      <% if film.course_id == @course.id %>
       <%= YoutubeEmbed::Video.iframe(film.video_url) %>
       <p>
         <%= link_to "Show this film", film %>
       </p>
+      <% end %>
     <% end %>
   </div>
 
