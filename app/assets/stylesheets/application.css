@@ -259,6 +259,10 @@ ul li {
     font-size: 2.5rem;
 }
 
+.user-container {
+    padding: 0 100px;
+}
+
 .login-form
 {
     text-align: center;
@@ -276,6 +280,8 @@ ul li {
     margin-bottom: 30px;
     padding: 10px;
     box-shadow: inset 2px 2px 2px black;
+    width: 100%;
+    border-radius: 5px;
 }
 
 .login-submit
@@ -453,7 +459,7 @@ a {
 .field {
     padding: 50px 0 0 0;
     position: relative;
-    width: fit-content;
+    width: 100%;
     margin: auto;
 }
 
@@ -462,8 +468,10 @@ a {
     margin: auto;
     text-align: center;
     color: silver;
-    width: 32vw;
+    width: 750px;
+    min-width: 500px;
     height: 70%;
+    border-radius: 20px;
 }
 
 .edit-input
@@ -475,6 +483,7 @@ a {
     border-radius: 2px;
     padding: 10px;
     box-shadow: inset 2px 2px 2px black;
+    width: 70%;
 }
 
 .edit-submit
