@@ -1,10 +1,21 @@
 <nav class="main-nav">
+    
     <div class="main-menu">
         <%= link_to image_tag("/logo.png", class: "nav-img"), root_path, class: "nav-img-cont" %>
-        <%= link_to "Kursy", courses_path, class: 'nav-link'%>
-        <%= link_to "O nas", home_about_path, class: 'nav-link'%>
-        <%= link_to "Kontakt", home_contact_path, class: 'nav-link'%>
-        <%= link_to "Formularze", home_forms_path, class: 'nav-link'%>
+        <input type="checkbox" class="nav-burger-box">
+        <div class="burger-menu">
+            <div class="burger">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+            </div>
+        </div>
+        <div class="routes">
+            <%= link_to "Kursy", courses_path, class: 'nav-link'%>
+            <%= link_to "O nas", home_about_path, class: 'nav-link'%>
+            <%= link_to "Kontakt", home_contact_path, class: 'nav-link'%>
+            <%= link_to "Formularze", home_forms_path, class: 'nav-link'%>
+        </div>
     </div>
     <div class="main-konto">
         
@@ -42,6 +53,27 @@
 <script>
    const img = document.querySelector(".nav-profile-box");
     const menu = document.querySelector(".nav-profile-menu");
+
+    const burger = document.querySelector(".nav-burger-box");
+    const nav = document.querySelector(".main-nav");
+    const links = document.querySelectorAll(".nav-link");
+    let y = 1
+    burger.addEventListener("click", () => {
+        nav.classList.toggle("main-nav-mobile")
+        if (y === 1) {
+        links.forEach((elem) => {
+            // elem.style.display = "block";
+        })
+        y = 0;
+    } else {
+        links.forEach((elem) => {
+            // elem.style.display = "none";
+        })
+        y = 1;
+    }
+    })
+
+
     let x = 1;
 
     function showMenu() {
@@ -68,4 +100,5 @@
 
     document.addEventListener("click", closeMenu);
 
+    
 </script>
